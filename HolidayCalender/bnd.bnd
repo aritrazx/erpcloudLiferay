@@ -1,0 +1,4 @@
+Bundle-Name: HolidayCalender
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.holiday.calender
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.holiday.calender.constants

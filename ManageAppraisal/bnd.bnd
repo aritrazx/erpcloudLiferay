@@ -1,0 +1,5 @@
+Bundle-Name: ManageAppraisal
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.appraisal
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.appraisal.constants
+ 

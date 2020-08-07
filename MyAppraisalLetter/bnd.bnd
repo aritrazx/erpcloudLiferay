@@ -1,0 +1,6 @@
+Bundle-Name: MyAppraisalLetter
+Bundle-SymbolicName: com.liferay.famocom.erpcloud
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.constants
+Import-Package:  \
+	*;resolution:=optional

@@ -1,0 +1,1455 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="com.liferay.famocom.erpcloud.model.AddTeamMember" />
+	<import class="com.liferay.famocom.erpcloud.model.AppraisalGoalDetails" />
+	<import class="com.liferay.famocom.erpcloud.model.AppraisalGoalMaster" />
+	<import class="com.liferay.famocom.erpcloud.model.AppraisalMaster" />
+	<import class="com.liferay.famocom.erpcloud.model.AppraisalPerformance" />
+	<import class="com.liferay.famocom.erpcloud.model.AppraisalProjectMaster" />
+	<import class="com.liferay.famocom.erpcloud.model.AppraisalSetup" />
+	<import class="com.liferay.famocom.erpcloud.model.Attendance" />
+	<import class="com.liferay.famocom.erpcloud.model.AttendanceBio" />
+	<import class="com.liferay.famocom.erpcloud.model.AttendanceCheckList" />
+	<import class="com.liferay.famocom.erpcloud.model.BankMaster" />
+	<import class="com.liferay.famocom.erpcloud.model.BillDocumentUploadFile" />
+	<import class="com.liferay.famocom.erpcloud.model.Billing" />
+	<import class="com.liferay.famocom.erpcloud.model.BookingRoom" />
+	<import class="com.liferay.famocom.erpcloud.model.Branch" />
+	<import class="com.liferay.famocom.erpcloud.model.CandidateApply" />
+	<import class="com.liferay.famocom.erpcloud.model.CandidateEvaluation" />
+	<import class="com.liferay.famocom.erpcloud.model.CandidatePayStructureMaster" />
+	<import class="com.liferay.famocom.erpcloud.model.CandidateReview" />
+	<import class="com.liferay.famocom.erpcloud.model.ClientMaster" />
+	<import class="com.liferay.famocom.erpcloud.model.CompanyPolicy" />
+	<import class="com.liferay.famocom.erpcloud.model.ConferenceRoom" />
+	<import class="com.liferay.famocom.erpcloud.model.DocumentUploadFile" />
+	<import class="com.liferay.famocom.erpcloud.model.EmailTemplate" />
+	<import class="com.liferay.famocom.erpcloud.model.Employee" />
+	<import class="com.liferay.famocom.erpcloud.model.EmployeeDocumentUpload" />
+	<import class="com.liferay.famocom.erpcloud.model.EmployeeType" />
+	<import class="com.liferay.famocom.erpcloud.model.EmpPayStructure" />
+	<import class="com.liferay.famocom.erpcloud.model.Evaluation" />
+	<import class="com.liferay.famocom.erpcloud.model.ExpCategory" />
+	<import class="com.liferay.famocom.erpcloud.model.Expense" />
+	<import class="com.liferay.famocom.erpcloud.model.ExpenseEntry" />
+	<import class="com.liferay.famocom.erpcloud.model.ExpenseEntryHistory" />
+	<import class="com.liferay.famocom.erpcloud.model.ExpProofFiles" />
+	<import class="com.liferay.famocom.erpcloud.model.FinSalary" />
+	<import class="com.liferay.famocom.erpcloud.model.FormSixteen" />
+	<import class="com.liferay.famocom.erpcloud.model.FormSixteenErrorFile" />
+	<import class="com.liferay.famocom.erpcloud.model.GeoAttendance" />
+	<import class="com.liferay.famocom.erpcloud.model.GoalDetails" />
+	<import class="com.liferay.famocom.erpcloud.model.GoalMaster" />
+	<import class="com.liferay.famocom.erpcloud.model.HolidayCalenderManagement" />
+	<import class="com.liferay.famocom.erpcloud.model.IncomeTaxSlab" />
+	<import class="com.liferay.famocom.erpcloud.model.InterviewEvaluation" />
+	<import class="com.liferay.famocom.erpcloud.model.JobEvaluation" />
+	<import class="com.liferay.famocom.erpcloud.model.JobOpening" />
+	<import class="com.liferay.famocom.erpcloud.model.JobPost" />
+	<import class="com.liferay.famocom.erpcloud.model.LeaveApply" />
+	<import class="com.liferay.famocom.erpcloud.model.LeaveApplyDtl" />
+	<import class="com.liferay.famocom.erpcloud.model.LeaveDoc" />
+	<import class="com.liferay.famocom.erpcloud.model.LeaveManagement" />
+	<import class="com.liferay.famocom.erpcloud.model.LeaveOb" />
+	<import class="com.liferay.famocom.erpcloud.model.LeaveType" />
+	<import class="com.liferay.famocom.erpcloud.model.Milestone" />
+	<import class="com.liferay.famocom.erpcloud.model.MonthlyAdjustment" />
+	<import class="com.liferay.famocom.erpcloud.model.NotificationMasterManage" />
+	<import class="com.liferay.famocom.erpcloud.model.NotificationSendManage" />
+	<import class="com.liferay.famocom.erpcloud.model.PayComponent" />
+	<import class="com.liferay.famocom.erpcloud.model.PayrollIncrement" />
+	<import class="com.liferay.famocom.erpcloud.model.PayrollSlabs" />
+	<import class="com.liferay.famocom.erpcloud.model.Performance" />
+	<import class="com.liferay.famocom.erpcloud.model.PerformanceMaster" />
+	<import class="com.liferay.famocom.erpcloud.model.ProjectMaster" />
+	<import class="com.liferay.famocom.erpcloud.model.ProjectRole" />
+	<import class="com.liferay.famocom.erpcloud.model.ProjectStatus" />
+	<import class="com.liferay.famocom.erpcloud.model.ProjectTask" />
+	<import class="com.liferay.famocom.erpcloud.model.PushNotification" />
+	<import class="com.liferay.famocom.erpcloud.model.RatingMaster" />
+	<import class="com.liferay.famocom.erpcloud.model.RecruitmentProcess" />
+	<import class="com.liferay.famocom.erpcloud.model.RecruitProcess" />
+	<import class="com.liferay.famocom.erpcloud.model.Resignation" />
+	<import class="com.liferay.famocom.erpcloud.model.SalDetails" />
+	<import class="com.liferay.famocom.erpcloud.model.SchedulesDetails" />
+	<import class="com.liferay.famocom.erpcloud.model.SchedulesMaster" />
+	<import class="com.liferay.famocom.erpcloud.model.SelectedCandidatePayStructure" />
+	<import class="com.liferay.famocom.erpcloud.model.SkillSet" />
+	<import class="com.liferay.famocom.erpcloud.model.StopPay" />
+	<import class="com.liferay.famocom.erpcloud.model.TaskMaster" />
+	<import class="com.liferay.famocom.erpcloud.model.TaskMasterMapping" />
+	<import class="com.liferay.famocom.erpcloud.model.TaxDeclaration" />
+	<import class="com.liferay.famocom.erpcloud.model.TaxDeclarationMonthly" />
+	<import class="com.liferay.famocom.erpcloud.model.TaxProofFiles" />
+	<import class="com.liferay.famocom.erpcloud.model.TaxSetting" />
+	<import class="com.liferay.famocom.erpcloud.model.TimeSheetEntry" />
+	<import class="com.liferay.famocom.erpcloud.model.TimeSheetMaster" />
+	<import class="com.liferay.famocom.erpcloud.model.TravelDeskDetails" />
+	<import class="com.liferay.famocom.erpcloud.model.WorkFromHome" />
+	<import class="com.liferay.famocom.erpcloud.model.WorksSchedules" />
+	<import class="com.liferay.famocom.erpcloud.model.YearSetting" />
+	<class name="com.liferay.famocom.erpcloud.model.impl.AddTeamMemberImpl" table="addTeamMember">
+		<id name="projectTeamsId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="roleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+		<property name="isProjectManager" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.AppraisalGoalDetailsImpl" table="appraisalGoalDetails">
+		<id name="appraisalGoalDetailsId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="appraisalGoalMasterId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="appraisalId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="evaluationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="goaldetailId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="ratingIdEmp" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="ratingIdMan" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.AppraisalGoalMasterImpl" table="appraisalGoalMaster">
+		<id name="appraisalGoalMasterId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="appraisalId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="appraisalProjectId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="evaluationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeComment" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="employeeOverallRat" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="managerComment" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="managerOverallRat" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.AppraisalMasterImpl" table="appraisalMaster">
+		<id name="appraisalId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="appraisalSettingId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="accomplishmentsEmp" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="strengthsEmp" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="developmentEmp" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="careerEmp" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="overallRatingEmp" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="overallCommentEmp" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="accomplishmentsMan" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="strengthsMan" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="developmentMan" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="careerMan" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyValue" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="developmentPlan" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="overallRatingMan" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="overallCommentMan" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="submitStep" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.AppraisalPerformanceImpl" table="appraisalPerformance">
+		<id name="appraisalPerformanceId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="appraisalId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="appraisalSettingId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="performanceId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="performanceComm" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ratingIdEmp" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="ratingIdMan" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.AppraisalProjectMasterImpl" table="appraisalProjectMaster">
+		<id name="appraisalProjectId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="appraisalId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="appraisalSettingId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="startDate" type="org.hibernate.type.TimestampType" />
+		<property name="endDate" type="org.hibernate.type.TimestampType" />
+		<property name="submitStep" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.AppraisalSetupImpl" table="appraisalSetup">
+		<id name="appraisalSettingId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="financialYear" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fromDateCycle" type="org.hibernate.type.TimestampType" />
+		<property name="toDateCycle" type="org.hibernate.type.TimestampType" />
+		<property name="fromDateSubmission" type="org.hibernate.type.TimestampType" />
+		<property name="toDateSubmission" type="org.hibernate.type.TimestampType" />
+		<property name="appraisalPeriod" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="totalEmp" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="beforeCtcAll" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="appraisalEmp" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="beforeCtc" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="afterCtc" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="totalAreas" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="totalBonus" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="totalCtcAfter" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="isLocked" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="isActive" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.AttendanceImpl" table="attendance">
+		<id name="attendanceId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeCode" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="attDate" type="org.hibernate.type.TimestampType" />
+		<property name="inTimeHour" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="inTimeMin" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="outTimeHour" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="outTimeMin" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="inTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="outTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="inDatePc" type="org.hibernate.type.TimestampType" />
+		<property name="outDatePc" type="org.hibernate.type.TimestampType" />
+		<property name="total" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ipPc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.AttendanceBioImpl" table="attendanceBio">
+		<id name="attendanceBioId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="attDate" type="org.hibernate.type.TimestampType" />
+		<property name="attTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="uploadDate" type="org.hibernate.type.TimestampType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.AttendanceCheckListImpl" table="AttendanceCheckList">
+		<id name="attendanceCheckListId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="attDate" type="org.hibernate.type.TimestampType" />
+		<property name="employeeCode" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fullName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="inTimeHour" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="inTimeMin" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="outTimeHour" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="outTimeMin" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="msg" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="indexNumber" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pcDateAndTime" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.BankMasterImpl" table="bankMaster">
+		<id name="bankId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="bankName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="branchName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="address" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ifscCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="bankType" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.BillDocumentUploadFileImpl" table="billDocumentUploadFile">
+		<id name="documentId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="dlFileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="billingId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="documentName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="documentPath" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="uploadDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.BillingImpl" table="billing">
+		<id name="billingId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="milestoneId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="billingNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="billingDate" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.BookingRoomImpl" table="BookingRoom">
+		<id name="bookingId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="roomId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="bookingDate" type="org.hibernate.type.TimestampType" />
+		<property name="fromTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="toTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="bookedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="note" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.BranchImpl" table="branch">
+		<id name="branchId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="branchName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="branchAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="createdById" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.CandidateApplyImpl" table="CandidateApply">
+		<id name="applyCandidateId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="firstName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="phoneNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="yearOfExp" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="monthOfExp" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="currentCTC" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="expectedCTC" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="currentCompany" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="noticePeriod" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="referenceEmployeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="cvFileId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="jobOpeningId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="skillset" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.CandidateEvaluationImpl" table="CandidateEvaluation">
+		<id name="candidateEvaluationId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="interviewerId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="jobPostId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="postEvaluationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="applyCandidateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="interviewerRating" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="interviewerRemarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hrRemarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="recruitmentProcessId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.CandidatePayStructureMasterImpl" table="candidatePayStructureMaster">
+		<id name="candidatePayStructureMasterId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="recruitmentProcessId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="totalAmount" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalBonus" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="payMasterStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="joiningDate" type="org.hibernate.type.TimestampType" />
+		<property name="candidateBond" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.CandidateReviewImpl" table="CandidateReview">
+		<id name="candidateReviewId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="recruitProcessId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="evaluationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="scroring" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.ClientMasterImpl" table="clientMaster">
+		<id name="clientId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="clientName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="officeAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="billingAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="contactNumber" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="emailId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="contactPerson" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="skypeId" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="gstNo" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="panNo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="bankName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="branchName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="bankAccountNumber" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="bankAccountType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ifscCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.CompanyPolicyImpl" table="companyPolicy">
+		<id name="companyPolicyId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="daysLocking" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="checkStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.ConferenceRoomImpl" table="ConferenceRoom">
+		<id name="roomId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="roomNo" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="floorNo" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="capacity" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="openTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="closeTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="building" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.DocumentUploadFileImpl" table="documentUploadFile">
+		<id name="documentId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="documentName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="documentPath" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="uploadDate" type="org.hibernate.type.TimestampType" />
+		<property name="travelDetailsId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.EmailTemplateImpl" table="emailTemplates">
+		<id column="id_" name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="templateName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailFor" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="templateBody" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdBy" type="org.hibernate.type.TimestampType" />
+		<property name="ModifiedBy" type="org.hibernate.type.TimestampType" />
+		<property name="Status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="restoreTemplateBody" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.EmployeeImpl" table="employee">
+		<id name="employeeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeCode" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="dateOfJoing" type="org.hibernate.type.TimestampType" />
+		<property name="firstName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="designation" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="dateOfBirth" type="org.hibernate.type.TimestampType" />
+		<property name="gender" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="maritalStatus" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="noOfChild" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="note" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="address" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property column="state_" name="state" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="postCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="homePhone" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="mobileNumber" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="emaiAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="anniversary" type="org.hibernate.type.TimestampType" />
+		<one-to-one access="com.liferay.portal.dao.orm.hibernate.PrivatePropertyAccessor" cascade="save-update" class="com.liferay.famocom.erpcloud.model.EmployeeEmployeePhotoBlobModel" constrained="true" name="employeePhotoBlobModel" outer-join="false" />
+		<property name="employeeStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalPay" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="basicPay" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="da" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="hra" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medical" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="ta" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="conveyance" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="internet" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="mobile" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="fare" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="areas" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="bouns" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="insurance" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="otherAllowance" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="providentFund" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="professionTax" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="incomeTax" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="loan" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="otherDeduction" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="bankId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="branchAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="accountNo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pfNo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="aadhaarNo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="employeetypeId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ispfdeduct" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="roleId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+		<property name="photoId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="branchId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="panNo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pesonalEmaiAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="payPerMonth" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="statusByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusByUserName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusDate" type="org.hibernate.type.TimestampType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class lazy="true" name="com.liferay.famocom.erpcloud.model.EmployeeEmployeePhotoBlobModel" table="employee">
+		<id column="employeeId" name="employeeId">
+			<generator class="foreign">
+				<param name="property">com.liferay.famocom.erpcloud.model.impl.EmployeeImpl</param>
+			</generator>
+		</id>
+		<property column="employeePhoto" name="employeePhotoBlob" type="blob" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.EmployeeDocumentUploadImpl" table="employeeDocumentUpload">
+		<id name="empDocumentId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="travelDeskDetailsId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="documentName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="documentPath" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="uploadDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.EmployeeTypeImpl" table="employeeType">
+		<id name="employeetypeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="typeName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pfDeduct" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="addeddate" type="org.hibernate.type.TimestampType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.EmpPayStructureImpl" table="empPayStructure">
+		<id name="empPayStructureId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="payComponentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="componentValue" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.EvaluationImpl" table="evaluation">
+		<id name="evaluationId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="evaluatedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="evalMessage" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="evalDate" type="org.hibernate.type.TimestampType" />
+		<property name="evalRating" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.ExpCategoryImpl" table="expCategory">
+		<id name="catId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="categoryName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="frequency" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="salaryHead" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="finalApprovalRoleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="attachment" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="componentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.ExpenseImpl" table="Expense">
+		<id name="expenseId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="catId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="expDate" type="org.hibernate.type.TimestampType" />
+		<property name="amount" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="manEmployeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="manCommnets" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="manApprovedDate" type="org.hibernate.type.TimestampType" />
+		<property name="accComments" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="accApprovedDate" type="org.hibernate.type.TimestampType" />
+		<property name="monthYear" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.ExpenseEntryImpl" table="expenseEntry">
+		<id name="expenseId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="catId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="title" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="expDate" type="org.hibernate.type.TimestampType" />
+		<property name="amount" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="manEmployeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="manCommnets" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="manApprovedDate" type="org.hibernate.type.TimestampType" />
+		<property name="accComments" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="accApprovedDate" type="org.hibernate.type.TimestampType" />
+		<property name="monthYear" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusByUserName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.ExpenseEntryHistoryImpl" table="expenseEntryHistory">
+		<id name="expenseHistoryId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="expenseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="manEmployeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="manComments" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="addeddate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.ExpProofFilesImpl" table="expProofFiles">
+		<id name="fileId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="financialYear" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="expenseId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fileName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileOrigName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="filePath" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="proofName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="uploadDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.FinSalaryImpl" table="finalSalary">
+		<id name="finSalaryId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="monthYear" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="totalEarning" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalDeduction" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalAmount" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="isLock" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.FormSixteenImpl" table="FormSixteen">
+		<id column="id_" name="id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="financialYear" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileEnteryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.FormSixteenErrorFileImpl" table="FormSixteenErrorFile">
+		<id name="errorId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="fileName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="errorMsg" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.GeoAttendanceImpl" table="geoAttendance">
+		<id name="attendanceId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="attDate" type="org.hibernate.type.TimestampType" />
+		<property name="inTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="outTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="workHour" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="latitude" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="longitude" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="outLatitude" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="outLongitude" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="geoAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.GoalDetailsImpl" table="goalDetails">
+		<id name="goaldetailId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="goalId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="evaluationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="parameter" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="scale" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.GoalMasterImpl" table="goalMaster">
+		<id name="goalId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="goalName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="goalDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.HolidayCalenderManagementImpl" table="holidayCalenderManagement">
+		<id name="holidayId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="holidayDate" type="org.hibernate.type.TimestampType" />
+		<property name="holidayName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="holidayStartDate" type="org.hibernate.type.TimestampType" />
+		<property name="holidayEndDate" type="org.hibernate.type.TimestampType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.IncomeTaxSlabImpl" table="incomeTaxSlab">
+		<id name="incomeTaxSlabId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="financialYear" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="incomeFrom" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="incomeTo" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="taxRate" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.InterviewEvaluationImpl" table="interviewEvaluation">
+		<id name="evaluationId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="roleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="evaluationName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.JobEvaluationImpl" table="JobEvaluation">
+		<id name="postEvaluationId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="jobPostId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="evaluationName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="evaluationDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.JobOpeningImpl" table="JobOpening">
+		<id name="jobOpeningId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="jobPostId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="openingFor" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.JobPostImpl" table="JobPost">
+		<id name="jobPostId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="postName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="postDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.LeaveApplyImpl" table="leaveApply">
+		<id name="leaveApplyId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="leaveTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fromDate" type="org.hibernate.type.TimestampType" />
+		<property name="fromDateSession" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="toDate" type="org.hibernate.type.TimestampType" />
+		<property name="toDateSession" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="leaveDays" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="attachedFile" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="cancelReason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hrComments" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="isApprove" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="statusByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusByUserName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusDate" type="org.hibernate.type.TimestampType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.LeaveApplyDtlImpl" table="leaveApplyDtl">
+		<id name="leaveApplyDtlId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="leaveApplyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="leaveTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="leaveDate" type="org.hibernate.type.TimestampType" />
+		<property name="sessionData" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="leaveDays" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="impectOnSalary" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isApprove" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.LeaveDocImpl" table="LeaveDoc">
+		<id name="leaveDocId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="leaveApplyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="filePath" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.LeaveManagementImpl" table="leaveManagement">
+		<id name="leaveId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="leaveName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="abb" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="encashmentDay" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="forwardDay" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="leaveStatus" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="encashmentPer" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="minServiceDay" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="noticeDay" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="employeetypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="maxCreditDay" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="gender" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="maritalStatus" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="impectOnSalary" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.LeaveObImpl" table="leaveOb">
+		<id name="leaveobId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="leaveTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="obVal" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isApprove" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.LeaveTypeImpl" table="leaveType">
+		<id name="leaveTypeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="leaveName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="abb" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="encashmentDay" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="forwardDay" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="leaveStatus" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="encashmentPer" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="minServiceDay" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="noticeDay" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="employeetypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="maxCreditDay" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="gender" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="maritalStatus" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="impectOnSalary" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.MilestoneImpl" table="Milestone">
+		<id name="milestoneId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="projectId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="clientId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="milestoneName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="dueDate" type="org.hibernate.type.TimestampType" />
+		<property name="checkGST" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="amount" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.MonthlyAdjustmentImpl" table="MonthlyAdjustment">
+		<id name="monthlyAdjustmentId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="payComponentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="amount" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="monthYear" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.NotificationMasterManageImpl" table="notificationMasterManage">
+		<id name="notifyId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="subject" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="body" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="documentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="documentUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.NotificationSendManageImpl" table="notificationSendManage">
+		<id name="notifyIdSendId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="notificationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="branchId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="sendingDate" type="org.hibernate.type.TimestampType" />
+		<property name="sendBy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="isOpen" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="openBy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="documentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="isApproved" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property column="comment_" name="comment" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="documentUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.PayComponentImpl" table="PayComponent">
+		<id name="componentId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeTypeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="abbreviation" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="taxStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="payType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="componentType" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="componentValueFormula" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="partOfCtc" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="effectiveDate" type="org.hibernate.type.TimestampType" />
+		<property name="islock" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="amount" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="payComponentOrder" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="autoAddPayStructure" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.PayrollIncrementImpl" table="payrollIncrement">
+		<id name="payrollIncrementId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="appraisalSettingId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeCode" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="overallRatingMan" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="preCtc" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="postCtc" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="componentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="preHeadComponentVal" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="postHeadComponentVal" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="bonusVal" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="financialYear" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.PayrollSlabsImpl" table="payrollSlabs">
+		<id name="payrollSlabsId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="appraisalSettingId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="ratingId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="payrollPercentage" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="bonusPercentage" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.PerformanceImpl" table="performance">
+		<id name="performanceId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="performanceHeading" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="performanceDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.PerformanceMasterImpl" table="performanceMaster">
+		<id name="performanceId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="performanceHeading" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="performanceDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.ProjectMasterImpl" table="projectMaster">
+		<id name="projectId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="clientId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="projectStatusId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="startDate" type="org.hibernate.type.TimestampType" />
+		<property name="endDate" type="org.hibernate.type.TimestampType" />
+		<property name="totalAmount" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.ProjectRoleImpl" table="projectRole">
+		<id name="roleId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="roleName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.ProjectStatusImpl" table="projectStatus">
+		<id name="projectStatusId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusColor" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.ProjectTaskImpl" table="ProjectTask">
+		<id name="projectTaskId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="projectId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="taskId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="taskName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="startDate" type="org.hibernate.type.TimestampType" />
+		<property name="endDate" type="org.hibernate.type.TimestampType" />
+		<property name="hours" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.PushNotificationImpl" table="pushNotification">
+		<id name="pushNotificationId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="subject" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="message" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fileUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.RatingMasterImpl" table="ratingMaster">
+		<id name="ratingId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="ratingNum" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ratingKey" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ratingDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="salaryPercentage" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.RecruitmentProcessImpl" table="RecruitmentProcess">
+		<id name="recruitmentProcessId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="applyCandidateId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="interviewDate" type="org.hibernate.type.TimestampType" />
+		<property name="interviewTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="interviewerRemarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hrRemarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="isSelected" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="interviewerId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="jobPostId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="statusByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusByUserName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusDate" type="org.hibernate.type.TimestampType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.RecruitProcessImpl" table="RecruitProcess">
+		<id name="recruitProcessId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="firstName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="interviewDate" type="org.hibernate.type.TimestampType" />
+		<property name="interviewTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileEntryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fileUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="interviewerRemarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hrRemarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="isSelected" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="DOB" type="org.hibernate.type.TimestampType" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="phoneNumber" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="skillset" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="experience" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="noticePeriod" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="currentCTC" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="expextedCTC" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="projectRoleId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="reference" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.ResignationImpl" table="Resignation">
+		<id name="ResignationId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="resignationDate" type="org.hibernate.type.TimestampType" />
+		<property name="resignationSubDate" type="org.hibernate.type.TimestampType" />
+		<property name="Description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="managerId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="mancomment" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="mancommentdate" type="org.hibernate.type.TimestampType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.SalDetailsImpl" table="payDetails">
+		<id name="SalDetailsId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="monthYear" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="componentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="value" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.SchedulesDetailsImpl" table="SchedulesDetails">
+		<id name="schedulesDetailsId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="schedulesDate" type="org.hibernate.type.TimestampType" />
+		<property name="worksSchedulesId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.SchedulesMasterImpl" table="SchedulesMaster">
+		<id name="schedulesId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="schedulesName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="schedulesDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.SelectedCandidatePayStructureImpl" table="SelectedCandidatePayStructure">
+		<id name="candidatePayStructureId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="payComponentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="componentValue" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="recruitmentProcessId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="payStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.SkillSetImpl" table="SkillSet">
+		<id name="SkillId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="SkillName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.StopPayImpl" table="StopPay">
+		<id name="stopPayId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="monthYear" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="isLock" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.TaskMasterImpl" table="taskMaster">
+		<id name="taskId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="taskName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="taskDesc" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.TaskMasterMappingImpl" table="taskMasterMapping">
+		<id name="taskMappingId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="taskId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.TaxDeclarationImpl" table="taxDeclaration">
+		<id name="taxDeclarationId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="financialYear" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="monthYear" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="hraFromDate" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hraToDate" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hraCity" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hraIsmetro" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hraLandlordPan" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hraRent" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medicalIndividual" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medicalParents" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medicalParentsSenior" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medicalHandiLess80" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medicalHandiGater80" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medicalGater60Less80" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medicalGater80" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="educationLoan" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="physicalDisability" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="physicalDisabilitySevere" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="equitySavings" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="interestOnDeposit" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="nationalPension" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="lic" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="ppf" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="nsc" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="infraBonds" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="tuitionFees" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="mutualFunds" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="sukanya" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="ulip" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="timeDeposit" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="housingLoan" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="fixedDeposit" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="nscInterest" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="housingLoanInterest" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="housingAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="previousIncome" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="previousPf" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="previousPt" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="previousTds" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="islock" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="finalSubmission" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="hraExempt" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="sectionBExempt" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="sectionCExempt" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="sectionDExempt" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="salaryAfterExempt" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="salaryBeforeExempt" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="taxRate" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="grossTds" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalPtax" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalProvidentFund" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalTds" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="tdsDeducted" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="tdsDuePerMonth" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="annualIncome" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="educationcess" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="addeddate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.TaxDeclarationMonthlyImpl" table="taxDeclarationMonthly">
+		<id name="taxDeclarationMonthlyId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="taxDeclarationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="financialYear" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="monthYear" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="hraFromDate" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hraToDate" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hraCity" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hraIsmetro" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hraLandlordPan" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hraRent" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medicalIndividual" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medicalParents" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medicalParentsSenior" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medicalHandiLess80" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medicalHandiGater80" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medicalGater60Less80" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medicalGater80" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="educationLoan" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="physicalDisability" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="physicalDisabilitySevere" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="equitySavings" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="interestOnDeposit" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="nationalPension" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="lic" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="ppf" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="nsc" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="infraBonds" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="tuitionFees" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="mutualFunds" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="sukanya" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="ulip" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="timeDeposit" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="housingLoan" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="fixedDeposit" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="nscInterest" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="housingLoanInterest" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="housingAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="previousIncome" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="previousPf" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="previousPt" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="previousTds" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="islock" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="finalSubmission" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="hraExempt" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="sectionBExempt" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="sectionCExempt" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="sectionDExempt" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="salaryAfterExempt" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="salaryBeforeExempt" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="taxRate" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="grossTds" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalTds" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="tdsDeducted" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="tdsDuePerMonth" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="educationCess" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalPtax" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalProvidentFund" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalConveyance" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+		<property name="currentMonthTax" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="sectionEExempt" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.TaxProofFilesImpl" table="taxProofFiles">
+		<id name="fileId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="financialYear" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="taxDeclarationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fileName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fileOrigName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="filePath" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="proofName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="uploadDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.TaxSettingImpl" table="taxSetting">
+		<id name="taxSettingId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="componentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="componentName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="taxFormulla" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.TimeSheetEntryImpl" table="timeSheetEntry">
+		<id name="timesheetId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="entryDate" type="org.hibernate.type.TimestampType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectTaskId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="hours" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="workDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="timesheetParentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="statusByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusByUserName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusDate" type="org.hibernate.type.TimestampType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.TimeSheetMasterImpl" table="timeSheetMaster">
+		<id name="timesheetParentId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fromDate" type="org.hibernate.type.TimestampType" />
+		<property name="toDate" type="org.hibernate.type.TimestampType" />
+		<property name="submitStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="addedDate" type="org.hibernate.type.TimestampType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="statusByUserId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="statusByUserName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="statusDate" type="org.hibernate.type.TimestampType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.TravelDeskDetailsImpl" table="TravelDesk">
+		<id name="travelDetailsId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectTeamsId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="ticketType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hotel" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="fromDate" type="org.hibernate.type.TimestampType" />
+		<property name="toDate" type="org.hibernate.type.TimestampType" />
+		<property name="fromTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="toTime" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="location" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="purpose" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="specialInstraction" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="managerComment" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.WorkFromHomeImpl" table="workFromHome">
+		<id name="workFromHomeId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="projectId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="appliedDate" type="org.hibernate.type.TimestampType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="workStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="hrComments" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.WorksSchedulesImpl" table="worksSchedules">
+		<id name="worksSchedulesId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="employeeId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="fromDate" type="org.hibernate.type.TimestampType" />
+		<property name="toDate" type="org.hibernate.type.TimestampType" />
+		<property name="schedulesId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="islock" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.liferay.famocom.erpcloud.model.impl.YearSettingImpl" table="YearSetting">
+		<id name="yearSettingId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="financialYearStartDate" type="org.hibernate.type.TimestampType" />
+		<property name="financialYearEndDate" type="org.hibernate.type.TimestampType" />
+		<property name="calendarStartDate" type="org.hibernate.type.TimestampType" />
+		<property name="calendarEndDate" type="org.hibernate.type.TimestampType" />
+		<property name="isActive" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+</hibernate-mapping>

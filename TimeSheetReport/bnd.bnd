@@ -1,0 +1,4 @@
+Bundle-Name: TimeSheetReport
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.tsreport
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.tsreport.constants

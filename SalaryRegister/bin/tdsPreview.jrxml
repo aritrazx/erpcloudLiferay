@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TDS" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b78e5117-d7e2-407a-a043-7a884ead14b6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="EMPID" class="java.lang.Long"/>
+	<parameter name="ENAME" class="java.lang.String"/>
+	<parameter name="PANNO" class="java.lang.String"/>
+	<parameter name="DATEOFJOINING" class="java.util.Date"/>
+	<parameter name="GENDER" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="hraCity" class="java.lang.String"/>
+	<field name="hraIsmetro" class="java.lang.String"/>
+	<field name="hraLandlordPan" class="java.lang.String"/>
+	<field name="hraRent" class="java.lang.Double"/>
+	<field name="medicalIndividual" class="java.lang.Double"/>
+	<field name="medicalParents" class="java.lang.Double"/>
+	<field name="medicalParentsSenior" class="java.lang.Double"/>
+	<field name="medicalHandiLess80" class="java.lang.Double"/>
+	<field name="medicalHandiGater80" class="java.lang.Double"/>
+	<field name="medicalGater60Less80" class="java.lang.Double"/>
+	<field name="medicalGater80" class="java.lang.Double"/>
+	<field name="educationLoan" class="java.lang.Double"/>
+	<field name="physicalDisability" class="java.lang.Double"/>
+	<field name="physicalDisabilitySevere" class="java.lang.Double"/>
+	<field name="equitySavings" class="java.lang.Double"/>
+	<field name="interestOnDeposit" class="java.lang.Double"/>
+	<field name="nationalPension" class="java.lang.Double"/>
+	<field name="nsc" class="java.lang.Double"/>
+	<field name="infraBonds" class="java.lang.Double"/>
+	<field name="tuitionFees" class="java.lang.Double"/>
+	<field name="mutualFunds" class="java.lang.Double"/>
+	<field name="sukanya" class="java.lang.Double"/>
+	<field name="ulip" class="java.lang.Double"/>
+	<field name="timeDeposit" class="java.lang.Double"/>
+	<field name="housingLoan" class="java.lang.Double"/>
+	<field name="fixedDeposit" class="java.lang.Double"/>
+	<field name="nscInterest" class="java.lang.Double"/>
+	<field name="housingLoanInterest" class="java.lang.Double"/>
+	<field name="lic" class="java.lang.Double"/>
+	<field name="previousIncome" class="java.lang.Double"/>
+	<field name="previousPf" class="java.lang.Double"/>
+	<field name="previousPt" class="java.lang.Double"/>
+	<field name="previousTds" class="java.lang.Double"/>
+	<field name="salaryBeforeExempt" class="java.lang.Double"/>
+	<field name="totalPtax" class="java.lang.Double"/>
+	<field name="salaryAfterExempt" class="java.lang.Double"/>
+	<field name="grossTds" class="java.lang.Double"/>
+	<field name="currentMonthTax" class="java.lang.Double"/>
+	<field name="educationCess" class="java.lang.Double"/>
+	<field name="totalTds" class="java.lang.Double"/>
+	<field name="tdsDeducted" class="java.lang.Double"/>
+	<field name="tdsDuePerMonth" class="java.lang.Double"/>
+	<field name="sectionBExempt" class="java.lang.Double"/>
+	<field name="hraExempt" class="java.lang.Double"/>
+	<field name="sectionCExempt" class="java.lang.Double"/>
+	<field name="sectionDExempt" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="210" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="68" width="100" height="20" uuid="fb16b320-69e9-4ed9-b6e0-4feaca2dff68"/>
+				<text><![CDATA[PAN No :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="47" width="100" height="20" uuid="5fdb0272-7204-4bd3-bbff-c27cd3e54aa7"/>
+				<text><![CDATA[Employee Name :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="0" width="491" height="20" uuid="51318439-05a1-42dd-a910-1d38d7893a97"/>
+				<text><![CDATA[Employee Investment Declaration Form For the Financial Year 2017-2018]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="27" width="100" height="20" uuid="f0cfc181-55d1-436f-a53b-e856337ae9eb"/>
+				<text><![CDATA[Employee ID :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="105" width="100" height="20" uuid="072ae233-d23d-403c-a26b-e9431779bb9a"/>
+				<text><![CDATA[Gender :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="88" width="100" height="20" uuid="a2b9d58e-7188-4221-9cba-4263c59d3981"/>
+				<text><![CDATA[Date of Joining :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="154" width="140" height="20" uuid="fbb67434-0d79-4704-bfa2-bcc648386163"/>
+				<text><![CDATA[City]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="154" width="120" height="20" uuid="c434c78e-71b9-4302-bd4f-66809292f8e6"/>
+				<text><![CDATA[Metro Yes/No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="155" width="110" height="20" uuid="9c234add-3f4a-44d4-9918-a37fed1f1e99"/>
+				<text><![CDATA[PAN of Landlord]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="156" width="120" height="20" uuid="231bf91b-e4b1-41aa-9ad5-8268509923e1"/>
+				<text><![CDATA[Rent Paid per month]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="178" width="140" height="20" uuid="e3070610-5e63-42f1-b88c-1c18c3f3b4b1"/>
+				<textFieldExpression><![CDATA[$F{hraCity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="176" width="120" height="20" uuid="ffc7da55-7554-4757-92d1-b5fe5c159e9f"/>
+				<textFieldExpression><![CDATA[$F{hraIsmetro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="176" width="110" height="20" uuid="25427179-29d7-48d9-abe9-5e0789803de6"/>
+				<textFieldExpression><![CDATA[$F{hraLandlordPan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="176" width="120" height="20" uuid="e1eddbaf-7713-4b79-b8d2-3e03860b113e"/>
+				<textFieldExpression><![CDATA[$F{hraRent}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="133" width="490" height="20" uuid="247b1b8f-9530-4eb7-9ea2-5f7cb82640e6"/>
+				<text><![CDATA[House Rent Allowance :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="150" y="26" width="190" height="20" uuid="e9d2934b-1f58-4946-a929-766e8b2eb954"/>
+				<textFieldExpression><![CDATA[$P{EMPID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="46" width="190" height="20" uuid="a6f3cdbe-ac15-456a-bf0b-f1afad5b7afb"/>
+				<textFieldExpression><![CDATA[$P{ENAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="67" width="190" height="20" uuid="fc8818ac-a225-408d-9ad2-fe357e5ad225"/>
+				<textFieldExpression><![CDATA[$P{PANNO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="87" width="190" height="20" uuid="dd7c8d3b-f544-4b39-9da9-63171498b6c5"/>
+				<textFieldExpression><![CDATA[$P{DATEOFJOINING}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="108" width="190" height="20" uuid="1f565c7f-815e-48ef-a086-71108dd5f9bc"/>
+				<textFieldExpression><![CDATA[$P{GENDER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="335" splitType="Stretch">
+			<textField>
+				<reportElement x="420" y="156" width="110" height="26" uuid="94b78ec5-f7cb-4480-b154-781a5fdbdbc7"/>
+				<textFieldExpression><![CDATA[$F{medicalHandiGater80}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="42" width="370" height="20" uuid="51e366bc-a0ec-48fa-b6e6-31b804b78681"/>
+				<text><![CDATA[Medical Insurance Premium (U/s 80D) - Parents not being Senior Citizens
+(Max Limit INR 25,000 p.a)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="2" width="110" height="20" uuid="41d227b2-5a08-433a-a660-8d8ac8db2d26"/>
+				<text><![CDATA[AMOUNT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="22" width="110" height="20" uuid="5ca8c3e8-6425-444d-b633-34a4d3b97217"/>
+				<textFieldExpression><![CDATA[$F{medicalIndividual}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="127" width="370" height="28" uuid="47d952f1-f40d-49d4-add8-d4bd586a3033"/>
+				<text><![CDATA[Medical Treatment in case any Disease/ Ailment-Self/Dependent (U/s 80DDB)
+Senior citizens (> 60 years and < 80 years)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="63" width="370" height="20" uuid="b1ab54e0-8084-41a0-86e2-03b0ead9ce94"/>
+				<text><![CDATA[Medical Insurance Premium (U/s 80D) - Parents being Senior Citizens (Max
+Limit INR 30,000 p.a)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="105" width="369" height="20" uuid="51b5907c-a959-4a0e-b2a4-351cfae6538e"/>
+				<text><![CDATA[Medical Treatment/Handicapped Dependent (U/s 80DD) >80%]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="129" width="110" height="27" uuid="09afd6c7-bedd-47b9-b9f2-1af7c7f22fe0"/>
+				<textFieldExpression><![CDATA[$F{medicalGater60Less80}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="155" width="370" height="28" uuid="4eabbdb3-3be4-4482-a0bc-9b8812491d91"/>
+				<text><![CDATA[Medical Treatment in case any Disease/ Ailment-Self/Dependent (U/s 80DDB)
+Super Senior citizens (> 80 years )]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="106" width="110" height="20" uuid="f0e1b909-3c88-4fed-9124-aa3ae1bed19f"/>
+				<textFieldExpression><![CDATA[$F{medicalGater80}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="43" width="110" height="20" uuid="3aa9bc71-b205-4c92-9270-e17ccf90379d"/>
+				<textFieldExpression><![CDATA[$F{medicalParents}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="64" width="110" height="20" uuid="0c779eb0-562c-4b60-9777-eb5053c44382"/>
+				<textFieldExpression><![CDATA[$F{medicalParentsSenior}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="84" width="370" height="20" uuid="551f3af2-688f-42e9-bd76-c6d6798cebf4"/>
+				<text><![CDATA[Medical Treatment/Handicapped Dependent (U/s 80DD) <80%]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="85" width="110" height="20" uuid="f2c7d0df-6196-435c-9d22-705a4f8d55d3"/>
+				<textFieldExpression><![CDATA[$F{medicalHandiLess80}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="2" width="370" height="20" uuid="d4e11b7d-f339-42ad-af3a-439443beb529"/>
+				<text><![CDATA[Section B - Chapter VI A - Deductions from Total Income]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="423" y="225" width="110" height="20" uuid="c10548f9-6da9-40a1-947d-ee17b794b2b4"/>
+				<textFieldExpression><![CDATA[$F{physicalDisabilitySevere}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="39" y="183" width="371" height="20" uuid="589d7ad3-266a-4390-88fc-bdfbff25f31f"/>
+				<text><![CDATA[Interest on Educational Loan (U/s 80E)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="423" y="287" width="110" height="20" uuid="aefac049-09f1-49f6-85c7-6c25c7f3de02"/>
+				<textFieldExpression><![CDATA[$F{nationalPension}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="203" width="370" height="20" uuid="3e826c06-ab50-4369-ab96-d8e3546ba952"/>
+				<text><![CDATA[Permanent Physical Disability (80U) < 80%]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="419" y="182" width="110" height="20" uuid="b3d9abc2-06b1-42e8-81a2-763fa0bcdcdf"/>
+				<textFieldExpression><![CDATA[$F{educationLoan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="423" y="266" width="110" height="20" uuid="1c27638a-5dfd-46ef-a74c-9df15f0304da"/>
+				<textFieldExpression><![CDATA[$F{interestOnDeposit}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="243" width="370" height="20" uuid="10234c6b-7dca-476c-8bbe-d73014c1eaae"/>
+				<text><![CDATA[Rajeev Gandhi Equity Savings Scheme (80CCG)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="223" width="370" height="20" uuid="ed21dc10-3219-42f1-9b44-e7b406eb377f"/>
+				<text><![CDATA[Permanent Physical Disability Severe Disability (80U) > 80%]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="423" y="246" width="110" height="20" uuid="7ecbd4ba-ff04-4da7-9207-735cb14883f4"/>
+				<textFieldExpression><![CDATA[$F{equitySavings}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="204" width="110" height="20" uuid="cd6a7d88-b196-4027-be06-d14dee12bed0"/>
+				<textFieldExpression><![CDATA[$F{physicalDisability}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="264" width="370" height="20" uuid="4e81cc1c-4003-4674-853c-2ab7fd9dd8c0"/>
+				<text><![CDATA[Interest on Deposit in Savings Account deduction upto Rs.10000 (80TTA)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="21" width="370" height="20" uuid="a6e695e9-c8f1-4849-8253-510cc211f0b4"/>
+				<text><![CDATA[Medical Insurance Premium (U/s 80D) - Individual, Spouse & Children (Max
+Limit INR 25,000 p.a)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="284" width="370" height="20" uuid="e2746b5b-4aed-4ba3-a8e2-79878ac1afc0"/>
+				<text><![CDATA[National Pension Scheme(80CCD)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="305" width="369" height="20" uuid="896678ab-304e-4cf5-9e5d-7651152f84ee"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="308" width="118" height="20" uuid="90881a07-93b2-4287-a54e-f64b125d9b60"/>
+				<textFieldExpression><![CDATA[$F{sectionBExempt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<summary>
+		<band height="801" splitType="Stretch">
+			<textField>
+				<reportElement x="420" y="328" width="110" height="20" uuid="cd82ce73-6f15-400d-8129-6c7fbe06fb36"/>
+				<textFieldExpression><![CDATA[$F{previousIncome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="397" width="110" height="20" uuid="6e58e343-cef5-4cfc-b374-c446259a58a9"/>
+				<textFieldExpression><![CDATA[$F{previousTds}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="372" width="340" height="20" uuid="49bfd07d-2cfb-456a-9af5-eb7a0d20bfae"/>
+				<text><![CDATA[Provident Fund (PF)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="328" width="340" height="20" uuid="19a46ca5-d625-42e4-bbaa-80b67cae5995"/>
+				<text><![CDATA[Income after Section 10 exemption]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="393" width="340" height="20" uuid="be029407-e299-4802-bef8-474e744621da"/>
+				<text><![CDATA[Tax deducted at source (TDS)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="310" width="340" height="20" uuid="13a5751c-37a2-4a86-96c7-02da47a8fe9a"/>
+				<text><![CDATA[Section E - Previous Employment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="350" width="340" height="20" uuid="a4af5417-d1f6-43aa-9396-2d7077d2d220"/>
+				<text><![CDATA[Provident Fund (PF)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="418" width="110" height="20" uuid="7c57d174-5ed1-49ef-9723-7b2f156bda8f"/>
+				<textFieldExpression><![CDATA[$F{previousTds}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="351" width="110" height="20" uuid="50140b72-aba6-425f-b25f-284ef4e0bfbd"/>
+				<textFieldExpression><![CDATA[$F{previousPf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="376" width="110" height="20" uuid="91088b84-afc6-4c7a-8940-f124b0de85bd"/>
+				<textFieldExpression><![CDATA[$F{previousPt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="414" width="340" height="20" uuid="fdbc0e19-d835-4f71-b0cf-014bda2feb5a"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="312" width="110" height="20" uuid="5b8acd09-9bde-4a3a-9b57-83f8d58228f7"/>
+				<text><![CDATA[AMMOUNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="774" width="134" height="20" uuid="0a6287af-bc1d-4514-8cb1-4c16f4da6327"/>
+				<text><![CDATA[Signature of the employee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="759" width="100" height="20" uuid="451e058b-0330-4971-822e-a0edaccddf42"/>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="697" width="494" height="61" uuid="16ecae94-8d8f-41f7-a340-d2e101084c0a"/>
+				<text><![CDATA[I hereby declare that the information given above is correct and true in all respects and I intend to
+make the investments declared above. I also undertake to indemnify the company for any
+loss/liability that may arise in the event of the above information being incorrect / declared
+investments not made]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="780" width="100" height="20" uuid="78baf675-522a-4b35-b687-b5dba8a9dc96"/>
+				<text><![CDATA[Place:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="677" width="100" height="20" uuid="a23ea24b-131b-47a8-a4f9-42d1b8205b17"/>
+				<text><![CDATA[Declaration:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="285" width="110" height="20" uuid="4f9ed3e3-1b51-4cc5-b4ff-7491799cb7de"/>
+				<textFieldExpression><![CDATA[$F{housingLoanInterest}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="420" y="262" width="110" height="20" uuid="85fb0b49-9243-484b-bb6b-40f34112be59"/>
+				<text><![CDATA[AMMOUNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="285" width="340" height="20" uuid="e30d8598-c9ce-41a9-90d2-7bb708922a1b"/>
+				<text><![CDATA[Address of the Property against which Loan taken :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="262" width="340" height="20" uuid="2227779c-9900-4de4-b5ba-64d57d59af84"/>
+				<text><![CDATA[Section D - Loss from House Property - SELF OCCUPIED]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="192" width="110" height="20" uuid="ce752b03-cbd9-48a3-bd5a-02a4faa399d5"/>
+				<textFieldExpression><![CDATA[$F{fixedDeposit}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="149" width="340" height="20" uuid="edba527e-bd23-4ad0-9ab5-9b7929a43abb"/>
+				<text><![CDATA[5 Year Time Deposit in Post Office]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="67" width="110" height="20" uuid="922eba74-9e7f-4af5-beba-7bc188ba4bb7"/>
+				<textFieldExpression><![CDATA[$F{tuitionFees}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="149" width="110" height="20" uuid="721ad8f2-023e-40fb-a1ce-3b4646e9c909"/>
+				<textFieldExpression><![CDATA[$F{timeDeposit}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="170" width="340" height="20" uuid="9be8c3c5-05e8-4db1-972a-ed30ad036c32"/>
+				<text><![CDATA[Housing Loan - Principal Amount paid, Registration Fees, Stamp duty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="2" width="110" height="20" uuid="30e22007-9393-40eb-89ba-1a62392c3221"/>
+				<text><![CDATA[AMMOUNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="88" width="340" height="20" uuid="99c6a390-f267-4a7e-b528-f4411db9cc6a"/>
+				<text><![CDATA[Mutual Funds / Equity Linked Saving Scheme (ELSS)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="22" width="110" height="20" uuid="cb86546b-a081-434d-a523-92ed004b4e9d"/>
+				<textFieldExpression><![CDATA[$F{lic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="170" width="110" height="20" uuid="cb81a089-4e86-47d2-a557-40600844899c"/>
+				<textFieldExpression><![CDATA[$F{housingLoan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="126" width="110" height="20" uuid="c7cb5471-4d3f-44ec-be0d-2a7629ff579f"/>
+				<textFieldExpression><![CDATA[$F{ulip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="87" width="110" height="20" uuid="1591728d-feb3-4704-b0f4-e41b22e1fe05"/>
+				<textFieldExpression><![CDATA[$F{mutualFunds}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="106" width="340" height="20" uuid="70d970aa-b147-40ad-9d1f-86851ab9a836"/>
+				<text><![CDATA[Sukanya Samriddhi Scheme]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="24" width="340" height="20" uuid="ac6b834a-ffb9-4f63-8bc9-bb69849c1be5"/>
+				<text><![CDATA[Life Insurance Premium]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="2" width="370" height="20" uuid="3ee89ce2-802c-411d-9320-017f49987c19"/>
+				<text><![CDATA[Section C - Chapter VIA Sec 80C]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="46" width="110" height="20" uuid="d9b02304-05bf-483d-9bcc-0b1806b7a708"/>
+				<textFieldExpression><![CDATA[$F{infraBonds}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="67" width="340" height="20" uuid="43157020-1393-4d51-809d-fec4c4c9ef32"/>
+				<text><![CDATA[Children Education Tuition Fees]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="108" width="110" height="20" uuid="b4526011-108c-40bb-b71c-adff51e63afd"/>
+				<textFieldExpression><![CDATA[$F{sukanya}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="234" width="110" height="23" uuid="4c0ee6bc-64dd-4cfe-8ff1-c82d7af419fd"/>
+				<textFieldExpression><![CDATA[$F{sectionCExempt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="235" width="340" height="20" uuid="76aa1113-190e-4d51-a1f9-fa3b1e2dbffc"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="192" width="340" height="20" uuid="4b2b4c98-e2d9-48b1-ab14-0957e09a21db"/>
+				<text><![CDATA[Fixed Deposit Scheme (Block Period of 5 yrs)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="213" width="340" height="20" uuid="de6aaaba-2750-480e-b9eb-deff309b4f24"/>
+				<text><![CDATA[NSC Interest (Will be considered as Other Income)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="128" width="340" height="20" uuid="e5586170-31c7-4f7c-99e3-37bc1e3e3199"/>
+				<text><![CDATA[ULIP]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="212" width="110" height="20" uuid="55681e85-d1c5-41fe-898b-74d97091236b"/>
+				<textFieldExpression><![CDATA[$F{nscInterest}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="46" width="340" height="20" uuid="36caace2-2c46-4300-b9de-a5032657d53c"/>
+				<text><![CDATA[Infrastructure Bonds]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="440" width="339" height="20" uuid="f4d498d5-a2c4-4435-9b7b-af6292073e75"/>
+				<text><![CDATA[Particular]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="443" width="109" height="20" uuid="179d3a17-b43c-4888-b9eb-03b039a4ccf4"/>
+				<text><![CDATA[AMOUNT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="462" width="339" height="20" uuid="55b9c2a0-52ea-4ee1-b249-bb638ac781dd"/>
+				<text><![CDATA[Annual Income (Basic+HRA+Medical+Travel+Conveyance)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="483" width="340" height="20" uuid="cad06934-295f-49f2-a69e-81ebe4155ec6"/>
+				<text><![CDATA[Less Profession Tax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="504" width="339" height="20" uuid="43c7fc45-3913-415a-b4d5-ff7d058b21d9"/>
+				<text><![CDATA[Less exempt (HRA+B+C+D+E)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="525" width="339" height="20" uuid="8977ecac-9e81-4102-8c07-f794a5d4841b"/>
+				<text><![CDATA[Gross Taxable Income]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="545" width="339" height="20" uuid="397ddacf-201b-4b31-a93a-de3860c4a00e"/>
+				<text><![CDATA[Income Tax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="565" width="339" height="20" uuid="566a7e4c-56ce-437c-831b-8b712d9aa1d1"/>
+				<text><![CDATA[Education Cess @ 3% of Income Tax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="587" width="340" height="20" uuid="954d4ca4-0c71-4fca-bfb8-f8938082259b"/>
+				<text><![CDATA[Net Tax Payable]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="609" width="339" height="20" uuid="12b3d4d2-186a-4736-9ee4-2866f3931ab2"/>
+				<text><![CDATA[Advance Tax Paid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="630" width="339" height="20" uuid="d827a70b-e0db-40ef-9094-2fb379082914"/>
+				<text><![CDATA[Tax Due]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="651" width="339" height="20" uuid="8f52dc0f-f243-4b83-b9a7-befd79af196a"/>
+				<text><![CDATA[TDS Per month]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="465" width="110" height="20" uuid="b682c402-461b-43ad-a936-0ad0e02c524a"/>
+				<textFieldExpression><![CDATA[$F{salaryBeforeExempt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="485" width="111" height="20" uuid="02fe82a7-65ee-4ecf-8a58-1be3ee081041"/>
+				<textFieldExpression><![CDATA[$F{totalPtax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="505" width="110" height="20" uuid="5e701b04-76ba-439f-8aae-7e9e20c6d3f6"/>
+				<textFieldExpression><![CDATA[$F{sectionBExempt}+$F{sectionCExempt}+$F{hraExempt}+$F{sectionDExempt}+$F{previousTds}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="525" width="110" height="20" uuid="a0b83a1e-333c-496f-994a-c61364ae48e5"/>
+				<textFieldExpression><![CDATA[$F{grossTds}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="546" width="112" height="20" uuid="971decbb-e81a-4101-8b2d-39fce1d8127a"/>
+				<textFieldExpression><![CDATA[$F{currentMonthTax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="418" y="568" width="111" height="20" uuid="6a10b1ad-74eb-45de-b37e-d76909d3da9e"/>
+				<textFieldExpression><![CDATA[$F{educationCess}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="589" width="116" height="20" uuid="f6a8ec98-f32a-4ed2-bf50-2b19778ad98b"/>
+				<textFieldExpression><![CDATA[$F{totalTds}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="610" width="114" height="20" uuid="4a18dc78-9d83-437d-a6c7-fec678788bf9"/>
+				<textFieldExpression><![CDATA[$F{tdsDeducted}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="631" width="113" height="20" uuid="ecbea565-1a49-4e07-9f5c-5cb6bfd92e0d"/>
+				<textFieldExpression><![CDATA[$F{tdsDuePerMonth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="652" width="116" height="20" uuid="f2877419-d90d-4bc8-a95a-f1307d1ad8ad"/>
+				<textFieldExpression><![CDATA[$F{currentMonthTax}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,4 @@
+Bundle-Name: MyTimesheet
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.mytimesheet
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.mytimesheet.constants

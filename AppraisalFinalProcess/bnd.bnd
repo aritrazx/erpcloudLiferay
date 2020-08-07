@@ -1,0 +1,6 @@
+Bundle-Name: AppraisalFinalProcess
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.finalprocess
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.finalprocess.constants
+Import-Package:  \
+	*;resolution:=optional

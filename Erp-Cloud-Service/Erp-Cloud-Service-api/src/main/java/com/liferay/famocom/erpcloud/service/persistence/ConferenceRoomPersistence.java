@@ -1,0 +1,163 @@
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+
+package com.liferay.famocom.erpcloud.service.persistence;
+
+import aQute.bnd.annotation.ProviderType;
+
+import com.liferay.famocom.erpcloud.exception.NoSuchConferenceRoomException;
+import com.liferay.famocom.erpcloud.model.ConferenceRoom;
+
+import com.liferay.portal.kernel.service.persistence.BasePersistence;
+
+/**
+ * The persistence interface for the conference room service.
+ *
+ * <p>
+ * Caching information and settings can be found in <code>portal.properties</code>
+ * </p>
+ *
+ * @author Samaresh
+ * @see com.liferay.famocom.erpcloud.service.persistence.impl.ConferenceRoomPersistenceImpl
+ * @see ConferenceRoomUtil
+ * @generated
+ */
+@ProviderType
+public interface ConferenceRoomPersistence extends BasePersistence<ConferenceRoom> {
+	/*
+	 * NOTE FOR DEVELOPERS:
+	 *
+	 * Never modify or reference this interface directly. Always use {@link ConferenceRoomUtil} to access the conference room persistence. Modify <code>service.xml</code> and rerun ServiceBuilder to regenerate this interface.
+	 */
+
+	/**
+	* Caches the conference room in the entity cache if it is enabled.
+	*
+	* @param conferenceRoom the conference room
+	*/
+	public void cacheResult(ConferenceRoom conferenceRoom);
+
+	/**
+	* Caches the conference rooms in the entity cache if it is enabled.
+	*
+	* @param conferenceRooms the conference rooms
+	*/
+	public void cacheResult(java.util.List<ConferenceRoom> conferenceRooms);
+
+	/**
+	* Creates a new conference room with the primary key. Does not add the conference room to the database.
+	*
+	* @param roomId the primary key for the new conference room
+	* @return the new conference room
+	*/
+	public ConferenceRoom create(long roomId);
+
+	/**
+	* Removes the conference room with the primary key from the database. Also notifies the appropriate model listeners.
+	*
+	* @param roomId the primary key of the conference room
+	* @return the conference room that was removed
+	* @throws NoSuchConferenceRoomException if a conference room with the primary key could not be found
+	*/
+	public ConferenceRoom remove(long roomId)
+		throws NoSuchConferenceRoomException;
+
+	public ConferenceRoom updateImpl(ConferenceRoom conferenceRoom);
+
+	/**
+	* Returns the conference room with the primary key or throws a {@link NoSuchConferenceRoomException} if it could not be found.
+	*
+	* @param roomId the primary key of the conference room
+	* @return the conference room
+	* @throws NoSuchConferenceRoomException if a conference room with the primary key could not be found
+	*/
+	public ConferenceRoom findByPrimaryKey(long roomId)
+		throws NoSuchConferenceRoomException;
+
+	/**
+	* Returns the conference room with the primary key or returns <code>null</code> if it could not be found.
+	*
+	* @param roomId the primary key of the conference room
+	* @return the conference room, or <code>null</code> if a conference room with the primary key could not be found
+	*/
+	public ConferenceRoom fetchByPrimaryKey(long roomId);
+
+	@Override
+	public java.util.Map<java.io.Serializable, ConferenceRoom> fetchByPrimaryKeys(
+		java.util.Set<java.io.Serializable> primaryKeys);
+
+	/**
+	* Returns all the conference rooms.
+	*
+	* @return the conference rooms
+	*/
+	public java.util.List<ConferenceRoom> findAll();
+
+	/**
+	* Returns a range of all the conference rooms.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link ConferenceRoomModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param start the lower bound of the range of conference rooms
+	* @param end the upper bound of the range of conference rooms (not inclusive)
+	* @return the range of conference rooms
+	*/
+	public java.util.List<ConferenceRoom> findAll(int start, int end);
+
+	/**
+	* Returns an ordered range of all the conference rooms.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link ConferenceRoomModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param start the lower bound of the range of conference rooms
+	* @param end the upper bound of the range of conference rooms (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of conference rooms
+	*/
+	public java.util.List<ConferenceRoom> findAll(int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator<ConferenceRoom> orderByComparator);
+
+	/**
+	* Returns an ordered range of all the conference rooms.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link ConferenceRoomModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param start the lower bound of the range of conference rooms
+	* @param end the upper bound of the range of conference rooms (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @param retrieveFromCache whether to retrieve from the finder cache
+	* @return the ordered range of conference rooms
+	*/
+	public java.util.List<ConferenceRoom> findAll(int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator<ConferenceRoom> orderByComparator,
+		boolean retrieveFromCache);
+
+	/**
+	* Removes all the conference rooms from the database.
+	*/
+	public void removeAll();
+
+	/**
+	* Returns the number of conference rooms.
+	*
+	* @return the number of conference rooms
+	*/
+	public int countAll();
+}

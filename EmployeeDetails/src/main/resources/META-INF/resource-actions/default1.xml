@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 7.0.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_7_0_0.dtd">
+
+<resource-action-mapping>
+	<portlet-resource>
+		<portlet-name>EmployeeDetails</portlet-name>
+		<permissions>
+			<supports>
+				<action-key>EMPLOYEE_VIEW</action-key>
+				<action-key>EMPLOYEE_ADD</action-key>
+			</supports>
+		</permissions>
+	</portlet-resource>
+	<model-resource>
+		<model-name>com.liferay.famocom.erpcloud.model.Employee</model-name>
+		<portlet-ref>
+			<portlet-name>EmployeeDetails</portlet-name>
+		</portlet-ref>
+		<permissions>
+			<supports>
+				<action-key>EMPLOYEE_DEACTIVATE</action-key>
+				<action-key>EMPLOYEE_ACTIVATE</action-key>
+				<action-key>EMPLOYEE_UPDATE</action-key>
+			</supports>
+		</permissions>
+	</model-resource>
+</resource-action-mapping>

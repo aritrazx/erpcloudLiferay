@@ -1,0 +1,276 @@
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+
+package com.liferay.famocom.erpcloud.service;
+
+import aQute.bnd.annotation.ProviderType;
+
+import com.liferay.portal.kernel.service.ServiceWrapper;
+
+/**
+ * Provides a wrapper for {@link TaskMasterLocalService}.
+ *
+ * @author Samaresh
+ * @see TaskMasterLocalService
+ * @generated
+ */
+@ProviderType
+public class TaskMasterLocalServiceWrapper implements TaskMasterLocalService,
+	ServiceWrapper<TaskMasterLocalService> {
+	public TaskMasterLocalServiceWrapper(
+		TaskMasterLocalService taskMasterLocalService) {
+		_taskMasterLocalService = taskMasterLocalService;
+	}
+
+	/**
+	* Adds the task master to the database. Also notifies the appropriate model listeners.
+	*
+	* @param taskMaster the task master
+	* @return the task master that was added
+	*/
+	@Override
+	public com.liferay.famocom.erpcloud.model.TaskMaster addTaskMaster(
+		com.liferay.famocom.erpcloud.model.TaskMaster taskMaster) {
+		return _taskMasterLocalService.addTaskMaster(taskMaster);
+	}
+
+	/**
+	* Creates a new task master with the primary key. Does not add the task master to the database.
+	*
+	* @param taskId the primary key for the new task master
+	* @return the new task master
+	*/
+	@Override
+	public com.liferay.famocom.erpcloud.model.TaskMaster createTaskMaster(
+		long taskId) {
+		return _taskMasterLocalService.createTaskMaster(taskId);
+	}
+
+	/**
+	* @throws PortalException
+	*/
+	@Override
+	public com.liferay.portal.kernel.model.PersistedModel deletePersistedModel(
+		com.liferay.portal.kernel.model.PersistedModel persistedModel)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _taskMasterLocalService.deletePersistedModel(persistedModel);
+	}
+
+	/**
+	* Deletes the task master with the primary key from the database. Also notifies the appropriate model listeners.
+	*
+	* @param taskId the primary key of the task master
+	* @return the task master that was removed
+	* @throws PortalException if a task master with the primary key could not be found
+	*/
+	@Override
+	public com.liferay.famocom.erpcloud.model.TaskMaster deleteTaskMaster(
+		long taskId) throws com.liferay.portal.kernel.exception.PortalException {
+		return _taskMasterLocalService.deleteTaskMaster(taskId);
+	}
+
+	/**
+	* Deletes the task master from the database. Also notifies the appropriate model listeners.
+	*
+	* @param taskMaster the task master
+	* @return the task master that was removed
+	*/
+	@Override
+	public com.liferay.famocom.erpcloud.model.TaskMaster deleteTaskMaster(
+		com.liferay.famocom.erpcloud.model.TaskMaster taskMaster) {
+		return _taskMasterLocalService.deleteTaskMaster(taskMaster);
+	}
+
+	@Override
+	public com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery() {
+		return _taskMasterLocalService.dynamicQuery();
+	}
+
+	/**
+	* Performs a dynamic query on the database and returns the matching rows.
+	*
+	* @param dynamicQuery the dynamic query
+	* @return the matching rows
+	*/
+	@Override
+	public <T> java.util.List<T> dynamicQuery(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery) {
+		return _taskMasterLocalService.dynamicQuery(dynamicQuery);
+	}
+
+	/**
+	* Performs a dynamic query on the database and returns a range of the matching rows.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link com.liferay.famocom.erpcloud.model.impl.TaskMasterModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param dynamicQuery the dynamic query
+	* @param start the lower bound of the range of model instances
+	* @param end the upper bound of the range of model instances (not inclusive)
+	* @return the range of matching rows
+	*/
+	@Override
+	public <T> java.util.List<T> dynamicQuery(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery, int start,
+		int end) {
+		return _taskMasterLocalService.dynamicQuery(dynamicQuery, start, end);
+	}
+
+	/**
+	* Performs a dynamic query on the database and returns an ordered range of the matching rows.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link com.liferay.famocom.erpcloud.model.impl.TaskMasterModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param dynamicQuery the dynamic query
+	* @param start the lower bound of the range of model instances
+	* @param end the upper bound of the range of model instances (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching rows
+	*/
+	@Override
+	public <T> java.util.List<T> dynamicQuery(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery, int start,
+		int end,
+		com.liferay.portal.kernel.util.OrderByComparator<T> orderByComparator) {
+		return _taskMasterLocalService.dynamicQuery(dynamicQuery, start, end,
+			orderByComparator);
+	}
+
+	/**
+	* Returns the number of rows matching the dynamic query.
+	*
+	* @param dynamicQuery the dynamic query
+	* @return the number of rows matching the dynamic query
+	*/
+	@Override
+	public long dynamicQueryCount(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery) {
+		return _taskMasterLocalService.dynamicQueryCount(dynamicQuery);
+	}
+
+	/**
+	* Returns the number of rows matching the dynamic query.
+	*
+	* @param dynamicQuery the dynamic query
+	* @param projection the projection to apply to the query
+	* @return the number of rows matching the dynamic query
+	*/
+	@Override
+	public long dynamicQueryCount(
+		com.liferay.portal.kernel.dao.orm.DynamicQuery dynamicQuery,
+		com.liferay.portal.kernel.dao.orm.Projection projection) {
+		return _taskMasterLocalService.dynamicQueryCount(dynamicQuery,
+			projection);
+	}
+
+	@Override
+	public com.liferay.famocom.erpcloud.model.TaskMaster fetchTaskMaster(
+		long taskId) {
+		return _taskMasterLocalService.fetchTaskMaster(taskId);
+	}
+
+	@Override
+	public com.liferay.portal.kernel.dao.orm.ActionableDynamicQuery getActionableDynamicQuery() {
+		return _taskMasterLocalService.getActionableDynamicQuery();
+	}
+
+	@Override
+	public com.liferay.portal.kernel.dao.orm.IndexableActionableDynamicQuery getIndexableActionableDynamicQuery() {
+		return _taskMasterLocalService.getIndexableActionableDynamicQuery();
+	}
+
+	/**
+	* Returns the OSGi service identifier.
+	*
+	* @return the OSGi service identifier
+	*/
+	@Override
+	public String getOSGiServiceIdentifier() {
+		return _taskMasterLocalService.getOSGiServiceIdentifier();
+	}
+
+	@Override
+	public com.liferay.portal.kernel.model.PersistedModel getPersistedModel(
+		java.io.Serializable primaryKeyObj)
+		throws com.liferay.portal.kernel.exception.PortalException {
+		return _taskMasterLocalService.getPersistedModel(primaryKeyObj);
+	}
+
+	/**
+	* Returns the task master with the primary key.
+	*
+	* @param taskId the primary key of the task master
+	* @return the task master
+	* @throws PortalException if a task master with the primary key could not be found
+	*/
+	@Override
+	public com.liferay.famocom.erpcloud.model.TaskMaster getTaskMaster(
+		long taskId) throws com.liferay.portal.kernel.exception.PortalException {
+		return _taskMasterLocalService.getTaskMaster(taskId);
+	}
+
+	/**
+	* Returns a range of all the task masters.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link com.liferay.famocom.erpcloud.model.impl.TaskMasterModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param start the lower bound of the range of task masters
+	* @param end the upper bound of the range of task masters (not inclusive)
+	* @return the range of task masters
+	*/
+	@Override
+	public java.util.List<com.liferay.famocom.erpcloud.model.TaskMaster> getTaskMasters(
+		int start, int end) {
+		return _taskMasterLocalService.getTaskMasters(start, end);
+	}
+
+	/**
+	* Returns the number of task masters.
+	*
+	* @return the number of task masters
+	*/
+	@Override
+	public int getTaskMastersCount() {
+		return _taskMasterLocalService.getTaskMastersCount();
+	}
+
+	/**
+	* Updates the task master in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
+	*
+	* @param taskMaster the task master
+	* @return the task master that was updated
+	*/
+	@Override
+	public com.liferay.famocom.erpcloud.model.TaskMaster updateTaskMaster(
+		com.liferay.famocom.erpcloud.model.TaskMaster taskMaster) {
+		return _taskMasterLocalService.updateTaskMaster(taskMaster);
+	}
+
+	@Override
+	public TaskMasterLocalService getWrappedService() {
+		return _taskMasterLocalService;
+	}
+
+	@Override
+	public void setWrappedService(TaskMasterLocalService taskMasterLocalService) {
+		_taskMasterLocalService = taskMasterLocalService;
+	}
+
+	private TaskMasterLocalService _taskMasterLocalService;
+}

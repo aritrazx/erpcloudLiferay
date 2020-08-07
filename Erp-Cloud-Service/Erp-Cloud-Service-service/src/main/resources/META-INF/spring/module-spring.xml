@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AddTeamMemberLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.AddTeamMemberLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AddTeamMemberServiceImpl" id="com.liferay.famocom.erpcloud.service.AddTeamMemberService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.AddTeamMemberPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.AddTeamMemberPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AppraisalGoalDetailsLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.AppraisalGoalDetailsLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AppraisalGoalDetailsServiceImpl" id="com.liferay.famocom.erpcloud.service.AppraisalGoalDetailsService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.AppraisalGoalDetailsPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.AppraisalGoalDetailsPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AppraisalGoalMasterLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.AppraisalGoalMasterLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AppraisalGoalMasterServiceImpl" id="com.liferay.famocom.erpcloud.service.AppraisalGoalMasterService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.AppraisalGoalMasterPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.AppraisalGoalMasterPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AppraisalMasterLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.AppraisalMasterLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AppraisalMasterServiceImpl" id="com.liferay.famocom.erpcloud.service.AppraisalMasterService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.AppraisalMasterPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.AppraisalMasterPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AppraisalPerformanceLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.AppraisalPerformanceLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AppraisalPerformanceServiceImpl" id="com.liferay.famocom.erpcloud.service.AppraisalPerformanceService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.AppraisalPerformancePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.AppraisalPerformancePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AppraisalProjectMasterLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.AppraisalProjectMasterLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AppraisalProjectMasterServiceImpl" id="com.liferay.famocom.erpcloud.service.AppraisalProjectMasterService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.AppraisalProjectMasterPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.AppraisalProjectMasterPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AppraisalSetupLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.AppraisalSetupLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AppraisalSetupServiceImpl" id="com.liferay.famocom.erpcloud.service.AppraisalSetupService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.AppraisalSetupPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.AppraisalSetupPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AttendanceLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.AttendanceLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AttendanceServiceImpl" id="com.liferay.famocom.erpcloud.service.AttendanceService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.AttendancePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.AttendancePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AttendanceBioLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.AttendanceBioLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AttendanceBioServiceImpl" id="com.liferay.famocom.erpcloud.service.AttendanceBioService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.AttendanceBioPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.AttendanceBioPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AttendanceCheckListLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.AttendanceCheckListLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.AttendanceCheckListServiceImpl" id="com.liferay.famocom.erpcloud.service.AttendanceCheckListService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.AttendanceCheckListPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.AttendanceCheckListPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.BankMasterLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.BankMasterLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.BankMasterServiceImpl" id="com.liferay.famocom.erpcloud.service.BankMasterService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.BankMasterPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.BankMasterPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.BillDocumentUploadFileLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.BillDocumentUploadFileLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.BillDocumentUploadFileServiceImpl" id="com.liferay.famocom.erpcloud.service.BillDocumentUploadFileService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.BillDocumentUploadFilePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.BillDocumentUploadFilePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.BillingLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.BillingLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.BillingServiceImpl" id="com.liferay.famocom.erpcloud.service.BillingService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.BillingPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.BillingPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.BookingRoomLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.BookingRoomLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.BookingRoomServiceImpl" id="com.liferay.famocom.erpcloud.service.BookingRoomService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.BookingRoomPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.BookingRoomPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.BranchLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.BranchLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.BranchServiceImpl" id="com.liferay.famocom.erpcloud.service.BranchService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.BranchPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.BranchPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.CandidateApplyLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.CandidateApplyLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.CandidateApplyServiceImpl" id="com.liferay.famocom.erpcloud.service.CandidateApplyService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.CandidateApplyPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.CandidateApplyPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.CandidateEvaluationLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.CandidateEvaluationLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.CandidateEvaluationServiceImpl" id="com.liferay.famocom.erpcloud.service.CandidateEvaluationService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.CandidateEvaluationPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.CandidateEvaluationPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.CandidatePayStructureMasterLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.CandidatePayStructureMasterLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.CandidatePayStructureMasterServiceImpl" id="com.liferay.famocom.erpcloud.service.CandidatePayStructureMasterService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.CandidatePayStructureMasterPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.CandidatePayStructureMasterPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.CandidateReviewLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.CandidateReviewLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.CandidateReviewServiceImpl" id="com.liferay.famocom.erpcloud.service.CandidateReviewService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.CandidateReviewPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.CandidateReviewPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ClientMasterLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.ClientMasterLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ClientMasterServiceImpl" id="com.liferay.famocom.erpcloud.service.ClientMasterService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.ClientMasterPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.ClientMasterPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.CompanyPolicyLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.CompanyPolicyLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.CompanyPolicyServiceImpl" id="com.liferay.famocom.erpcloud.service.CompanyPolicyService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.CompanyPolicyPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.CompanyPolicyPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ConferenceRoomLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.ConferenceRoomLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ConferenceRoomServiceImpl" id="com.liferay.famocom.erpcloud.service.ConferenceRoomService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.ConferenceRoomPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.ConferenceRoomPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.DocumentUploadFileLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.DocumentUploadFileLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.DocumentUploadFileServiceImpl" id="com.liferay.famocom.erpcloud.service.DocumentUploadFileService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.DocumentUploadFilePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.DocumentUploadFilePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.EmailTemplateLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.EmailTemplateLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.EmailTemplateServiceImpl" id="com.liferay.famocom.erpcloud.service.EmailTemplateService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.EmailTemplatePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.EmailTemplatePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.EmployeeLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.EmployeeLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.EmployeeServiceImpl" id="com.liferay.famocom.erpcloud.service.EmployeeService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.EmployeePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.EmployeePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.EmployeeFinderImpl" id="com.liferay.famocom.erpcloud.service.persistence.EmployeeFinder" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.EmployeeDocumentUploadLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.EmployeeDocumentUploadLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.EmployeeDocumentUploadServiceImpl" id="com.liferay.famocom.erpcloud.service.EmployeeDocumentUploadService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.EmployeeDocumentUploadPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.EmployeeDocumentUploadPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.EmployeeTypeLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.EmployeeTypeLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.EmployeeTypeServiceImpl" id="com.liferay.famocom.erpcloud.service.EmployeeTypeService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.EmployeeTypePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.EmployeeTypePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.EmpPayStructureLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.EmpPayStructureLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.EmpPayStructureServiceImpl" id="com.liferay.famocom.erpcloud.service.EmpPayStructureService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.EmpPayStructurePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.EmpPayStructurePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.EmpPayStructureFinderImpl" id="com.liferay.famocom.erpcloud.service.persistence.EmpPayStructureFinder" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.EvaluationLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.EvaluationLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.EvaluationServiceImpl" id="com.liferay.famocom.erpcloud.service.EvaluationService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.EvaluationPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.EvaluationPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ExpCategoryLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.ExpCategoryLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ExpCategoryServiceImpl" id="com.liferay.famocom.erpcloud.service.ExpCategoryService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.ExpCategoryPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.ExpCategoryPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ExpenseLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.ExpenseLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ExpenseServiceImpl" id="com.liferay.famocom.erpcloud.service.ExpenseService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.ExpensePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.ExpensePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ExpenseEntryLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.ExpenseEntryLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ExpenseEntryServiceImpl" id="com.liferay.famocom.erpcloud.service.ExpenseEntryService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.ExpenseEntryPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.ExpenseEntryPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ExpenseEntryHistoryLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.ExpenseEntryHistoryLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ExpenseEntryHistoryServiceImpl" id="com.liferay.famocom.erpcloud.service.ExpenseEntryHistoryService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.ExpenseEntryHistoryPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.ExpenseEntryHistoryPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ExpProofFilesLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.ExpProofFilesLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ExpProofFilesServiceImpl" id="com.liferay.famocom.erpcloud.service.ExpProofFilesService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.ExpProofFilesPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.ExpProofFilesPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.FinSalaryLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.FinSalaryLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.FinSalaryServiceImpl" id="com.liferay.famocom.erpcloud.service.FinSalaryService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.FinSalaryPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.FinSalaryPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.FormSixteenLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.FormSixteenLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.FormSixteenServiceImpl" id="com.liferay.famocom.erpcloud.service.FormSixteenService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.FormSixteenPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.FormSixteenPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.FormSixteenErrorFileLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.FormSixteenErrorFileLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.FormSixteenErrorFileServiceImpl" id="com.liferay.famocom.erpcloud.service.FormSixteenErrorFileService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.FormSixteenErrorFilePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.FormSixteenErrorFilePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.GeoAttendanceLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.GeoAttendanceLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.GeoAttendanceServiceImpl" id="com.liferay.famocom.erpcloud.service.GeoAttendanceService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.GeoAttendancePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.GeoAttendancePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.GoalDetailsLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.GoalDetailsLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.GoalDetailsServiceImpl" id="com.liferay.famocom.erpcloud.service.GoalDetailsService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.GoalDetailsPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.GoalDetailsPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.GoalMasterLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.GoalMasterLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.GoalMasterServiceImpl" id="com.liferay.famocom.erpcloud.service.GoalMasterService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.GoalMasterPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.GoalMasterPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.HolidayCalenderManagementLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.HolidayCalenderManagementLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.HolidayCalenderManagementServiceImpl" id="com.liferay.famocom.erpcloud.service.HolidayCalenderManagementService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.HolidayCalenderManagementPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.HolidayCalenderManagementPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.IncomeTaxSlabLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.IncomeTaxSlabLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.IncomeTaxSlabPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.IncomeTaxSlabPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.InterviewEvaluationLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.InterviewEvaluationLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.InterviewEvaluationServiceImpl" id="com.liferay.famocom.erpcloud.service.InterviewEvaluationService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.InterviewEvaluationPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.InterviewEvaluationPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.JobEvaluationLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.JobEvaluationLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.JobEvaluationServiceImpl" id="com.liferay.famocom.erpcloud.service.JobEvaluationService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.JobEvaluationPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.JobEvaluationPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.JobOpeningLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.JobOpeningLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.JobOpeningServiceImpl" id="com.liferay.famocom.erpcloud.service.JobOpeningService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.JobOpeningPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.JobOpeningPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.JobPostLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.JobPostLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.JobPostServiceImpl" id="com.liferay.famocom.erpcloud.service.JobPostService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.JobPostPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.JobPostPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.LeaveApplyLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.LeaveApplyLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.LeaveApplyServiceImpl" id="com.liferay.famocom.erpcloud.service.LeaveApplyService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.LeaveApplyPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.LeaveApplyPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.LeaveApplyDtlLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.LeaveApplyDtlLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.LeaveApplyDtlServiceImpl" id="com.liferay.famocom.erpcloud.service.LeaveApplyDtlService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.LeaveApplyDtlPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.LeaveApplyDtlPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.LeaveDocLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.LeaveDocLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.LeaveDocServiceImpl" id="com.liferay.famocom.erpcloud.service.LeaveDocService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.LeaveDocPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.LeaveDocPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.LeaveManagementLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.LeaveManagementLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.LeaveManagementServiceImpl" id="com.liferay.famocom.erpcloud.service.LeaveManagementService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.LeaveManagementPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.LeaveManagementPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.LeaveObLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.LeaveObLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.LeaveObServiceImpl" id="com.liferay.famocom.erpcloud.service.LeaveObService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.LeaveObPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.LeaveObPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.LeaveTypeLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.LeaveTypeLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.LeaveTypeServiceImpl" id="com.liferay.famocom.erpcloud.service.LeaveTypeService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.LeaveTypePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.LeaveTypePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.MilestoneLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.MilestoneLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.MilestoneServiceImpl" id="com.liferay.famocom.erpcloud.service.MilestoneService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.MilestonePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.MilestonePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.MonthlyAdjustmentLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.MonthlyAdjustmentLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.MonthlyAdjustmentServiceImpl" id="com.liferay.famocom.erpcloud.service.MonthlyAdjustmentService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.MonthlyAdjustmentPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.MonthlyAdjustmentPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.NotificationMasterManageLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.NotificationMasterManageLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.NotificationMasterManageServiceImpl" id="com.liferay.famocom.erpcloud.service.NotificationMasterManageService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.NotificationMasterManagePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.NotificationMasterManagePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.NotificationSendManageLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.NotificationSendManageLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.NotificationSendManageServiceImpl" id="com.liferay.famocom.erpcloud.service.NotificationSendManageService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.NotificationSendManagePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.NotificationSendManagePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.PayComponentLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.PayComponentLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.PayComponentServiceImpl" id="com.liferay.famocom.erpcloud.service.PayComponentService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.PayComponentPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.PayComponentPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.PayrollIncrementLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.PayrollIncrementLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.PayrollIncrementServiceImpl" id="com.liferay.famocom.erpcloud.service.PayrollIncrementService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.PayrollIncrementPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.PayrollIncrementPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.PayrollSlabsLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.PayrollSlabsLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.PayrollSlabsServiceImpl" id="com.liferay.famocom.erpcloud.service.PayrollSlabsService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.PayrollSlabsPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.PayrollSlabsPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.PerformanceLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.PerformanceLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.PerformanceServiceImpl" id="com.liferay.famocom.erpcloud.service.PerformanceService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.PerformancePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.PerformancePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.PerformanceMasterLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.PerformanceMasterLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.PerformanceMasterServiceImpl" id="com.liferay.famocom.erpcloud.service.PerformanceMasterService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.PerformanceMasterPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.PerformanceMasterPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ProjectMasterLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.ProjectMasterLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ProjectMasterServiceImpl" id="com.liferay.famocom.erpcloud.service.ProjectMasterService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.ProjectMasterPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.ProjectMasterPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ProjectRoleLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.ProjectRoleLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ProjectRoleServiceImpl" id="com.liferay.famocom.erpcloud.service.ProjectRoleService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.ProjectRolePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.ProjectRolePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ProjectStatusLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.ProjectStatusLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ProjectStatusServiceImpl" id="com.liferay.famocom.erpcloud.service.ProjectStatusService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.ProjectStatusPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.ProjectStatusPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ProjectTaskLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.ProjectTaskLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ProjectTaskServiceImpl" id="com.liferay.famocom.erpcloud.service.ProjectTaskService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.ProjectTaskPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.ProjectTaskPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.PushNotificationLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.PushNotificationLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.PushNotificationServiceImpl" id="com.liferay.famocom.erpcloud.service.PushNotificationService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.PushNotificationPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.PushNotificationPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.RatingMasterLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.RatingMasterLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.RatingMasterServiceImpl" id="com.liferay.famocom.erpcloud.service.RatingMasterService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.RatingMasterPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.RatingMasterPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.RatingMasterFinderImpl" id="com.liferay.famocom.erpcloud.service.persistence.RatingMasterFinder" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.RecruitmentProcessLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.RecruitmentProcessLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.RecruitmentProcessServiceImpl" id="com.liferay.famocom.erpcloud.service.RecruitmentProcessService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.RecruitmentProcessPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.RecruitmentProcessPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.RecruitProcessLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.RecruitProcessLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.RecruitProcessServiceImpl" id="com.liferay.famocom.erpcloud.service.RecruitProcessService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.RecruitProcessPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.RecruitProcessPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ResignationLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.ResignationLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.ResignationServiceImpl" id="com.liferay.famocom.erpcloud.service.ResignationService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.ResignationPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.ResignationPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.SalDetailsLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.SalDetailsLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.SalDetailsServiceImpl" id="com.liferay.famocom.erpcloud.service.SalDetailsService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.SalDetailsPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.SalDetailsPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.SalDetailsFinderImpl" id="com.liferay.famocom.erpcloud.service.persistence.SalDetailsFinder" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.SchedulesDetailsLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.SchedulesDetailsLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.SchedulesDetailsServiceImpl" id="com.liferay.famocom.erpcloud.service.SchedulesDetailsService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.SchedulesDetailsPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.SchedulesDetailsPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.SchedulesMasterLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.SchedulesMasterLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.SchedulesMasterServiceImpl" id="com.liferay.famocom.erpcloud.service.SchedulesMasterService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.SchedulesMasterPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.SchedulesMasterPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.SelectedCandidatePayStructureLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.SelectedCandidatePayStructureLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.SelectedCandidatePayStructureServiceImpl" id="com.liferay.famocom.erpcloud.service.SelectedCandidatePayStructureService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.SelectedCandidatePayStructurePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.SelectedCandidatePayStructurePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.SkillSetLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.SkillSetLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.SkillSetServiceImpl" id="com.liferay.famocom.erpcloud.service.SkillSetService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.SkillSetPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.SkillSetPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.StopPayLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.StopPayLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.StopPayServiceImpl" id="com.liferay.famocom.erpcloud.service.StopPayService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.StopPayPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.StopPayPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TaskMasterLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.TaskMasterLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TaskMasterServiceImpl" id="com.liferay.famocom.erpcloud.service.TaskMasterService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.TaskMasterPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.TaskMasterPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TaskMasterMappingLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.TaskMasterMappingLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TaskMasterMappingServiceImpl" id="com.liferay.famocom.erpcloud.service.TaskMasterMappingService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.TaskMasterMappingPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.TaskMasterMappingPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TaxDeclarationLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.TaxDeclarationLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.TaxDeclarationPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.TaxDeclarationPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TaxDeclarationMonthlyLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.TaxDeclarationMonthlyLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TaxDeclarationMonthlyServiceImpl" id="com.liferay.famocom.erpcloud.service.TaxDeclarationMonthlyService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.TaxDeclarationMonthlyPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.TaxDeclarationMonthlyPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TaxProofFilesLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.TaxProofFilesLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TaxProofFilesServiceImpl" id="com.liferay.famocom.erpcloud.service.TaxProofFilesService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.TaxProofFilesPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.TaxProofFilesPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TaxSettingLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.TaxSettingLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.TaxSettingPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.TaxSettingPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TimeSheetEntryLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.TimeSheetEntryLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TimeSheetEntryServiceImpl" id="com.liferay.famocom.erpcloud.service.TimeSheetEntryService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.TimeSheetEntryPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.TimeSheetEntryPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TimeSheetMasterLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.TimeSheetMasterLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TimeSheetMasterServiceImpl" id="com.liferay.famocom.erpcloud.service.TimeSheetMasterService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.TimeSheetMasterPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.TimeSheetMasterPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TravelDeskDetailsLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.TravelDeskDetailsLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.TravelDeskDetailsServiceImpl" id="com.liferay.famocom.erpcloud.service.TravelDeskDetailsService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.TravelDeskDetailsPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.TravelDeskDetailsPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.WorkFromHomeLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.WorkFromHomeLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.WorkFromHomeServiceImpl" id="com.liferay.famocom.erpcloud.service.WorkFromHomeService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.WorkFromHomePersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.WorkFromHomePersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.WorksSchedulesLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.WorksSchedulesLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.WorksSchedulesServiceImpl" id="com.liferay.famocom.erpcloud.service.WorksSchedulesService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.WorksSchedulesPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.WorksSchedulesPersistence" parent="basePersistence" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.YearSettingLocalServiceImpl" id="com.liferay.famocom.erpcloud.service.YearSettingLocalService" />
+	<bean class="com.liferay.famocom.erpcloud.service.impl.YearSettingServiceImpl" id="com.liferay.famocom.erpcloud.service.YearSettingService" />
+	<bean class="com.liferay.famocom.erpcloud.service.persistence.impl.YearSettingPersistenceImpl" id="com.liferay.famocom.erpcloud.service.persistence.YearSettingPersistence" parent="basePersistence" />
+</beans>

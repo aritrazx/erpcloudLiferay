@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+	
+	body{ font-size:12px; color:#777;}
+	
+	p,span { padding:0px; margin:0px;}
+	
+	
+		
+	</style>
+</head>
+<body >
+ 
+
+              <table  width="100%" align="center">
+          
+             
+	             <tr class="top">
+	            <td align="left" valign="top" style="padding:0px;"><img src="[logo_str]" style="width:100px; height:70px;" /></td>
+	           
+	            <td align="right" valign="middle" style="text-align:right; padding-top:10px;">
+					<p><strong>[companyName]</strong></p>
+					<p style="font-size:12px;">[companyAddress]</p>
+					<p style="font-size:12px;">[companyPhone]</p>
+					<p style="font-size:12px;">[companyEmail]</p>
+					<p style="font-size:12px;">[companywebsite]</p>
+				</td>
+	            </tr>
+	              
+               <tr><td colspan="2" align="center" style="padding-top:25px;"  ><h4>Tax Computation as on [fromdate] <!-- '.$fromdate.' --> For the Financial Year [financialYear]<!--  '.FINANCIALYEAR.'  --></h4></td></tr>
+              <tr><td colspan="2" align="center"></td></tr>
+              <tr>
+              <td colspan="2">
+              <table width="100%" align="center" style="border: 1px solid black;">
+                <tr>
+                <td width="30%" style="padding:5px;">Employee ID :</td>
+                <td align="left" style="padding:5px;font-weight:bold;">[employeeId]</td>
+                </tr>
+                <tr>
+                <td width="30%" style="padding:5px;">Employee Name :</td>
+                <td align="left" style="padding:5px;font-weight:bold;">[employeeName]</td>
+                </tr>
+                <tr>
+                <td width="30%" style="padding:5px;">PAN No :</td>
+                <td align="left" style="padding:5px;font-weight:bold;">[employeePanNo]</td>
+                </tr>
+                <tr>
+                <td width="30%" style="padding:5px;">Date of Joining :</td>
+                <td align="left" style="padding:5px;font-weight:bold;"> [dateOfJoining] </td>
+                </tr>
+                <tr>
+                <td width="30%" style="padding:5px;">Gender :</td>
+                <td align="left" style="padding:5px;font-weight:bold;">[employeeGender]</td>
+                </tr>
+                </table>
+              </td>
+              </tr>
+              
+              <tr>
+              <td colspan="2">
+              <table cellspacing="0"  style="border: 1px solid black;"  width="100%" align="center" >
+              <tr>
+              <td  width="70%" style="background-color:#DBDBDB;padding:10px;border-right:1px solid black;border-bottom:1px solid black" align="center">House Rent Allowance</td>
+              <td  align="center" width="15%" style="background-color:#DBDBDB;padding:10px;border-bottom:1px solid black">AMOUNT</td>
+              <td align="center" align="center" width="15%" style="background-color:#DBDBDB;border-left:1px solid black;padding:10px;border-bottom:1px solid black">EXEMPT</td>
+              </tr>
+              <tr bgcolor="">
+              <td align="right" style="padding:5px;border-right:1px solid black;" ><strong>Rent Paid per month</strong></td>
+              <td align="right" style="padding:5px;" ><strong>[hraRent]</strong></td> 
+              <td align="right"  style="padding:5px;border-left:1px solid black;"  ><strong>[hraExempt]</strong></td>
+              </tr>
+              </table>
+              </td>
+              </tr>  
+
+              <tr>
+              <td colspan="2">
+              <table cellspacing="0" style="border: 1px solid black;"   width="100%" align="center" >
+              <tr>
+              <td align="center" width="70%" style="padding:10px;background-color:#DBDBDB;border-right:1px solid black;border-bottom:1px solid black">Section B - Chapter VI A - Deductions from Total Income </td>
+              <td align="center" align="center" width="15%" style="background-color:#DBDBDB;padding:10px;border-bottom:1px solid black">AMOUNT</td>
+              <td align="center" align="center" width="15%" style="background-color:#DBDBDB;padding:10px;border-left:1px solid black;border-bottom:1px solid black">EXEMPT</td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Medical Insurance Premium (U/s 80D) - Individual, Spouse & Children (Max Limit INR 25,000 p.a)</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black" > [medicalIndividual]</td>
+              <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black" >Medical Insurance Premium (U/s 80D) - Parents not being Senior Citizens (Max Limit INR 25,000 p.a)</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black" >  [medicalParents] </td>
+              <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black" >Medical Insurance Premium (U/s 80D) - Parents being Senior Citizens (Max Limit INR 30,000 p.a)</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black" > [medicalParentsSenior]  </td>
+              <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+            <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Medical Treatment/Handicapped Dependent (U/s 80DD) &#60; 80% </td> 
+              <td align="right" style="padding:5px;border-bottom:1px solid black" >[medicalHandiLess80]</td>
+              <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Medical Treatment/Handicapped Dependent (U/s 80DD) >80%</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black" > [medicalHandiGater80]</td>
+              <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+               <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Medical Treatment in case any Disease/ Ailment-Self/Dependent (U/s 80DDB) Senior citizens (> 60 years and  &#60;  80 years)</td> 
+              <td align="right" style="padding:5px;border-bottom:1px solid black" > [medicalGater60Less80]  </td>
+              <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Medical Treatment in case any Disease/ Ailment-Self/Dependent (U/s 80DDB) Super Senior citizens (> 80 years )</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black"> [medicalGater80]</td>
+              <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Interest on Educational Loan (U/s 80E)</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black" >[educationLoan]</td>
+              <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Permanent Physical Disability (80U)  &#60;  80%</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black" > [physicalDisability]</td>
+              <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Permanent Physical Disability Severe Disability (80U) > 80%</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[physicalDisabilitySevere]</td>
+              <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr style="padding:5px;border-right:1px solid black;border-bottom:1px solid black" >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black" >Rajeev Gandhi Equity Savings Scheme (80CCG)</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[equitySavings]</td>
+              <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black" >Interest on Deposit in Savings Account deduction upto Rs.10000 (80TTA)</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black" >[interestOnDeposit] </td>
+              <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr style="padding:5px;border-right:1px solid black;border-bottom:1px solid black" >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">National Pension Scheme(80CCD)</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black" >[nationalPension] </td>
+              <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr bgcolor="#D3D3D3">
+              <td align="right" style="padding:5px;border-right:1px solid black;" ><strong>Total</strong></td>
+             
+              <td align="right" style="padding:5px;"><strong>[sectionBTotal]</strong></td>
+              <td align="right" style="padding:5px;border-top:1px solid black;border-left:1px solid black;"><strong>[sectionBExempt]</strong></td>
+              </tr>
+              </table>
+              </td>
+              </tr>
+
+              <tr>
+              <td colspan="2">
+              <table cellspacing="0" style="border: 1px solid black;"  width="100%" align="center" >
+              <tr>
+              <td  width="70%" style="background-color:#DBDBDB;padding:10px;border-right:1px solid black;border-bottom:1px solid black "  align="center">Section C - Chapter VIA Sec 80C </td>
+              <td align="center" width="15%" style="background-color:#DBDBDB;padding:10px;border-bottom:1px solid black">AMOUNT</td>
+              <td align="center" align="center" width="15%" style="background-color:#DBDBDB;border-left:1px solid black;padding:10px;border-bottom:1px solid black;">EXEMPT</td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Life Insurance Premium </td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[lic] </td>
+              <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Public Provident Fund (PPF)</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[ppf]</td>
+              <td style="padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">National Savings Certificate (NSC)</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[nsc]</td>
+              <td style="padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Infrastructure Bonds</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[infraBonds]</td>
+              <td style="padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Children Education Tuition Fees</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[tuitionFees] </td>
+              <td style="padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Mutual Funds / Equity Linked Saving Scheme (ELSS)</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[mutualFunds] </td>
+              <td style="padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Sukanya Samriddhi Scheme </td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[sukanya] </td>
+              <td style="padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">ULIP</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[ulip] </td>
+              <td style="padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">5 Year Time Deposit in Post Office</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[timeDeposit] </td>
+              <td style="padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Housing Loan - Principal Amount paid, Registration Fees, Stamp duty</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[housingLoan]</td>
+              <td style="padding:5px;border-left:1px solid black;"></td>
+              </tr >
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Fixed Deposit Scheme (Block Period of 5 yrs)</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[fixedDeposit]  </td>
+              <td style="padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Provident Fund (PF)</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[totalProvidentFund] <!-- '.$declaration_data['total_provident_fund'].' --></td>
+              <td style="padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr  >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">NSC Interest (Will be considered as Other Income)</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[nscInterest]  </td>
+              <td style="padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td align="right" style="padding:5px;border-right:1px solid black;" ><strong>Total</strong></td>
+             
+              <td align="right" style="padding:5px;" ><strong>[sectionCTotal]</strong></td>
+              <td align="right" style="padding:5px;border-top:1px solid black;border-left:1px solid black;"><strong>[sectionCExempt]</strong></td>
+              </tr>
+              </table>
+              </td>
+              </tr>
+
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;
+
+               <tr>
+              <td colspan="2">
+              <table cellspacing="0"  style="border: 1px solid black;" width="100%" align="center" >
+              <tr>
+              <td  width="70%" style="background-color:#DBDBDB;padding:10px;border-right:1px solid black;border-bottom:1px solid black" align="center">Section D - Loss from House Property - SELF OCCUPIED </td>
+              <td align="center" width="15%" style="background-color:#DBDBDB;padding:10px;border-bottom:1px solid black">AMOUNT</td>
+              <td align="center" align="center" width="15%" style="background-color:#DBDBDB;padding:10px;border-left:1px solid black;border-bottom:1px solid black" >EXEMPT</td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Total interest paid by me (post construction/possession/ amortized pre-emi) during the financial year </td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black"> [housingLoanInterest]</td>
+               <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td colspan="2" style="padding:5px;border-bottom:1px solid black">Address of the Property against which Loan taken :</td>
+               <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td colspan="2" align="right" style="padding:5px;"></td>
+              <td align="right" style="padding:5px;border-left:1px solid black;border-top:1px solid black;"><strong>[sectionDExempt]</strong></td>
+              
+              </tr>
+              </table>
+              </td>
+              </tr>
+
+              <tr>
+              <td colspan="2">
+              <table cellspacing="0"  style="border: 1px solid black;" width="100%" align="center" >
+              <tr>
+              <td  width="70%" style="background-color:#DBDBDB;padding:10px;border-right:1px solid black;border-bottom:1px solid black" align="center">Section E - Previous Employment </td>
+              <td align="center" width="15%" style="background-color:#DBDBDB;padding:10px;border-bottom:1px solid black;">AMOUNT</td>
+              <td align="center" align="center" width="15%" style="background-color:#DBDBDB;border-left:1px solid black;padding:10px;border-bottom:1px solid black">EXEMPT</td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Income after Section 10 exemption </td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black"> [previousIncome]</td>
+               <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Provident Fund (PF)</td>
+              <td align="right"style="padding:5px;border-bottom:1px solid black">[previousPf] </td>
+               <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Professional Tax (PT)</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[previousPt] </td>
+               <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-right:1px solid black;border-bottom:1px solid black">Tax deducted at source (TDS)</td>
+              <td align="right" style="padding:5px;border-bottom:1px solid black">[previousTds]</td>
+              <td style= "padding:5px;border-left:1px solid black;"></td>
+              </tr>
+              <tr bgcolor="#D3D3D3">
+              <td align="right" style="padding:5px;border-right:1px solid black;"><strong>Total</strong></td>
+             
+              <td align="right" style="padding:5px;" ><strong>[sectionETotal]</strong></td>
+              <td align="right" style="padding:5px;border-top:1px solid black;border-left:1px solid black;"><strong></strong></td>
+              </tr>
+              </table>
+              </td>
+              </tr>
+
+
+              <tr>
+              <td colspan="2" >
+              <table  style="border: 1px solid black;border-collapse: collapse;"  width="100%" align="center" >
+              <tr>
+              <td  width="85.5%"  style="background-color:#DBDBDB;padding:10px;border-bottom:1px solid black" align="center">Particular </td>
+              <td align="center" width="14.5%" style="background-color:#DBDBDB;padding:10px;border-left:1px solid black;border-bottom:1px solid black">AMOUNT</td>
+              
+              </tr>
+              <tr >
+              <td style="padding:5px;border-bottom:1px solid black">Annual Income (Basic+HRA+Medical+Travel+Conveyance) </td>
+              <td  align="right" style="padding:5px;border-left:1px solid black;border-bottom:1px solid black"> [salaryBeforeExempt] </td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-bottom:1px solid black">Less Profession Tax</td>
+              <td align="right" style="padding:5px;border-left:1px solid black;border-bottom:1px solid black" >[totalPtax]<!-- '.$total_ptax.' --></td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-bottom:1px solid black">Less exempt (HRA+B+C+D+E)</td>
+              <td align="right" style="padding:5px;border-left:1px solid black;border-bottom:1px solid black" >[lessExempt]</td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-bottom:1px solid black">Gross Taxable Income </td>
+              <td align="right" style="padding:5px;border-left:1px solid black;border-bottom:1px solid black">[salaryAfterExempt] </td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-bottom:1px solid black">Income Tax</td>
+              <td align="right" style="padding:5px;border-left:1px solid black;border-bottom:1px solid black">[grossTds]</td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-bottom:1px solid black">Education Cess @ 3% of Income Tax</td>
+              <td align="right" style="padding:5px;border-left:1px solid black;border-bottom:1px solid black" >[educationCess] </td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-bottom:1px solid black">Net Tax Payable</td>
+              <td align="right" style="padding:5px;border-left:1px solid black;border-bottom:1px solid black">[totalTds]</td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-bottom:1px solid black">Advance Tax Paid</td>
+              <td align="right" style="padding:5px;border-left:1px solid black;border-bottom:1px solid black">[tdsDeducted]</td>
+              </tr>
+              <tr >
+              <td style="padding:5px;border-bottom:1px solid black">Tax Due</td>
+              <td align="right" style="padding:5px;border-left:1px solid black;border-bottom:1px solid black" > [tdsDue] </td>
+              </tr>
+              <tr bgcolor="#D3D3D3">
+              <td align="right" style="padding:5px;"><strong>[perMonth]</strong></td>
+              <td align="right" style="padding:5px;border-left:1px solid black;"><strong>[tdsDuePerMonth]</strong></td>
+              
+              </tr>
+              </table>
+              </td>
+              </tr>
+              </table>
+              
+              
+              </body>
+</html>

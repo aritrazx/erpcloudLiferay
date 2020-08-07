@@ -1,0 +1,57 @@
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+
+package com.liferay.famocom.erpcloud.model;
+
+import aQute.bnd.annotation.ProviderType;
+
+import com.liferay.portal.kernel.annotation.ImplementationClassName;
+import com.liferay.portal.kernel.model.PersistedModel;
+import com.liferay.portal.kernel.util.Accessor;
+
+/**
+ * The extended model interface for the CandidateReview service. Represents a row in the &quot;CandidateReview&quot; database table, with each column mapped to a property of this class.
+ *
+ * @author Samaresh
+ * @see CandidateReviewModel
+ * @see com.liferay.famocom.erpcloud.model.impl.CandidateReviewImpl
+ * @see com.liferay.famocom.erpcloud.model.impl.CandidateReviewModelImpl
+ * @generated
+ */
+@ImplementationClassName("com.liferay.famocom.erpcloud.model.impl.CandidateReviewImpl")
+@ProviderType
+public interface CandidateReview extends CandidateReviewModel, PersistedModel {
+	/*
+	 * NOTE FOR DEVELOPERS:
+	 *
+	 * Never modify this interface directly. Add methods to {@link com.liferay.famocom.erpcloud.model.impl.CandidateReviewImpl} and rerun ServiceBuilder to automatically copy the method declarations to this interface.
+	 */
+	public static final Accessor<CandidateReview, Long> CANDIDATE_REVIEW_ID_ACCESSOR =
+		new Accessor<CandidateReview, Long>() {
+			@Override
+			public Long get(CandidateReview candidateReview) {
+				return candidateReview.getCandidateReviewId();
+			}
+
+			@Override
+			public Class<Long> getAttributeClass() {
+				return Long.class;
+			}
+
+			@Override
+			public Class<CandidateReview> getTypeClass() {
+				return CandidateReview.class;
+			}
+		};
+}

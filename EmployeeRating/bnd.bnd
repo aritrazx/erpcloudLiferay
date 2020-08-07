@@ -1,0 +1,4 @@
+Bundle-Name: EmployeeRating
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.employeerating
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.employeerating.constants

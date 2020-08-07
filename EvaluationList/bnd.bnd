@@ -1,0 +1,4 @@
+Bundle-Name: EvaluationList
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.evallist
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.evallist.constants

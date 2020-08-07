@@ -1,0 +1,4 @@
+Bundle-Name: GoalMaster
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.goalmaster
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.goalmaster.constants

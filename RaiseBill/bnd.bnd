@@ -1,0 +1,4 @@
+Bundle-Name: RaiseBill
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.raisebill
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.raisebill.constants

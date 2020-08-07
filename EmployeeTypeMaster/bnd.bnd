@@ -1,0 +1,4 @@
+Bundle-Name: EmployeeTypeMaster
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.employeetype
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.employeetype.constants

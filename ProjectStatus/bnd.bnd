@@ -1,0 +1,4 @@
+Bundle-Name: ProjectStatus
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.projectstatus
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.projectstatus.constants

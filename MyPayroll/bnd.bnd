@@ -1,0 +1,16 @@
+Bundle-Name: MyPayroll
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.mypayroll
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.mypayroll.constants
+
+Include-Resource:\
+    @itext-1.3.1.jar,\
+    @itextpdf-5.5.10.jar,\
+    @xmlworker-5.5.10.jar,\
+    @commons-io-1.3.2.jar,\
+    @bcmail-jdk16-1.46.jar,\
+    @bcprov-jdk15on-1.50.jar,\
+    @bctsp-jdk16-1.46.jar
+
+Import-Package: \
+    *;resolution:=optional

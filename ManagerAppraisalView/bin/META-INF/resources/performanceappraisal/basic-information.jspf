@@ -1,0 +1,20 @@
+<label><h3>Appraisal For :-- </h3></label>
+			<hr>
+<aui:row>
+	<aui:col span="6">
+		<strong>Employee Name:&nbsp;</strong>${manageAppraisalModel.fullName}
+	
+	</aui:col>
+	<aui:col span="6">
+		<strong>Designation:&nbsp;</strong>${manageAppraisalModel.designation}
+	</aui:col>
+</aui:row>
+<aui:row>
+	<aui:col span="6">
+		<strong>Date of Joining:&nbsp;</strong>${manageAppraisalModel.dateOfJoining}
+	</aui:col>
+	<aui:col span="6">
+		
+		<strong>Email-id:&nbsp;</strong>${manageAppraisalModel.emailId}
+	</aui:col>
+</aui:row>

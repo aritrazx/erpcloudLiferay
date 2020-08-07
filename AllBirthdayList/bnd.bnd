@@ -1,0 +1,4 @@
+Bundle-Name: AllBirthdayList
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.allbirthdaylist
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.allbirthdaylist.constants

@@ -1,0 +1,4 @@
+Bundle-Name: AllRecruit
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.allrecruit
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.allrecruit.constants

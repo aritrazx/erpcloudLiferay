@@ -1,0 +1,22 @@
+Bundle-Name: InterviewProcessReview
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.interviewprocessreview
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.interviewprocessreview.constants
+
+-includeresource:\
+	@com.liferay.famocom.erpcloud.employeedetails-1.0.0.jar,\
+	@itext-1.3.1.jar,\
+    @itextpdf-5.5.10.jar,\
+    @xmlworker-5.5.10.jar,\
+    @commons-io-1.3.2.jar,\
+    @bcmail-jdk16-1.46.jar,\
+    @bcprov-jdk15on-1.50.jar,\
+    @bctsp-jdk16-1.46.jar,\
+	@com.liferay.portal.workflow.task.web-1.0.6.jar
+	
+
+    
+Import-Package: !com.liferay.portal.workflow.task.web.internal.display.context,\
+ !com.liferay.portal.workflow.task.web.internal.search,\
+ !com.liferay.portal.workflow.task.web.internal.display,\
+*;resolution:=optional

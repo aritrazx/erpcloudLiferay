@@ -1,0 +1,9 @@
+Bundle-Name: Erp-Cloud-Service-api
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.liferay.famocom.erpcloud.exception,\
+	com.liferay.famocom.erpcloud.model,\
+	com.liferay.famocom.erpcloud.service,\
+	com.liferay.famocom.erpcloud.service.persistence
+-includeresource: META-INF/service.xml=../Erp-Cloud-Service-service/service.xml

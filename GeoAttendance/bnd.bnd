@@ -1,0 +1,4 @@
+Bundle-Name: GeoAttendance
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.geoattendance
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.geoattendance.constants

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 7.0.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_7_0_0.dtd">
+
+<resource-action-mapping>
+<portlet-resource>
+        <portlet-name>Payroll</portlet-name>
+        <permissions>
+            <supports>
+               <action-key>ADD_ENTRY</action-key>
+			   <action-key>CONFIGURATION</action-key>
+			    <action-key>PAY_COMPONENT_VIEW</action-key>
+			    <action-key>STOP_PAY_VIEW</action-key>
+			    <action-key>MONTHLY_ADJUSTMENT_VIEW</action-key>
+			    <action-key>PAY_COMPONENT_ADD</action-key>
+			    <action-key>STOP_PAY_ADD</action-key>
+			    <action-key>MONTHLY_ADJUSTMENT_ADD</action-key>
+            </supports>       
+        </permissions>
+    </portlet-resource>
+
+
+<model-resource>
+    <model-name>com.liferay.famocom.erpcloud.model.PayComponent</model-name>
+    <portlet-ref>
+        <portlet-name>Payroll</portlet-name>
+    </portlet-ref>
+    <permissions>
+        <supports>
+            <action-key>ADD_ENTRY</action-key>
+            <action-key>DELETE</action-key>
+            <action-key>UPDATE</action-key>
+            <action-key>VIEW</action-key>
+        </supports>       
+    </permissions>
+</model-resource>
+</resource-action-mapping>

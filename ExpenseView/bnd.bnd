@@ -1,0 +1,4 @@
+Bundle-Name: ExpenseView
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.expenseview
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.expenseview.constants

@@ -1,0 +1,1916 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder
+	package-path="com.liferay.famocom.erpcloud">
+	<author>Samaresh</author>
+	<namespace>ERP</namespace>
+	<entity local-service="true" table="employeeType"
+		name="EmployeeType" remote-service="true" uuid="false">
+		<column name="employeetypeId" type="long" primary="true"></column>
+		<column name="typeName" type="String"></column>
+		<column name="pfDeduct" type="long"></column>
+		<column name="status" type="int"></column>
+		<column name="companyId" type="long"></column>
+		<column name="addeddate" type="Date"></column>
+		<column name="description" type="String"></column>
+	</entity>
+	<entity name="Employee" table="employee" local-service="true"
+		remote-service="true">
+		<column name="employeeId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="employeeCode" type="long"></column>
+		<column name="dateOfJoing" type="Date"></column>
+		<column name="firstName" type="String"></column>
+		<column name="lastName" type="String"></column>
+		<column name="designation" type="String"></column>
+		<column name="dateOfBirth" type="Date"></column>
+		<column name="gender" type="String"></column>
+		<column name="maritalStatus" type="String"></column>
+		<column name="noOfChild" type="long"></column>
+		<column name="note" type="String"></column>
+		<column name="address" type="String"></column>
+		<column name="state" type="String"></column>
+		<column name="postCode" type="String"></column>
+		<column name="homePhone" type="int"></column>
+		<column name="mobileNumber" type="int"></column>
+		<column name="emaiAddress" type="String"></column>
+		<column name="anniversary" type="Date"></column>
+		<column name="employeePhoto" type="Blob"></column>
+		<column name="employeeStatus" type="int"></column>
+		<column name="totalPay" type="double"></column>
+		<column name="basicPay" type="double"></column>
+		<column name="da" type="double"></column>
+		<column name="hra" type="double"></column>
+		<column name="medical" type="double"></column>
+		<column name="ta" type="double"></column>
+		<column name="conveyance" type="double"></column>
+		<column name="internet" type="double"></column>
+		<column name="mobile" type="double"></column>
+		<column name="fare" type="double"></column>
+		<column name="areas" type="double"></column>
+		<column name="bouns" type="double"></column>
+		<column name="insurance" type="double"></column>
+		<column name="otherAllowance" type="double"></column>
+		<column name="providentFund" type="double"></column>
+		<column name="professionTax" type="double"></column>
+		<column name="incomeTax" type="double"></column>
+		<column name="loan" type="double"></column>
+		<column name="otherDeduction" type="double"></column>
+		<column name="bankId" type="long"></column>
+		<column name="branchAddress" type="String"></column>
+		<column name="accountNo" type="String"></column>
+		<column name="pfNo" type="String"></column>
+		<column name="aadhaarNo" type="String"></column>
+		<column name="employeetypeId" type="int"></column>
+		<column name="ispfdeduct" type="int"></column>
+		<column name="roleId" type="int"></column>
+		<column name="addedDate" type="Date"></column>
+		<column name="photoId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="branchId" type="long"></column>
+		<column name="panNo" type="String"></column>
+		<column name="pesonalEmaiAddress" type="String"></column>
+
+		<!-- start samaresh -->
+		<column name="payPerMonth" type="double"></column>
+		<!-- end samaresh -->
+
+		<!-- Workflow status Columns -->
+		<column name="groupId" type="long" />
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+		<finder name="userId" return-type="Collection">
+			<finder-column name="userId" />
+		</finder>
+		<finder name="status" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+			<finder-column name="status"></finder-column>
+		</finder>
+		<finder name="employees" return-type="Employee">
+			<finder-column name="userId"></finder-column>
+		</finder>
+		<finder name="employeeCode" return-type="Employee">
+			<finder-column name="employeeCode"></finder-column>
+		</finder>
+		<!-- start kameshwar -->
+		<finder name="employeeStatusAndemployeeId"
+			return-type="Collection">
+			<finder-column name="employeeStatus"></finder-column>
+			<finder-column name="employeeId"
+				arrayable-operator="AND" comparator="!="></finder-column>
+		</finder>
+
+		<finder name="employeeStatus" return-type="Collection">
+			<finder-column name="employeeStatus"></finder-column>
+		</finder>
+		<!-- end kameshwar -->
+		<!-- References -->
+		<reference entity="AssetEntry"
+			package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag"
+			package-path="com.liferay.portlet.asset" />
+
+	</entity>
+	<entity name="LeaveManagement" local-service="true"
+		remote-service="true" table="leaveManagement">
+		<column name="leaveId" type="long" primary="true"></column>
+		<column name="leaveName" type="String"></column>
+		<column name="abb" type="String"></column>
+		<column name="encashmentDay" type="int"></column>
+		<column name="forwardDay" type="int"></column>
+		<column name="leaveStatus" type="boolean"></column>
+		<column name="encashmentPer" type="int"></column>
+		<column name="minServiceDay" type="int"></column>
+		<column name="noticeDay" type="int"></column>
+		<column name="employeetypeId" type="long"></column>
+		<column name="maxCreditDay" type="int"></column>
+		<column name="gender" type="String"></column>
+		<column name="maritalStatus" type="String"></column>
+		<column name="impectOnSalary" type="int"></column>
+		<column name="companyId" type="long"></column>
+		<column name="addedDate" type="Date"></column>
+		<finder name="leaveName" return-type="leaveManagement">
+			<finder-column name="leaveName"></finder-column>
+		</finder>
+	</entity>
+	<entity name="Attendance" local-service="true"
+		table="attendance" remote-service="true">
+		<column name="attendanceId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="employeeCode" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="attDate" type="Date"></column>
+		<column name="inTimeHour" type="String"></column>
+		<column name="inTimeMin" type="String"></column>
+		<column name="outTimeHour" type="String"></column>
+		<column name="outTimeMin" type="String"></column>
+		<column name="inTime" type="String"></column>
+		<column name="outTime" type="String"></column>
+		<column name="inDatePc" type="Date"></column>
+		<column name="outDatePc" type="Date"></column>
+		<column name="total" type="String"></column>
+		<column name="status" type="String"></column>
+		<column name="ipPc" type="String"></column>
+		<finder name="empIdAndAttDate" return-type="Attendance">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="attDate"></finder-column>
+		</finder>
+		<finder name="empIdAndAttDateComId" return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="companyId"></finder-column>
+			<finder-column name="attDate"></finder-column>
+		</finder>
+		<finder name="empId" return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+		</finder>
+	</entity>
+	<entity name="WorksSchedules" table="worksSchedules"
+		local-service="true">
+		<column name="worksSchedulesId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="fromDate" type="Date"></column>
+		<column name="toDate" type="Date"></column>
+		<column name="schedulesId" type="long"></column>
+		<column name="islock" type="int"></column>
+		<column name="status" type="int"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="description" type="String"></column>
+		<finder name="schedulesId" return-type="Collection">
+			<finder-column name="schedulesId"></finder-column>
+		</finder>
+		<finder name="fromToDate" return-type="Collection">
+			<finder-column name="fromDate"></finder-column>
+			<finder-column name="toDate"></finder-column>
+		</finder>
+		<finder name="toDate" return-type="Collection">
+			<finder-column name="toDate"></finder-column>
+		</finder>
+	</entity>
+	<entity name="SchedulesMaster" local-service="true"
+		table="SchedulesMaster">
+		<column name="schedulesId" primary="true" type="long"></column>
+		<column name="schedulesName" type="String"></column>
+		<column name="schedulesDescription" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="status" type="int"></column>
+	</entity>
+
+	<entity name="EmailTemplate" local-service="true"
+		remote-service="true" table="emailTemplates">
+		<column name="id" type="long" primary="true"></column>
+		<column name="templateName" type="String"></column>
+		<column name="emailFor" type="String"></column>
+		<column name="templateBody" type="String"></column>
+		<column name="createdBy" type="Date"></column>
+		<column name="ModifiedBy" type="Date"></column>
+		<column name="Status" type="boolean"></column>
+		<column name="restoreTemplateBody" type="String"></column>
+		<finder name="emailFor" return-type="EmailTemplate">
+			<finder-column name="emailFor"></finder-column>
+		</finder>
+	</entity>
+	<entity name="HolidayCalenderManagement"
+		table="holidayCalenderManagement" local-service="true"
+		remote-service="true">
+		<column name="holidayId" type="long" primary="true"></column>
+		<column name="holidayDate" type="Date"></column>
+		<column name="holidayName" type="String"></column>
+		<column name="holidayStartDate" type="Date"></column>
+		<column name="holidayEndDate" type="Date"></column>
+		<column name="companyId" type="long"></column>
+		<finder name="empIdAndAttDate"
+			return-type="HolidayCalenderManagement">
+			<finder-column name="holidayDate"></finder-column>
+		</finder>
+		<finder name="holiDayCheck" return-type="Collection">
+			<finder-column name="holidayDate"></finder-column>
+		</finder>
+		<finder name="nameAndHoliDayId" return-type="Collection">
+			<finder-column name="holidayName"></finder-column>
+			<finder-column name="holidayId" comparator="!="> </finder-column>
+		</finder>
+		<finder name="dateAndHoliDayId" return-type="Collection">
+			<finder-column name="holidayDate"></finder-column>
+			<finder-column name="holidayId" comparator="!="> </finder-column>
+		</finder>
+	</entity>
+	<entity name="ProjectRole" local-service="true"
+		table="projectRole">
+		<column name="roleId" type="long" primary="true"></column>
+		<column name="roleName" type="String"></column>
+	</entity>
+	<entity name="InterviewEvaluation" table="interviewEvaluation"
+		local-service="true">
+		<column name="evaluationId" type="long" primary="true"></column>
+		<column name="roleId" type="long"></column>
+		<column name="evaluationName" type="String"></column>
+	</entity>
+	<entity name="RecruitProcess" local-service="true"
+		table="RecruitProcess" remote-service="true">
+		<!-- PK fields -->
+		<column name="recruitProcessId" primary="true" type="long" />
+		<column name="firstName" type="String" />
+		<column name="lastName" type="String"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="interviewDate" type="Date"></column>
+		<column name="interviewTime" type="String"></column>
+		<column name="fileEntryId" type="long"></column>
+		<column name="fileUrl" type="String"></column>
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="interviewerRemarks" type="String"></column>
+		<column name="hrRemarks" type="String"></column>
+		<column name="isSelected" type="int"></column>
+		<column name="status" type="long"></column>
+		<column name="DOB" type="Date"></column>
+		<column name="email" type="String"></column>
+		<column name="phoneNumber" type="long"></column>
+		<column name="skillset" type="String"></column>
+		<column name="experience" type="double"></column>
+		<column name="noticePeriod" type="int"></column>
+		<column name="currentCTC" type="double"></column>
+		<column name="expextedCTC" type="double"></column>
+		<column name="projectRoleId" type="long"></column>
+		<column name="reference" type="long"></column>
+		<finder name="recruitProcess" return-type="RecruitProcess">
+			<finder-column name="employeeId"></finder-column>
+		</finder>
+		<finder name="recruitProcessCol" return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+		</finder>
+	</entity>
+	<entity local-service="true" table="Expense" name="Expense"
+		remote-service="true">
+		<column name="expenseId" type="long" primary="true"></column>
+		<column name="employeeId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="projectId" type="long" />
+		<column name="catId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="title" type="String" />
+		<column name="description" type="String" />
+		<column name="expDate" type="Date" />
+		<column name="amount" type="double" />
+		<column name="status" type="int" />
+		<column name="manEmployeeId" type="long" />
+		<column name="manCommnets" type="String" />
+		<column name="manApprovedDate" type="Date" />
+		<column name="accComments" type="String" />
+		<column name="accApprovedDate" type="Date" />
+		<column name="monthYear" type="long" />
+
+		<finder name="empId" return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+		</finder>
+	</entity>
+
+	<entity local-service="true" table="expCategory"
+		name="ExpCategory" remote-service="true">
+		<column name="catId" primary="true" type="long" />
+		<column name="companyId" type="long" />
+		<column name="categoryName" type="String" />
+		<column name="frequency" type="String" />
+		<column name="salaryHead" type="long" />
+		<column name="finalApprovalRoleId" type="long" />
+		<column name="attachment" type="boolean" />
+		<column name="componentId" type="long" />
+	</entity>
+	<entity name="ProjectMaster" table="projectMaster"
+		local-service="true" remote-service="true">
+		<column name="projectId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="projectName" type="String"></column>
+		<column name="clientId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="projectStatus" type="int"></column>
+		<column name="projectStatusId" type="long"></column>
+		<column name="projectDesc" type="String"></column>
+		<column name="startDate" type="Date"></column>
+		<column name="endDate" type="Date"></column>
+		<column name="totalAmount" type="double"></column>
+		<column name="addedDate" type="Date"></column>
+
+		<finder name="projectId" return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="companyId"></finder-column>
+		</finder>
+
+		<finder name="EmployeeId" return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="ExpenseEntryHistory" table="expenseEntryHistory"
+		local-service="true" remote-service="true">
+
+		<column name="expenseHistoryId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="expenseId" type="long"></column>
+		<column name="status" type="int"></column>
+		<column name="manEmployeeId" type="long"></column>
+		<column name="manComments" type="String"></column>
+		<column name="addeddate" type="Date"></column>
+		<finder name="ExpenceId" return-type="Collection">
+			<finder-column name="expenseId"></finder-column>
+		</finder>
+	</entity>
+	<entity name="ConferenceRoom" table="ConferenceRoom"
+		local-service="true" remote-service="true">
+		<column name="roomId" type="long" primary="true"></column>
+		<column name="roomNo" type="long"></column>
+		<column name="floorNo" type="long"></column>
+		<column name="capacity" type="long"></column>
+		<column name="openTime" type="String"></column>
+		<column name="closeTime" type="String"></column>
+		<column name="building" type="String"></column>
+	</entity>
+	<entity name="BookingRoom" table="BookingRoom"
+		local-service="true" remote-service="true">
+		<column name="bookingId" type="long" primary="true"></column>
+		<column name="roomId" type="long"></column>
+		<column name="bookingDate" type="Date"></column>
+		<column name="fromTime" type="String"></column>
+		<column name="toTime" type="String"></column>
+		<column name="bookedBy" type="long"></column>
+		<column name="note" type="String"></column>
+	</entity>
+	<entity name="GeoAttendance" local-service="true"
+		table="geoAttendance">
+		<column name="attendanceId" type="long" primary="true"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="attDate" type="Date"></column>
+		<column name="inTime" type="String"></column>
+		<column name="outTime" type="String"></column>
+		<column name="workHour" type="String"></column>
+		<column name="latitude" type="String"></column>
+		<column name="longitude" type="String"></column>
+		<column name="outLatitude" type="String"></column>
+		<column name="outLongitude" type="String"></column>
+		<column name="geoAddress" type="String"></column>
+		<finder name="empIdAndAttDate" return-type="GeoAttendance">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="attDate"></finder-column>
+		</finder>
+
+		<finder name="empId" return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+		</finder>
+	</entity>
+	<entity name="SchedulesDetails" table="SchedulesDetails"
+		local-service="true">
+		<column name="schedulesDetailsId" type="long" primary="true"></column>
+		<column name="schedulesDate" type="Date"></column>
+		<column name="worksSchedulesId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="companyId" type="long"></column>
+
+		<finder name="checkDate" return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="companyId"></finder-column>
+			<finder-column name="schedulesDate"></finder-column>
+		</finder>
+
+		<finder name="detailsEdit" return-type="Collection">
+			<finder-column name="worksSchedulesId"></finder-column>
+		</finder>
+
+		<finder name="empIdAndAttDate" return-type="SchedulesDetails">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="schedulesDate"></finder-column>
+		</finder>
+	</entity>
+	<entity name="TravelDeskDetails" local-service="true"
+		table="TravelDesk">
+		<column name="travelDetailsId" primary="true" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="projectId" type="long"></column>
+		<column name="projectTeamsId" type="long"></column>
+		<column name="ticketType" type="String"></column>
+		<column name="hotel" type="boolean"></column>
+		<column name="fromDate" type="Date"></column>
+		<column name="toDate" type="Date"></column>
+		<column name="fromTime" type="String"></column>
+		<column name="toTime" type="String"></column>
+		<column name="location" type="String"></column>
+		<column name="purpose" type="String"></column>
+		<column name="specialInstraction" type="String"></column>
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="status" type="int"></column>
+		<column name="managerComment" type="String"></column>
+
+		<finder name="travel" return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+		</finder>
+		<finder name="projectMemberList" return-type="Collection">
+			<finder-column name="projectId"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="AddTeamMember" table="addTeamMember"
+		local-service="true" remote-service="true">
+		<column name="projectTeamsId" type="long" primary="true"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="projectId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="roleId" type="long"></column>
+		<column name="addedDate" type="Date"></column>
+		<column name="isProjectManager" type="boolean"></column>
+
+		<finder name="getProjectId" return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="companyId"></finder-column>
+		</finder>
+		<finder name="projectManager" return-type="Collection">
+			<finder-column name="isProjectManager"></finder-column>
+		</finder>
+		<finder name="projectMember" return-type="Collection">
+			<finder-column name="projectId"></finder-column>
+		</finder>
+		<finder name="getProjectManager" return-type="AddTeamMember">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="projectId"></finder-column>
+		</finder>
+		<finder name="getProjectManagerProjectList"
+			return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="isProjectManager"></finder-column>
+		</finder>
+		<finder name="getProjectManagerProject"
+			return-type="AddTeamMember">
+			<finder-column name="projectId"></finder-column>
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="isProjectManager"></finder-column>
+		</finder>
+	</entity>
+	<entity name="TimeSheetEntry" table="timeSheetEntry"
+		local-service="true" remote-service="true">
+		<column name="timesheetId" type="long" primary="true"></column>
+		<column name="entryDate" type="Date"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="projectId" type="long"></column>
+		<column name="projectTaskId" type="long"></column>
+		<column name="hours" type="double"></column>
+		<column name="workDescription" type="String"></column>
+		<column name="timesheetParentId" type="long"></column>
+		<column name="addedDate" type="Date"></column>
+
+		<!-- Workflow status Columns -->
+		<column name="groupId" type="long" />
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+
+		<finder name="status" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+			<finder-column name="status"></finder-column>
+		</finder>
+
+		<!-- References -->
+		<reference entity="AssetEntry"
+			package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag"
+			package-path="com.liferay.portlet.asset" />
+	</entity>
+	<entity name="ProjectStatus" table="projectStatus"
+		local-service="true" remote-service="true">
+
+		<column name="projectStatusId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="statusName" type="String"></column>
+		<column name="statusColor" type="String"></column>
+		<column name="addedDate" type="Date"></column>
+
+	</entity>
+	<entity name="ProjectTask" table="ProjectTask"
+		local-service="true" remote-service="true">
+		<column name="projectTaskId" type="long" primary="true"></column>
+		<column name="projectId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="taskId" type="long"></column>
+		<column name="taskName" type="String"></column>
+		<column name="startDate" type="Date"></column>
+		<column name="endDate" type="Date"></column>
+		<column name="hours" type="double"></column>
+		<column name="addedDate" type="Date"></column>
+	</entity>
+	<entity name="LeaveApply" table="leaveApply"
+		local-service="true" remote-service="true">
+		<column name="leaveApplyId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="leaveTypeId" type="long"></column>
+		<column name="fromDate" type="Date"></column>
+		<column name="fromDateSession" type="String"></column>
+		<column name="toDate" type="Date"></column>
+		<column name="toDateSession" type="String"></column>
+		<column name="leaveDays" type="double"></column>
+		<column name="reason" type="String"></column>
+		<column name="attachedFile" type="String"></column>
+		<column name="cancelReason" type="String"></column>
+		<column name="hrComments" type="String"></column>
+		<column name="isApprove" type="int"></column>
+		<column name="addedDate" type="Date"></column>
+		<column name="userId" type="long"></column>
+		<column name="fileEntryId" type="long" />
+		<!-- Workflow status Columns -->
+		<column name="groupId" type="long" />
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<finder name="userId" return-type="Collection">
+			<finder-column name="userId" />
+		</finder>
+		<finder name="status" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+			<finder-column name="status"></finder-column>
+		</finder>
+		<reference entity="AssetEntry"
+			package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag"
+			package-path="com.liferay.portlet.asset" />
+	</entity>
+	<entity name="LeaveApplyDtl" table="leaveApplyDtl"
+		local-service="true" remote-service="true">
+		<column name="leaveApplyDtlId" type="long" primary="true"></column>
+		<column name="leaveApplyId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="leaveTypeId" type="long"></column>
+		<column name="leaveDate" type="Date"></column>
+		<column name="sessionData" type="String"></column>
+		<column name="leaveDays" type="double"></column>
+		<column name="impectOnSalary" type="int"></column>
+		<column name="isApprove" type="int"></column>
+		<finder return-type="Collection" name="employeeId">
+			<finder-column name="employeeId"></finder-column>
+		</finder>
+		<finder name="leaveApplyId" return-type="Collection">
+			<finder-column name="leaveDate"></finder-column>
+		</finder>
+		<finder name="empIdAndAttDate" return-type="LeaveApplyDtl">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="leaveDate"></finder-column>
+			<finder-column name="isApprove"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="NotificationMasterManage" local-service="true"
+		table="notificationMasterManage" remote-service="true">
+		<column name="notifyId" type="long" primary="true"></column>
+		<column name="subject" type="String"></column>
+		<column name="body" type="String"></column>
+		<column name="createdBy" type="String"></column>
+		<column name="createdDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="documentId" type="long"></column>
+		<column name="documentUrl" type="String"></column>
+	</entity>
+	<entity name="NotificationSendManage" local-service="true"
+		table="notificationSendManage" remote-service="true">
+		<column name="notifyIdSendId" type="long" primary="true"></column>
+		<column name="notificationId" type="long"></column>
+		<column name="branchId" type="long"></column>
+		<column name="sendingDate" type="Date"></column>
+		<column name="sendBy" type="String"></column>
+		<column name="isOpen" type="boolean"></column>
+		<column name="openBy" type="String"></column>
+		<column name="documentId" type="long"></column>
+		<column name="isApproved" type="int"></column>
+		<column name="comment" type="String"></column>
+		<column name="documentUrl" type="String"></column>
+		<finder name="BranchId" return-type="Collection">
+			<finder-column name="branchId"></finder-column>
+		</finder>
+		<finder name="NotificationId"
+			return-type="NotificationSendManage">
+			<finder-column name="notificationId"></finder-column>
+		</finder>
+		<finder name="BranchFromNotificationId"
+			return-type="Collection">
+			<finder-column name="notificationId"></finder-column>
+		</finder>
+		<finder name="BranchAndNotificationId"
+			return-type="NotificationSendManage">
+			<finder-column name="notificationId"></finder-column>
+			<finder-column name="branchId"></finder-column>
+		</finder>
+	</entity>
+	<entity name="Evaluation" local-service="true"
+		table="evaluation">
+		<column name="evaluationId" type="long" primary="true"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="evaluatedBy" type="long"></column>
+		<column name="evalMessage" type="String"></column>
+		<column name="evalDate" type="Date"></column>
+		<column name="evalRating" type="int"></column>
+		<reference package-path="com.liferay.portlet.asset"
+			entity="AssetEntry" />
+	</entity>
+	<entity name="WorkFromHome" table="workFromHome"
+		local-service="true" remote-service="true">
+		<column name="workFromHomeId" type="long" primary="true"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="projectId" type="long"></column>
+		<column name="appliedDate" type="Date"></column>
+		<column name="description" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="workStatus" type="int"></column>
+		<column name="hrComments" type="String" />
+	</entity>
+	<entity name="AppraisalMaster" table="appraisalMaster"
+		local-service="true" remote-service="true" uuid-accessor="false">
+		<column name="appraisalId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="appraisalSettingId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="accomplishmentsEmp" type="String"></column>
+		<column name="strengthsEmp" type="String"></column>
+		<column name="developmentEmp" type="String"></column>
+		<column name="careerEmp" type="String"></column>
+		<column name="overallRatingEmp" type="long"></column>
+		<column name="overallCommentEmp" type="String"></column>
+		<column name="accomplishmentsMan" type="String"></column>
+		<column name="strengthsMan" type="String"></column>
+		<column name="developmentMan" type="String"></column>
+		<column name="careerMan" type="String"></column>
+		<column name="companyValue" type="String"></column>
+		<column name="developmentPlan" type="String"></column>
+		<column name="overallRatingMan" type="long"></column>
+		<column name="overallCommentMan" type="String"></column>
+		<column name="submitStep" type="long"></column>
+		<column name="addedDate" type="Date"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="modifiedBy" type="long"></column>
+
+		<finder name="SettingIdAndEmployeeId"
+			return-type="AppraisalMaster">
+			<finder-column name="appraisalSettingId"></finder-column>
+			<finder-column name="employeeId"></finder-column>
+		</finder>
+		<finder name="SettingIdAndsubmitStep" return-type="Collection">
+			<finder-column name="appraisalSettingId"></finder-column>
+			<finder-column name="submitStep"></finder-column>
+		</finder>
+	</entity>
+	<entity name="AppraisalGoalMaster" table="appraisalGoalMaster"
+		local-service="true" remote-service="true">
+		<column name="appraisalGoalMasterId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="appraisalId" type="long"></column>
+		<column name="appraisalProjectId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="projectId" type="long"></column>
+		<column name="evaluationId" type="long"></column>
+		<column name="employeeComment" type="String"></column>
+		<column name="employeeOverallRat" type="long"></column>
+		<column name="managerComment" type="String"></column>
+		<column name="managerOverallRat" type="long"></column>
+		<column name="createdDate" type="Date"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="modifiedBy" type="long"></column>
+
+		<finder name="ApprIdEmpIdProjIdEvalId"
+			return-type="AppraisalGoalMaster">
+			<finder-column name="appraisalId"></finder-column>
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="projectId"></finder-column>
+			<finder-column name="evaluationId"></finder-column>
+		</finder>
+	</entity>
+	<entity name="AppraisalPerformance" table="appraisalPerformance"
+		local-service="true" remote-service="true">
+		<column name="appraisalPerformanceId" type="long"
+			primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="appraisalId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="appraisalSettingId" type="long"></column>
+		<column name="performanceId" type="long"></column>
+		<column name="performanceComm" type="String"></column>
+		<column name="ratingIdEmp" type="long"></column>
+		<column name="ratingIdMan" type="long"></column>
+		<column name="createdDate" type="Date"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="modifiedBy" type="long"></column>
+
+		<finder name="ApprIdSettingIdAndEmployeeIdPerformance"
+			return-type="AppraisalPerformance">
+			<finder-column name="appraisalId"></finder-column>
+			<finder-column name="appraisalSettingId"></finder-column>
+			<finder-column name="employeeId"></finder-column>
+		</finder>
+		<finder name="ApprIdSettingIdAndEmployeeIdPerformId"
+			return-type="AppraisalPerformance">
+			<finder-column name="appraisalId"></finder-column>
+			<finder-column name="appraisalSettingId"></finder-column>
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="performanceId"></finder-column>
+		</finder>
+	</entity>
+	<entity name="AppraisalProjectMaster"
+		table="appraisalProjectMaster" local-service="true"
+		remote-service="true">
+		<column name="appraisalProjectId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="appraisalId" type="long"></column>
+		<column name="appraisalSettingId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="projectId" type="long"></column>
+		<column name="projectDescription" type="String"></column>
+		<column name="startDate" type="Date"></column>
+		<column name="endDate" type="Date"></column>
+		<column name="submitStep" type="long"></column>
+		<column name="addedDate" type="Date"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="modifiedBy" type="long"></column>
+
+		<finder name="SettingIdAndEmployeeIdProjectInfo"
+			return-type="AppraisalProjectMaster">
+			<finder-column name="appraisalSettingId"></finder-column>
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="projectId"></finder-column>
+		</finder>
+		<finder name="SettingIdAndEmployeeIdAppraisalIdList"
+			return-type="Collection">
+			<finder-column name="appraisalSettingId"></finder-column>
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="appraisalId"></finder-column>
+		</finder>
+		<finder name="employeeListFromManager" return-type="Collection">
+			<finder-column name="appraisalSettingId"></finder-column>
+			<finder-column name="projectId"></finder-column>
+			<finder-column name="submitStep"></finder-column>
+		</finder>
+		<finder name="appraisalSettingIdAndEmployeeId"
+			return-type="Collection">
+			<finder-column name="appraisalSettingId"></finder-column>
+			<finder-column name="employeeId"></finder-column>
+		</finder>
+	</entity>
+	<entity name="AppraisalSetup" table="appraisalSetup"
+		local-service="true" remote-service="true">
+		<column name="appraisalSettingId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="financialYear" type="String"></column>
+		<column name="fromDateCycle" type="Date"></column>
+		<column name="toDateCycle" type="Date"></column>
+		<column name="fromDateSubmission" type="Date"></column>
+		<column name="toDateSubmission" type="Date"></column>
+		<column name="appraisalPeriod" type="long"></column>
+		<column name="totalEmp" type="long"></column>
+		<column name="beforeCtcAll" type="long"></column>
+		<column name="appraisalEmp" type="long"></column>
+		<column name="beforeCtc" type="long"></column>
+		<column name="afterCtc" type="long"></column>
+		<column name="totalAreas" type="long"></column>
+		<column name="totalBonus" type="long"></column>
+		<column name="totalCtcAfter" type="long"></column>
+		<column name="isLocked" type="long"></column>
+		<column name="isActive" type="long"></column>
+		<column name="employeeType" type="String"></column>
+		<column name="addedDate" type="Date"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="modifiedBy" type="long"></column>
+
+		<finder name="IsActive" return-type="AppraisalSetup">
+
+			<finder-column name="isActive"></finder-column>
+		</finder>
+		<finder name="FinancialYearAndIsActive"
+			return-type="AppraisalSetup">
+			<finder-column name="financialYear"></finder-column>
+			<finder-column name="isActive"></finder-column>
+		</finder>
+	</entity>
+	<entity name="AppraisalGoalDetails" table="appraisalGoalDetails"
+		local-service="true" remote-service="true">
+		<column name="appraisalGoalDetailsId" type="long"
+			primary="true"></column>
+		<column name="appraisalGoalMasterId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="appraisalId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="projectId" type="long"></column>
+		<column name="evaluationId" type="long"></column>
+		<column name="goaldetailId" type="long"></column>
+		<column name="ratingIdEmp" type="long"></column>
+		<column name="ratingIdMan" type="long"></column>
+		<column name="createdDate" type="Date"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="modifiedBy" type="long"></column>
+
+		<finder name="ApprIdEmpIdProjIdEvalIdGoalDetId"
+			return-type="AppraisalGoalDetails">
+			<finder-column name="appraisalId"></finder-column>
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="projectId"></finder-column>
+			<finder-column name="evaluationId"></finder-column>
+			<finder-column name="goaldetailId"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="AttendanceBio" table="attendanceBio"
+		local-service="true" remote-service="true">
+		<column name="attendanceBioId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="attDate" type="Date"></column>
+		<column name="attTime" type="String"></column>
+		<column name="uploadDate" type="Date"></column>
+		<column name="status" type="int"></column>
+		<finder name="empIdAndAttDateComId" return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="companyId"></finder-column>
+			<finder-column name="attDate"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="Resignation" table="Resignation"
+		local-service="true" remote-service="true">
+		<column name="ResignationId" type="long" primary="true"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="resignationDate" type="Date"></column>
+		<column name="resignationSubDate" type="Date"></column>
+		<column name="Description" type="String"></column>
+		<column name="managerId" type="long"></column>
+		<column name="mancomment" type="String"></column>
+		<column name="mancommentdate" type="Date"></column>
+		<column name="status" type="boolean"></column>
+	</entity>
+
+	<entity name="Milestone" table="Milestone" local-service="true"
+		remote-service="true">
+		<column name="milestoneId" type="long" primary="true"></column>
+		<column name="projectId" type="long"></column>
+		<column name="clientId" type="long"></column>
+		<column name="milestoneName" type="String"></column>
+		<column name="dueDate" type="Date"></column>
+		<column name="checkGST" type="int"></column>
+		<column name="amount" type="double"></column>
+		<column name="status" type="int"></column>
+	</entity>
+
+	<entity name="ClientMaster" table="clientMaster"
+		local-service="true" remote-service="true">
+
+		<column name="clientId" type="long" primary="true"></column>
+		<column name="clientName" type="String"></column>
+		<column name="officeAddress" type="String"></column>
+		<column name="billingAddress" type="String"></column>
+		<column name="contactNumber" type="int"></column>
+		<column name="emailId" type="String"></column>
+		<column name="contactPerson" type="String"></column>
+		<column name="skypeId" type="String"></column>
+		<column name="gstNo" type="long"></column>
+		<column name="panNo" type="String"></column>
+		<column name="bankName" type="String"></column>
+		<column name="branchName" type="String"></column>
+		<column name="bankAccountNumber" type="long"></column>
+		<column name="bankAccountType" type="String"></column>
+		<column name="ifscCode" type="String"></column>
+		<column name="addedDate" type="Date"></column>
+	</entity>
+
+	<entity name="Billing" table="billing" local-service="true"
+		remote-service="true">
+
+		<column name="billingId" type="long" primary="true"></column>
+		<column name="milestoneId" type="long"></column>
+		<column name="billingNumber" type="String"></column>
+		<column name="billingDate" type="String"></column>
+	</entity>
+
+	<entity name="BillDocumentUploadFile" local-service="true"
+		table="billDocumentUploadFile">
+		<column name="documentId" type="long" primary="true"></column>
+		<column name="dlFileEntryId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="billingId" type="long"></column>
+		<column name="documentName" type="String"></column>
+		<column name="documentPath" type="String"></column>
+		<column name="uploadDate" type="Date"></column>
+	</entity>
+
+	<entity name="CandidateReview" table="CandidateReview"
+		local-service="true">
+		<column name="candidateReviewId" type="long" primary="true"></column>
+		<column name="recruitProcessId" type="long"></column>
+		<column name="evaluationId" type="long"></column>
+		<column name="scroring" type="String"></column>
+
+		<finder name="candidateReview" return-type="Collection">
+			<finder-column name="recruitProcessId"></finder-column>
+		</finder>
+
+	</entity>
+
+	<entity name="CompanyPolicy" local-service="true"
+		table="companyPolicy">
+		<column name="companyPolicyId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="daysLocking" type="int"></column>
+		<column name="checkStatus" type="int"></column>
+		<column name="addedDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+	</entity>
+
+	<entity name="AttendanceCheckList" local-service="true"
+		table="AttendanceCheckList">
+		<column name="attendanceCheckListId" type="long" primary="true"></column>
+		<column name="attDate" type="Date"></column>
+		<column name="employeeCode" type="long"></column>
+		<column name="fullName" type="String"></column>
+		<column name="inTimeHour" type="String"></column>
+		<column name="inTimeMin" type="String"></column>
+		<column name="outTimeHour" type="String"></column>
+		<column name="outTimeMin" type="String"></column>
+		<column name="status" type="String"></column>
+		<column name="msg" type="String"></column>
+		<column name="indexNumber" type="int"></column>
+		<column name="pcDateAndTime" type="Date"></column>
+	</entity>
+
+	<entity name="DocumentUploadFile" local-service="true"
+		table="documentUploadFile" remote-service="true">
+		<column name="documentId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="fileEntryId" type="long"></column>
+		<column name="documentName" type="String"></column>
+		<column name="documentPath" type="String"></column>
+		<column name="uploadDate" type="Date"></column>
+		<column name="travelDetailsId" type="long"></column>
+	</entity>
+
+	<entity name="EmployeeDocumentUpload" local-service="true"
+		table="employeeDocumentUpload">
+		<column name="empDocumentId" primary="true" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="fileEntryId" type="long"></column>
+		<column name="travelDeskDetailsId" type="long"></column>
+		<column name="documentName" type="String"></column>
+		<column name="documentPath" type="String"></column>
+		<column name="uploadDate" type="Date"></column>
+	</entity>
+	<!-- start kameshwar -->
+	<entity local-service="true" name="PayComponent"
+		table="PayComponent" remote-service="true">
+		<!-- PK fields -->
+		<column name="componentId" primary="true" type="long" />
+		<!-- Group instance -->
+		<!-- Audit fields -->
+		<column name="employeeTypeId" type="long"></column>
+		<column name="name" type="String" />
+		<column name="abbreviation" type="String"></column>
+		<column name="taxStatus" type="int"></column>
+		<column name="payType" type="String"></column>
+		<column name="componentType" type="int"></column>
+		<column name="componentValueFormula" type="String"></column>
+		<column name="partOfCtc" type="int"></column>
+		<column name="effectiveDate" type="Date"></column>
+		<column name="islock" type="long"></column>
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="amount" type="double"></column>
+		<column name="payComponentOrder" type="long"></column>
+		<column name="autoAddPayStructure" type="int"></column>
+
+		<finder name="nameAndcomponentId" return-type="Collection">
+			<finder-column name="name"></finder-column>
+			<finder-column name="componentId" comparator="!="> </finder-column>
+		</finder>
+		<finder name="abbreviationAndcomponentId"
+			return-type="Collection">
+			<finder-column name="abbreviation"></finder-column>
+			<finder-column name="componentId" comparator="!="> </finder-column>
+		</finder>
+		<finder name="taxStatusAndpayType" return-type="Collection">
+			<finder-column name="taxStatus"></finder-column>
+			<finder-column name="payType"> </finder-column>
+		</finder>
+
+		<finder name="payComponentOrder" return-type="Collection">
+			<finder-column name="payComponentOrder"></finder-column>
+		</finder>
+		<!-- Samaresh -->
+		<finder name="payType" return-type="Collection">
+			<finder-column name="payType"></finder-column>
+		</finder>
+		<!-- Samaresh -->
+	</entity>
+
+
+	<entity name="MonthlyAdjustment" local-service="true"
+		remote-service="true" table="MonthlyAdjustment">
+
+		<column name="monthlyAdjustmentId" type="long" primary="true"></column>
+		<column name="payComponentId" type="long"></column>
+		<column name="amount" type="double"></column>
+		<column name="monthYear" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<finder name="employeeId" return-type="Collection">
+			<finder-column name="employeeId" />
+		</finder>
+		<finder name="monthYear" return-type="Collection">
+			<finder-column name="monthYear" />
+		</finder>
+		<finder name="monthYearAndemployeeId" return-type="Collection">
+			<finder-column name="monthYear" />
+			<finder-column name="employeeId" />
+		</finder>
+		<finder name="monthYearAndemployeeIdAndpayComponentId"
+			return-type="MonthlyAdjustment">
+			<finder-column name="monthYear" />
+			<finder-column name="employeeId" />
+			<finder-column name="payComponentId" />
+		</finder>
+	</entity>
+	<entity name="StopPay" local-service="true"
+		remote-service="true" table="StopPay">
+		<column name="stopPayId" type="long" primary="true"></column>
+		<column name="monthYear" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="reason" type="String"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="createdDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="modifiedBy" type="long"></column>
+		<column name="status" type="long"></column>
+		<column name="isLock" type="long"></column>
+		<finder name="employeeId" return-type="Collection">
+			<finder-column name="employeeId" />
+		</finder>
+		<finder name="MonthYearAndStatus" return-type="Collection">
+			<finder-column name="monthYear" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="monthYear" return-type="Collection">
+			<finder-column name="monthYear" />
+		</finder>
+		<finder name="employeeIdAndMonthYear" return-type="StopPay">
+			<finder-column name="employeeId" />
+			<finder-column name="monthYear" />
+		</finder>
+	</entity>
+	<entity name="SalDetails" local-service="true"
+		remote-service="true" table="payDetails">
+		<column name="SalDetailsId" type="long" primary="true"></column>
+		<column name="monthYear" type="long"></column>
+		<column name="componentId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="value" type="double"></column>
+		<finder name="employeeId" return-type="Collection">
+			<finder-column name="employeeId" />
+		</finder>
+		<finder name="monthYear" return-type="Collection">
+			<finder-column name="monthYear" />
+		</finder>
+		<finder name="monthYearAndemployeeId" return-type="Collection">
+			<finder-column name="monthYear" />
+			<finder-column name="employeeId" />
+		</finder>
+		<finder name="employeeIdAndMonthYear" return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="monthYear" arrayable-operator="OR"
+				comparator="="></finder-column>
+		</finder>
+		<finder name="employeeIdAndComponentIdmonthYears"
+			return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="componentId"
+				arrayable-operator="OR" comparator="="></finder-column>
+			<finder-column name="monthYear" arrayable-operator="OR"
+				comparator="="></finder-column>
+		</finder>
+		<finder name="employeeIdAndMonthYearAndComponentId"
+			return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="monthYear" />
+			<finder-column name="componentId"
+				arrayable-operator="OR" comparator="="></finder-column>
+		</finder>
+		<finder name="employeeIdAndComponentIdAndMonthYear"
+			return-type="SalDetails">
+			<finder-column name="employeeId" />
+			<finder-column name="componentId" />
+			<finder-column name="monthYear" />
+		</finder>
+		<finder name="employeeIdAndComponentIdAndMonthYears"
+			return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="componentId"></finder-column>
+			<finder-column name="monthYear" arrayable-operator="OR"
+				comparator="="></finder-column>
+		</finder>
+	</entity>
+	<entity name="FinSalary" local-service="true"
+		remote-service="true" table="finalSalary">
+		<column name="finSalaryId" type="long" primary="true"></column>
+		<column name="monthYear" type="long"></column>
+		<column name="totalEarning" type="double"></column>
+		<column name="totalDeduction" type="double"></column>
+		<column name="totalAmount" type="double"></column>
+		<column name="isLock" type="long"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="createdDate" type="Date"></column>
+
+		<finder return-type="FinSalary" name="monthYear">
+			<finder-column name="monthYear"></finder-column>
+		</finder>
+
+	</entity>
+	<entity name="TaxDeclaration" table="taxDeclaration"
+		local-service="true" remote-service="false">
+
+		<column name="taxDeclarationId" type="long" primary="true"></column>
+		<column name="financialYear" type="String"></column>
+		<column name="monthYear" type="int"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="hraFromDate" type="String"></column>
+		<column name="hraToDate" type="String"></column>
+		<column name="hraCity" type="String"></column>
+		<column name="hraIsmetro" type="String"></column>
+		<column name="hraLandlordPan" type="String"></column>
+		<column name="hraRent" type="double"></column>
+		<column name="medicalIndividual" type="double"></column>
+		<column name="medicalParents" type="double"></column>
+		<column name="medicalParentsSenior" type="double"></column>
+		<column name="medicalHandiLess80" type="double"></column>
+		<column name="medicalHandiGater80" type="double"></column>
+		<column name="medicalGater60Less80" type="double"></column>
+		<column name="medicalGater80" type="double"></column>
+		<column name="educationLoan" type="double"></column>
+		<column name="physicalDisability" type="double"></column>
+		<column name="physicalDisabilitySevere" type="double"></column>
+		<column name="equitySavings" type="double"></column>
+		<column name="interestOnDeposit" type="double"></column>
+		<column name="nationalPension" type="double"></column>
+		<column name="lic" type="double"></column>
+		<column name="ppf" type="double"></column>
+		<column name="nsc" type="double"></column>
+		<column name="infraBonds" type="double"></column>
+		<column name="tuitionFees" type="double"></column>
+		<column name="mutualFunds" type="double"></column>
+		<column name="sukanya" type="double"></column>
+		<column name="ulip" type="double"></column>
+		<column name="timeDeposit" type="double"></column>
+		<column name="housingLoan" type="double"></column>
+		<column name="fixedDeposit" type="double"></column>
+		<column name="nscInterest" type="double"></column>
+		<column name="housingLoanInterest" type="double"></column>
+		<column name="housingAddress" type="String"></column>
+		<column name="previousIncome" type="double"></column>
+		<column name="previousPf" type="double"></column>
+		<column name="previousPt" type="double"></column>
+		<column name="previousTds" type="double"></column>
+		<column name="islock" type="boolean"></column>
+		<column name="finalSubmission" type="boolean"></column>
+		<column name="hraExempt" type="double"></column>
+		<column name="sectionBExempt" type="double"></column>
+		<column name="sectionCExempt" type="double"></column>
+		<column name="sectionDExempt" type="double"></column>
+		<column name="salaryAfterExempt" type="double"></column>
+		<column name="salaryBeforeExempt" type="double"></column>
+		<column name="taxRate" type="double"></column>
+		<column name="grossTds" type="double"></column>
+		<column name="totalPtax" type="double"></column>
+		<column name="totalProvidentFund" type="double"></column>
+		<column name="totalTds" type="double"></column>
+		<column name="tdsDeducted" type="double"></column>
+		<column name="tdsDuePerMonth" type="double"></column>
+		<column name="annualIncome" type="double"></column>
+		<column name="educationcess" type="double"></column>
+		<column name="addeddate" type="Date"></column>
+
+		<finder return-type="TaxDeclaration" name="employeeId">
+			<finder-column name="employeeId"></finder-column>
+		</finder>
+		<finder return-type="TaxDeclaration"
+			name="employeeIdAndFinancialYear">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="financialYear"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="IncomeTaxSlab" table="incomeTaxSlab"
+		local-service="true" remote-service="false">
+
+		<column name="incomeTaxSlabId" type="long" primary="true"></column>
+		<column name="financialYear" type="String"></column>
+		<column name="companyId" type="long"></column>
+		<column name="incomeFrom" type="int"></column>
+		<column name="incomeTo" type="int"></column>
+		<column name="taxRate" type="double"></column>
+	</entity>
+
+	<entity name="TaxSetting" table="taxSetting"
+		local-service="true" remote-service="false">
+		<column name="taxSettingId" type="long" primary="true"></column>
+		<column name="componentId" type="long"></column>
+		<column name="componentName" type="String"></column>
+		<column name="taxFormulla" type="String"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="createdDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<finder name="componentId" return-type="Collection">
+			<finder-column name="componentId"></finder-column>
+		</finder>
+	</entity>
+	<entity name="TaxDeclarationMonthly"
+		table="taxDeclarationMonthly" local-service="true">
+		<column name="taxDeclarationMonthlyId" type="long"
+			primary="true"></column>
+		<column name="taxDeclarationId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="financialYear" type="String"></column>
+		<column name="monthYear" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="hraFromDate" type="String"></column>
+		<column name="hraToDate" type="String"></column>
+		<column name="hraCity" type="String"></column>
+		<column name="hraIsmetro" type="String"></column>
+		<column name="hraLandlordPan" type="String"></column>
+		<column name="hraRent" type="double"></column>
+		<column name="medicalIndividual" type="double"></column>
+		<column name="medicalParents" type="double"></column>
+		<column name="medicalParentsSenior" type="double"></column>
+		<column name="medicalHandiLess80" type="double"></column>
+		<column name="medicalHandiGater80" type="double"></column>
+		<column name="medicalGater60Less80" type="double"></column>
+		<column name="medicalGater80" type="double"></column>
+		<column name="educationLoan" type="double"></column>
+		<column name="physicalDisability" type="double"></column>
+		<column name="physicalDisabilitySevere" type="double"></column>
+		<column name="equitySavings" type="double"></column>
+		<column name="interestOnDeposit" type="double"></column>
+		<column name="nationalPension" type="double"></column>
+		<column name="lic" type="double"></column>
+		<column name="ppf" type="double"></column>
+		<column name="nsc" type="double"></column>
+		<column name="infraBonds" type="double"></column>
+		<column name="tuitionFees" type="double"></column>
+		<column name="mutualFunds" type="double"></column>
+		<column name="sukanya" type="double"></column>
+		<column name="ulip" type="double"></column>
+		<column name="timeDeposit" type="double"></column>
+		<column name="housingLoan" type="double"></column>
+		<column name="fixedDeposit" type="double"></column>
+		<column name="nscInterest" type="double"></column>
+		<column name="housingLoanInterest" type="double"></column>
+		<column name="housingAddress" type="String"></column>
+		<column name="previousIncome" type="double"></column>
+		<column name="previousPf" type="double"></column>
+		<column name="previousPt" type="double"></column>
+		<column name="previousTds" type="double"></column>
+		<column name="islock" type="boolean"></column>
+		<column name="finalSubmission" type="boolean"></column>
+		<column name="hraExempt" type="double"></column>
+		<column name="sectionBExempt" type="double"></column>
+		<column name="sectionCExempt" type="double"></column>
+		<column name="sectionDExempt" type="double"></column>
+		<column name="salaryAfterExempt" type="double"></column>
+		<column name="salaryBeforeExempt" type="double"></column>
+		<column name="taxRate" type="double"></column>
+		<column name="grossTds" type="double"></column>
+		<column name="totalTds" type="double"></column>
+		<column name="tdsDeducted" type="double"></column>
+		<column name="tdsDuePerMonth" type="double"></column>
+		<column name="educationCess" type="double"></column>
+		<column name="totalPtax" type="double"></column>
+		<column name="totalProvidentFund" type="double"></column>
+		<column name="totalConveyance" type="double"></column>
+		<column name="addedDate" type="Date"></column>
+		<column name="currentMonthTax" type="double"></column>
+		<column name="sectionEExempt" type="double"></column>
+		<finder name="monthYearAndemployeeId"
+			return-type="TaxDeclarationMonthly">
+			<finder-column name="monthYear" />
+			<finder-column name="employeeId" />
+		</finder>
+		<finder name="employeeIdAndMonthYear" return-type="Collection">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="monthYear" arrayable-operator="OR"
+				comparator="="></finder-column>
+		</finder>
+
+	</entity>
+	<entity name="EmpPayStructure" table="empPayStructure"
+		local-service="true" remote-service="true">
+		<column name="empPayStructureId" type="long" primary="true"></column>
+		<column name="payComponentId" type="long"></column>
+		<column name="componentValue" type="double"></column>
+		<column name="employeeId" type="long"></column>
+		<finder name="employeeId" return-type="Collection">
+			<finder-column name="employeeId" />
+		</finder>
+		<finder name="payComponentId" return-type="Collection">
+			<finder-column name="payComponentId" />
+		</finder>
+		<finder name="payComponentIdsAndemployeeId"
+			return-type="Collection">
+			<finder-column name="payComponentId"
+				arrayable-operator="OR" comparator="="></finder-column>
+			<finder-column name="employeeId"></finder-column>
+		</finder>
+		<finder name="payComponentIdAndemployeeId"
+			return-type="EmpPayStructure">
+			<finder-column name="payComponentId"></finder-column>
+			<finder-column name="employeeId"></finder-column>
+		</finder>
+		<!-- samaresh -->
+		<finder name="employeeIdPayComponentId"
+			return-type="EmpPayStructure">
+			<finder-column name="employeeId" />
+			<finder-column name="payComponentId" />
+		</finder>
+		<!-- samarsh -->
+	</entity>
+	<!-- end kameshwar -->
+
+	<entity local-service="true" table="expenseEntry"
+		name="ExpenseEntry" remote-service="true">
+		<column name="expenseId" type="long" primary="true"></column>
+		<column name="employeeId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="projectId" type="long" />
+		<column name="catId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="title" type="String" />
+		<column name="description" type="String" />
+		<column name="expDate" type="Date" />
+		<column name="amount" type="double" />
+		<column name="status" type="int" />
+		<column name="manEmployeeId" type="long" />
+		<column name="manCommnets" type="String" />
+		<column name="manApprovedDate" type="Date" />
+		<column name="accComments" type="String" />
+		<column name="accApprovedDate" type="Date" />
+		<column name="monthYear" type="long" />
+		<!-- Workflow status Columns -->
+
+
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+		<finder name="userId" return-type="Collection">
+			<finder-column name="userId" />
+		</finder>
+		<finder name="status" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+			<finder-column name="status"></finder-column>
+		</finder>
+		<!-- References -->
+		<reference entity="AssetEntry"
+			package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag"
+			package-path="com.liferay.portlet.asset" />
+
+	</entity>
+
+	<entity name="ExpProofFiles" table="expProofFiles"
+		local-service="true" remote-service="true">
+		<column name="fileId" type="long" primary="true"></column>
+		<column name="financialYear" type="String"></column>
+		<column name="companyId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="expenseId" type="long"></column>
+		<column name="fileName" type="String"></column>
+		<column name="fileOrigName" type="String"></column>
+		<column name="filePath" type="String"></column>
+		<column name="proofName" type="String"></column>
+		<column name="uploadDate" type="Date"></column>
+		<finder name="ExpenceId" return-type="ExpProofFiles">
+			<finder-column name="expenseId"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="Performance" table="performance"
+		local-service="true" remote-service="true">
+		<column name="performanceId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="performanceHeading" type="String"></column>
+		<column name="performanceDescription" type="String"></column>
+		<column name="createDate" type="Date"></column>
+	</entity>
+
+	<entity name="PayrollSlabs" table="payrollSlabs"
+		local-service="true" remote-service="true">
+		<column name="payrollSlabsId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="appraisalSettingId" type="long"></column>
+		<column name="ratingId" type="long"></column>
+		<column name="payrollPercentage" type="double"></column>
+		<column name="bonusPercentage" type="double"></column>
+		<finder name="AppraisalSettingIdRatingId"
+			return-type="PayrollSlabs">
+			<finder-column name="appraisalSettingId"></finder-column>
+			<finder-column name="ratingId"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="PayrollIncrement" table="payrollIncrement"
+		local-service="true" remote-service="true">
+		<column name="payrollIncrementId" type="long" primary="true"></column>
+		<column name="appraisalSettingId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="employeeCode" type="long"></column>
+		<column name="overallRatingMan" type="long"></column>
+		<column name="preCtc" type="double"></column>
+		<column name="postCtc" type="double"></column>
+		<column name="componentId" type="long"></column>
+		<column name="preHeadComponentVal" type="double"></column>
+		<column name="postHeadComponentVal" type="double"></column>
+		<column name="bonusVal" type="double"></column>
+		<column name="financialYear" type="String"></column>
+		<finder name="employeeIdComponentIdFinancialYear"
+			return-type="PayrollIncrement">
+			<finder-column name="employeeId" />
+			<finder-column name="componentId" />
+			<finder-column name="financialYear" />
+		</finder>
+		<finder name="employeeIdAppraisalSettingIdFinancialYear"
+			return-type="Collection">
+			<finder-column name="employeeId" />
+			<finder-column name="appraisalSettingId" />
+			<finder-column name="financialYear" />
+		</finder>
+	</entity>
+
+	<entity name="GoalDetails" table="goalDetails"
+		local-service="true" remote-service="true">
+		<column name="goaldetailId" type="long" primary="true"></column>
+		<column name="goalId" type="long"></column>
+		<column name="evaluationId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="parameter" type="String"></column>
+		<column name="scale" type="String"></column>
+		<column name="addedDate" type="Date"></column>
+		<finder name="GoalId" return-type="Collection">
+			<finder-column name="goalId"></finder-column>
+		</finder>
+	</entity>
+
+
+	<!-- start Aritra -->
+	<entity name="LeaveDoc" table="LeaveDoc" local-service="true"
+		remote-service="true">
+		<column name="leaveDocId" type="long" primary="true"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="leaveApplyId" type="long"></column>
+		<column name="fileEntryId" type="long"></column>
+		<column name="filePath" type="String"></column>
+		<column name="addedDate" type="Date"></column>
+	</entity>
+
+	<entity name="Branch" local-service="true" table="branch"
+		remote-service="true">
+		<column name="branchId" type="long" primary="true"></column>
+		<column name="branchName" type="String"></column>
+		<column name="branchAddress" type="String"></column>
+		<column name="status" type="int"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="createdById" type="long"></column>
+	</entity>
+
+	<entity name="TaxProofFiles" table="taxProofFiles"
+		local-service="true" remote-service="true">
+
+		<column name="fileId" type="long" primary="true"></column>
+		<column name="financialYear" type="String"></column>
+		<column name="companyId" type="long"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="taxDeclarationId" type="long"></column>
+		<column name="fileName" type="String"></column>
+		<column name="fileOrigName" type="String"></column>
+		<column name="filePath" type="String"></column>
+		<column name="proofName" type="String"></column>
+		<column name="uploadDate" type="Date"></column>
+	</entity>
+	<!-- end Aritra -->
+
+
+	<!-- Start Hussham 260618 -->
+	<entity name="BankMaster" local-service="true"
+		remote-service="true" table="bankMaster">
+		<column name="bankId" type="long" primary="true"></column>
+		<column name="bankName" type="String"></column>
+		<column name="branchName" type="String"></column>
+		<column name="address" type="String"></column>
+		<column name="ifscCode" type="String"></column>
+		<column name="status" type="int"></column>
+		<column name="bankType" type="int"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+	</entity>
+
+	<entity name="GoalMaster" table="goalMaster"
+		local-service="true" remote-service="true">
+		<column name="goalId" type="long" primary="true"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="projectId" type="long"></column>
+		<column name="goalName" type="String"></column>
+		<column name="goalDescription" type="String"></column>
+		<column name="addedDate" type="Date"></column>
+	</entity>
+
+	<entity name="PerformanceMaster" table="performanceMaster"
+		local-service="true" remote-service="true">
+		<column name="performanceId" type="long" primary="true"></column>
+		<column name="companyId" type="long"></column>
+		<column name="performanceHeading" type="String"></column>
+		<column name="performanceDescription" type="String"></column>
+		<column name="addedDate" type="Date"></column>
+	</entity>
+
+	<entity name="RatingMaster" table="ratingMaster"
+		local-service="true" remote-service="true">
+		<column name="ratingId" type="long" primary="true"></column>
+		<column name="ratingNum" type="String"></column>
+		<column name="ratingKey" type="String"></column>
+		<column name="ratingDescription" type="String"></column>
+		<column name="salaryPercentage" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="addedDate" type="Date"></column>
+	</entity>
+
+	<entity name="TaskMaster" local-service="true"
+		table="taskMaster">
+		<column name="taskId" type="long" primary="true"></column>
+		<column name="taskName" type="String"></column>
+		<column name="taskDesc" type="String"></column>
+		<column name="status" type="int"></column>
+		<column name="createDate" type="Date"></column>
+	</entity>
+	<entity name="TaskMasterMapping" local-service="true"
+		table="taskMasterMapping">
+		<column name="taskMappingId" type="long" primary="true"></column>
+		<column name="taskId" type="long"></column>
+		<column name="projectId" type="long"></column>
+		<column name="createDate" type="Date"></column>
+	</entity>
+	<!-- end Hussham -->
+
+	<!-- start rajdip -->
+	<entity name="CandidateApply" table="CandidateApply"
+		local-service="true" remote-service="true">
+		<column name="applyCandidateId" type="long" primary="true"></column>
+		<column name="firstName" type="String"></column>
+		<column name="lastName" type="String"></column>
+		<column name="emailAddress" type="String"></column>
+		<column name="phoneNumber" type="String"></column>
+		<column name="yearOfExp" type="int"></column>
+		<column name="monthOfExp" type="int"></column>
+		<column name="currentCTC" type="int"></column>
+		<column name="expectedCTC" type="int"></column>
+		<column name="currentCompany" type="String"></column>
+		<column name="noticePeriod" type="int"></column>
+		<column name="referenceEmployeeId" type="long"></column>
+		<column name="cvFileId" type="long"></column>
+		<column name="jobOpeningId" type="long"></column>
+		<column name="skillset" type="String"></column>
+		<column name="status" type="int"></column>
+	</entity>
+	<entity name="SkillSet" table="SkillSet" local-service="true"
+		remote-service="true">
+		<column name="SkillId" type="long" primary="true"></column>
+		<column name="SkillName" type="String"></column>
+	</entity>
+
+	<entity name="JobOpening" table="JobOpening"
+		local-service="true" remote-service="true">
+		<column name="jobOpeningId" type="long" primary="true"></column>
+		<column name="jobPostId" type="long" />
+		<column name="openingFor" type="String"></column>
+		<column name="description" type="String"></column>
+		<column name="createdDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="status" type="int"></column>
+	</entity>
+	<entity name="RecruitmentProcess" table="RecruitmentProcess"
+		local-service="true" remote-service="true">
+		<column name="recruitmentProcessId" primary="true" type="long" />
+		<column name="applyCandidateId" type="long"></column>
+		<column name="interviewDate" type="Date"></column>
+		<column name="interviewTime" type="String"></column>
+		<column name="fileEntryId" type="long"></column>
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="interviewerRemarks" type="String"></column>
+		<column name="hrRemarks" type="String"></column>
+		<column name="isSelected" type="boolean"></column>
+		<column name="interviewerId" type="long"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="jobPostId" type="long"></column>
+
+		<!-- Workflow Start -->
+		<!-- Workflow status Columns -->
+		<column name="groupId" type="long" />
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+		<column name="userId" type="long"></column>
+
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Workflow finder -->
+		<!-- <finder name="userId" return-type="Collection"> <finder-column name="userId" 
+			/> </finder> -->
+		<finder name="status" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+			<finder-column name="status"></finder-column>
+		</finder>
+
+		<!-- References -->
+		<reference entity="AssetEntry"
+			package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag"
+			package-path="com.liferay.portlet.asset" />
+		<!-- Workflow End -->
+
+
+	</entity>
+
+	<entity name="JobPost" table="JobPost" local-service="true"
+		remote-service="true">
+		<column name="jobPostId" primary="true" type="long" />
+		<column name="postName" type="String" />
+		<column name="postDescription" type="String" />
+		<column name="createdDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+	</entity>
+	<entity name="JobEvaluation" table="JobEvaluation"
+		local-service="true" remote-service="true">
+		<column name="postEvaluationId" primary="true" type="long" />
+		<column name="jobPostId" type="long" />
+		<column name="evaluationName" type="String" />
+		<column name="evaluationDescription" type="String" />
+		<column name="createdDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+
+		<finder name="jobEvaluation" return-type="Collection">
+			<finder-column name="jobPostId"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="CandidateEvaluation" table="CandidateEvaluation"
+		local-service="true" remote-service="true">
+		<column name="candidateEvaluationId" type="long" primary="true"></column>
+		<column name="interviewerId" type="long"></column>
+		<column name="jobPostId" type="long"></column>
+		<column name="postEvaluationId" type="long"></column>
+		<column name="applyCandidateId" type="long"></column>
+		<column name="interviewerRating" type="int"></column>
+		<column name="interviewerRemarks" type="String"></column>
+		<column name="hrRemarks" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="recruitmentProcessId" type="long" />
+	</entity>
+
+	<entity name="SelectedCandidatePayStructure"
+		table="SelectedCandidatePayStructure" local-service="true"
+		remote-service="true">
+		<column name="candidatePayStructureId" type="long"
+			primary="true"></column>
+		<column name="payComponentId" type="long"></column>
+		<column name="componentValue" type="double"></column>
+		<column name="recruitmentProcessId" type="long"></column>
+		<column name="payStatus" type="int"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<finder return-type="Collection"
+			name="recruitmentProcessIdAndPayStatus">
+			<finder-column name="recruitmentProcessId"></finder-column>
+			<finder-column name="payStatus"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="CandidatePayStructureMaster"
+		table="candidatePayStructureMaster" local-service="true"
+		remote-service="true">
+		<column name="candidatePayStructureMasterId" type="long"
+			primary="true"></column>
+		<column name="recruitmentProcessId" type="long"></column>
+		<column name="totalAmount" type="double"></column>
+		<column name="totalBonus" type="double"></column>
+		<column name="payMasterStatus" type="int"></column>
+		<column name="joiningDate" type="Date"></column>
+		<column name="candidateBond" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<finder return-type="Collection"
+			name="recruitmentProcessIdAndPayMasterStatus">
+			<finder-column name="recruitmentProcessId"></finder-column>
+			<finder-column name="payMasterStatus"></finder-column>
+		</finder>
+	</entity>
+	<!-- end rajdip -->
+
+
+	<entity name="TimeSheetMaster" table="timeSheetMaster"
+		local-service="true" remote-service="true">
+		<column name="timesheetParentId" type="long" primary="true"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="fromDate" type="Date"></column>
+		<column name="toDate" type="Date"></column>
+		<column name="submitStatus" type="int"></column>
+		<column name="addedDate" type="Date"></column>
+
+		<!-- Workflow status Columns -->
+		<column name="groupId" type="long" />
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+
+		<finder name="status" return-type="Collection">
+			<finder-column name="groupId"></finder-column>
+			<finder-column name="status"></finder-column>
+		</finder>
+
+		<!-- References -->
+		<reference entity="AssetEntry"
+			package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag"
+			package-path="com.liferay.portlet.asset" />
+	</entity>
+
+	<entity name="PushNotification" table="pushNotification"
+		local-service="true" remote-service="true">
+		<column name="pushNotificationId" type="long" primary="true"></column>
+		<column name="subject" type="String"></column>
+		<column name="message" type="String"></column>
+		<column name="fileId" type="long"></column>
+		<column name="fileUrl" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+	</entity>
+	<!-- Aritra start -->
+	<entity name="LeaveOb" table="leaveOb" local-service="true"
+		remote-service="true">
+		<column name="leaveobId" type="long" primary="true"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="leaveTypeId" type="long"></column>
+		<column name="obVal" type="int"></column>
+		<column name="isApprove" type="boolean"></column>
+		<finder name="openingBalance" return-type="LeaveOb">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="leaveTypeId"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="FormSixteen" table="FormSixteen"
+		local-service="true" remote-service="true">
+		<column name="id" type="long" primary="true"></column>
+		<column name="employeeId" type="long"></column>
+		<column name="financialYear" type="String"></column>
+		<column name="fileEnteryId" type="long"></column>
+		<column name="addedDate" type="Date"></column>
+		<finder return-type="Collection" name="getForm">
+			<finder-column name="employeeId"></finder-column>
+			<finder-column name="financialYear"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="FormSixteenErrorFile" table="FormSixteenErrorFile"
+		local-service="true" remote-service="true">
+		<column name="errorId" type="long" primary="true"></column>
+		<column name="fileName" type="String"></column>
+		<column name="errorMsg" type="String"></column>
+	</entity>
+
+	<entity name="LeaveType" local-service="true"
+		remote-service="true" table="leaveType">
+		<column name="leaveTypeId" type="long" primary="true"></column>
+		<column name="leaveName" type="String"></column>
+		<column name="abb" type="String"></column>
+		<column name="encashmentDay" type="int"></column>
+		<column name="forwardDay" type="int"></column>
+		<column name="leaveStatus" type="boolean"></column>
+		<column name="encashmentPer" type="int"></column>
+		<column name="minServiceDay" type="int"></column>
+		<column name="noticeDay" type="int"></column>
+		<column name="employeetypeId" type="long"></column>
+		<column name="maxCreditDay" type="int"></column>
+		<column name="gender" type="String"></column>
+		<column name="maritalStatus" type="String"></column>
+		<column name="impectOnSalary" type="int"></column>
+		<column name="companyId" type="long"></column>
+		<column name="addedDate" type="Date"></column>
+		<finder name="leaveName" return-type="leaveType">
+			<finder-column name="leaveName"></finder-column>
+		</finder>
+	</entity>
+
+	<entity name="YearSetting" table="YearSetting"
+		local-service="true" remote-service="true">
+		<column name="yearSettingId" type="long" primary="true"></column>
+		<column name="financialYearStartDate" type="Date"></column>
+		<column name="financialYearEndDate" type="Date"></column>
+		<column name="calendarStartDate" type="Date"></column>
+		<column name="calendarEndDate" type="Date"></column>
+		<column name="isActive" type="int"></column>
+		<finder return-type="YearSetting" name="isActive">
+			<finder-column name="isActive"></finder-column>
+		</finder>
+	</entity>
+	<!-- Aritra end -->
+</service-builder>

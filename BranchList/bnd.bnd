@@ -1,0 +1,4 @@
+Bundle-Name: BranchList
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.branch.list
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.branch.list.constants

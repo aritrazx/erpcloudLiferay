@@ -1,0 +1,28 @@
+<custom-sql>
+	<sql
+		id="com.liferay.famocom.erpcloud.service.persistence.RatingMasterFinder.getUsageCount">
+		SELECT COUNT(*)
+		FROM 
+		appraisalmaster  
+		CROSS JOIN 
+		appraisalgoaldetails 
+		CROSS JOIN
+		appraisalgoalmaster 
+		CROSS JOIN 
+		appraisalperformance 
+	
+		WHERE
+		 (appraisalmaster.overallRatingEmp = ?) AND
+		 (appraisalgoaldetails.ratingIdEmp = ?) AND
+		 (appraisalgoalmaster.employeeOverallRat = ?) AND 
+		 (appraisalperformance.ratingIdEmp = ?) 
+
+	</sql>
+<sql id="com.liferay.famocom.erpcloud.service.persistence.EmpPayStructureFinder.getEmployeeIdFormEmpPayStructure">
+   SELECT DISTINCT (emppaystructure.employeeId) 
+   FROM emppaystructure 
+   INNER JOIN
+   employee  ON  emppaystructure.employeeId = employee.employeeId
+   WHERE employee.employeeStatus=0 
+   </sql>
+</custom-sql>

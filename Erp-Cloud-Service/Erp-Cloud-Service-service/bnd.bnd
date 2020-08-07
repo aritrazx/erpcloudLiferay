@@ -1,0 +1,15 @@
+Bundle-Name: Erp-Cloud-Service-service
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+
+Export-Package: \
+	com.liferay.famocom.erpcloud.service.payroll.permission,\
+	com.liferay.famocom.erpcloud.service.salaryprocess.permission,\
+	com.liferay.famocom.erpcloud.mytimesheet.permission,\
+	com.liferay.famocom.erpcloud.service.projectmaster.permission,\
+	com.liferay.famocom.erpcloud.service.teammember.permission,\
+	com.liferay.famocom.erpcloud.service.projecttask.permission,\
+	com.liferay.famocom.erpcloud.service.timesheetsetting.permission,\
+	com.liferay.famocom.erpcloud.leave.permission

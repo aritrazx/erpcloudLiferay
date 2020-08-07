@@ -1,0 +1,4 @@
+Bundle-Name: LeaveSetup
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.leavesetup
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.leavesetup.constants

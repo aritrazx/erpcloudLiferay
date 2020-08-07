@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 7.0.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_7_0_0.dtd">
+
+<resource-action-mapping>
+	<portlet-resource>
+		<portlet-name>ManageAppraisalMVC</portlet-name>
+		<permissions>
+			<supports>
+				<action-key>APPRAISAL_VIEW</action-key>
+				<action-key>APPRAISAL_ADD</action-key>
+				<action-key>APPRAISAL_EDIT</action-key>
+			</supports>
+		</permissions>
+	</portlet-resource>
+	<model-resource>
+		<model-name>com.liferay.famocom.erpcloud.model.AppraisalSetup</model-name>
+		<portlet-ref>
+			<portlet-name>ManageAppraisalMVC</portlet-name>
+		</portlet-ref>
+		<permissions>
+			<supports>
+				<action-key>ADD_ENTRY</action-key>
+				<action-key>DELETE</action-key>
+				<action-key>UPDATE</action-key>
+				<action-key>MANAGER_VIEW</action-key>
+				<action-key>HR_VIEW</action-key>
+			</supports>
+		</permissions>
+	</model-resource>
+</resource-action-mapping>

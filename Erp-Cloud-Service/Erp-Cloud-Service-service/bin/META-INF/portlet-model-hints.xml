@@ -1,0 +1,1182 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.famocom.erpcloud.model.AddTeamMember">
+		<field name="projectTeamsId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="projectId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="roleId" type="long" />
+		<field name="addedDate" type="Date" />
+		<field name="isProjectManager" type="boolean" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.AppraisalGoalDetails">
+		<field name="appraisalGoalDetailsId" type="long" />
+		<field name="appraisalGoalMasterId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="appraisalId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="projectId" type="long" />
+		<field name="evaluationId" type="long" />
+		<field name="goaldetailId" type="long" />
+		<field name="ratingIdEmp" type="long" />
+		<field name="ratingIdMan" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="createdBy" type="long" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.AppraisalGoalMaster">
+		<field name="appraisalGoalMasterId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="appraisalId" type="long" />
+		<field name="appraisalProjectId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="projectId" type="long" />
+		<field name="evaluationId" type="long" />
+		<field name="employeeComment" type="String" />
+		<field name="employeeOverallRat" type="long" />
+		<field name="managerComment" type="String" />
+		<field name="managerOverallRat" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="createdBy" type="long" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.AppraisalMaster">
+		<field name="appraisalId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="appraisalSettingId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="accomplishmentsEmp" type="String" />
+		<field name="strengthsEmp" type="String" />
+		<field name="developmentEmp" type="String" />
+		<field name="careerEmp" type="String" />
+		<field name="overallRatingEmp" type="long" />
+		<field name="overallCommentEmp" type="String" />
+		<field name="accomplishmentsMan" type="String" />
+		<field name="strengthsMan" type="String" />
+		<field name="developmentMan" type="String" />
+		<field name="careerMan" type="String" />
+		<field name="companyValue" type="String" />
+		<field name="developmentPlan" type="String" />
+		<field name="overallRatingMan" type="long" />
+		<field name="overallCommentMan" type="String" />
+		<field name="submitStep" type="long" />
+		<field name="addedDate" type="Date" />
+		<field name="createdBy" type="long" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.AppraisalPerformance">
+		<field name="appraisalPerformanceId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="appraisalId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="appraisalSettingId" type="long" />
+		<field name="performanceId" type="long" />
+		<field name="performanceComm" type="String" />
+		<field name="ratingIdEmp" type="long" />
+		<field name="ratingIdMan" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="createdBy" type="long" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.AppraisalProjectMaster">
+		<field name="appraisalProjectId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="appraisalId" type="long" />
+		<field name="appraisalSettingId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="projectId" type="long" />
+		<field name="projectDescription" type="String" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="submitStep" type="long" />
+		<field name="addedDate" type="Date" />
+		<field name="createdBy" type="long" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.AppraisalSetup">
+		<field name="appraisalSettingId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="financialYear" type="String" />
+		<field name="fromDateCycle" type="Date" />
+		<field name="toDateCycle" type="Date" />
+		<field name="fromDateSubmission" type="Date" />
+		<field name="toDateSubmission" type="Date" />
+		<field name="appraisalPeriod" type="long" />
+		<field name="totalEmp" type="long" />
+		<field name="beforeCtcAll" type="long" />
+		<field name="appraisalEmp" type="long" />
+		<field name="beforeCtc" type="long" />
+		<field name="afterCtc" type="long" />
+		<field name="totalAreas" type="long" />
+		<field name="totalBonus" type="long" />
+		<field name="totalCtcAfter" type="long" />
+		<field name="isLocked" type="long" />
+		<field name="isActive" type="long" />
+		<field name="employeeType" type="String" />
+		<field name="addedDate" type="Date" />
+		<field name="createdBy" type="long" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.Attendance">
+		<field name="attendanceId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="employeeCode" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="attDate" type="Date" />
+		<field name="inTimeHour" type="String" />
+		<field name="inTimeMin" type="String" />
+		<field name="outTimeHour" type="String" />
+		<field name="outTimeMin" type="String" />
+		<field name="inTime" type="String" />
+		<field name="outTime" type="String" />
+		<field name="inDatePc" type="Date" />
+		<field name="outDatePc" type="Date" />
+		<field name="total" type="String" />
+		<field name="status" type="String" />
+		<field name="ipPc" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.AttendanceBio">
+		<field name="attendanceBioId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="attDate" type="Date" />
+		<field name="attTime" type="String" />
+		<field name="uploadDate" type="Date" />
+		<field name="status" type="int" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.AttendanceCheckList">
+		<field name="attendanceCheckListId" type="long" />
+		<field name="attDate" type="Date" />
+		<field name="employeeCode" type="long" />
+		<field name="fullName" type="String" />
+		<field name="inTimeHour" type="String" />
+		<field name="inTimeMin" type="String" />
+		<field name="outTimeHour" type="String" />
+		<field name="outTimeMin" type="String" />
+		<field name="status" type="String" />
+		<field name="msg" type="String" />
+		<field name="indexNumber" type="int" />
+		<field name="pcDateAndTime" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.BankMaster">
+		<field name="bankId" type="long" />
+		<field name="bankName" type="String" />
+		<field name="branchName" type="String" />
+		<field name="address" type="String" />
+		<field name="ifscCode" type="String" />
+		<field name="status" type="int" />
+		<field name="bankType" type="int" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.BillDocumentUploadFile">
+		<field name="documentId" type="long" />
+		<field name="dlFileEntryId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="billingId" type="long" />
+		<field name="documentName" type="String" />
+		<field name="documentPath" type="String" />
+		<field name="uploadDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.Billing">
+		<field name="billingId" type="long" />
+		<field name="milestoneId" type="long" />
+		<field name="billingNumber" type="String" />
+		<field name="billingDate" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.BookingRoom">
+		<field name="bookingId" type="long" />
+		<field name="roomId" type="long" />
+		<field name="bookingDate" type="Date" />
+		<field name="fromTime" type="String" />
+		<field name="toTime" type="String" />
+		<field name="bookedBy" type="long" />
+		<field name="note" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.Branch">
+		<field name="branchId" type="long" />
+		<field name="branchName" type="String" />
+		<field name="branchAddress" type="String" />
+		<field name="status" type="int" />
+		<field name="modifiedDate" type="Date" />
+		<field name="createDate" type="Date" />
+		<field name="createdById" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.CandidateApply">
+		<field name="applyCandidateId" type="long" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="phoneNumber" type="String" />
+		<field name="yearOfExp" type="int" />
+		<field name="monthOfExp" type="int" />
+		<field name="currentCTC" type="int" />
+		<field name="expectedCTC" type="int" />
+		<field name="currentCompany" type="String" />
+		<field name="noticePeriod" type="int" />
+		<field name="referenceEmployeeId" type="long" />
+		<field name="cvFileId" type="long" />
+		<field name="jobOpeningId" type="long" />
+		<field name="skillset" type="String" />
+		<field name="status" type="int" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.CandidateEvaluation">
+		<field name="candidateEvaluationId" type="long" />
+		<field name="interviewerId" type="long" />
+		<field name="jobPostId" type="long" />
+		<field name="postEvaluationId" type="long" />
+		<field name="applyCandidateId" type="long" />
+		<field name="interviewerRating" type="int" />
+		<field name="interviewerRemarks" type="String" />
+		<field name="hrRemarks" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="recruitmentProcessId" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.CandidatePayStructureMaster">
+		<field name="candidatePayStructureMasterId" type="long" />
+		<field name="recruitmentProcessId" type="long" />
+		<field name="totalAmount" type="double" />
+		<field name="totalBonus" type="double" />
+		<field name="payMasterStatus" type="int" />
+		<field name="joiningDate" type="Date" />
+		<field name="candidateBond" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.CandidateReview">
+		<field name="candidateReviewId" type="long" />
+		<field name="recruitProcessId" type="long" />
+		<field name="evaluationId" type="long" />
+		<field name="scroring" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.ClientMaster">
+		<field name="clientId" type="long" />
+		<field name="clientName" type="String" />
+		<field name="officeAddress" type="String" />
+		<field name="billingAddress" type="String" />
+		<field name="contactNumber" type="int" />
+		<field name="emailId" type="String" />
+		<field name="contactPerson" type="String" />
+		<field name="skypeId" type="String" />
+		<field name="gstNo" type="long" />
+		<field name="panNo" type="String" />
+		<field name="bankName" type="String" />
+		<field name="branchName" type="String" />
+		<field name="bankAccountNumber" type="long" />
+		<field name="bankAccountType" type="String" />
+		<field name="ifscCode" type="String" />
+		<field name="addedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.CompanyPolicy">
+		<field name="companyPolicyId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="daysLocking" type="int" />
+		<field name="checkStatus" type="int" />
+		<field name="addedDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.ConferenceRoom">
+		<field name="roomId" type="long" />
+		<field name="roomNo" type="long" />
+		<field name="floorNo" type="long" />
+		<field name="capacity" type="long" />
+		<field name="openTime" type="String" />
+		<field name="closeTime" type="String" />
+		<field name="building" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.DocumentUploadFile">
+		<field name="documentId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="fileEntryId" type="long" />
+		<field name="documentName" type="String" />
+		<field name="documentPath" type="String" />
+		<field name="uploadDate" type="Date" />
+		<field name="travelDetailsId" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.EmailTemplate">
+		<field name="id" type="long" />
+		<field name="templateName" type="String" />
+		<field name="emailFor" type="String" />
+		<field name="templateBody" type="String" />
+		<field name="createdBy" type="Date" />
+		<field name="ModifiedBy" type="Date" />
+		<field name="Status" type="boolean" />
+		<field name="restoreTemplateBody" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.Employee">
+		<field name="employeeId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="employeeCode" type="long" />
+		<field name="dateOfJoing" type="Date" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="designation" type="String" />
+		<field name="dateOfBirth" type="Date" />
+		<field name="gender" type="String" />
+		<field name="maritalStatus" type="String" />
+		<field name="noOfChild" type="long" />
+		<field name="note" type="String" />
+		<field name="address" type="String" />
+		<field name="state" type="String" />
+		<field name="postCode" type="String" />
+		<field name="homePhone" type="int" />
+		<field name="mobileNumber" type="int" />
+		<field name="emaiAddress" type="String" />
+		<field name="anniversary" type="Date" />
+		<field name="employeePhoto" type="Blob" />
+		<field name="employeeStatus" type="int" />
+		<field name="totalPay" type="double" />
+		<field name="basicPay" type="double" />
+		<field name="da" type="double" />
+		<field name="hra" type="double" />
+		<field name="medical" type="double" />
+		<field name="ta" type="double" />
+		<field name="conveyance" type="double" />
+		<field name="internet" type="double" />
+		<field name="mobile" type="double" />
+		<field name="fare" type="double" />
+		<field name="areas" type="double" />
+		<field name="bouns" type="double" />
+		<field name="insurance" type="double" />
+		<field name="otherAllowance" type="double" />
+		<field name="providentFund" type="double" />
+		<field name="professionTax" type="double" />
+		<field name="incomeTax" type="double" />
+		<field name="loan" type="double" />
+		<field name="otherDeduction" type="double" />
+		<field name="bankId" type="long" />
+		<field name="branchAddress" type="String" />
+		<field name="accountNo" type="String" />
+		<field name="pfNo" type="String" />
+		<field name="aadhaarNo" type="String" />
+		<field name="employeetypeId" type="int" />
+		<field name="ispfdeduct" type="int" />
+		<field name="roleId" type="int" />
+		<field name="addedDate" type="Date" />
+		<field name="photoId" type="long" />
+		<field name="userId" type="long" />
+		<field name="branchId" type="long" />
+		<field name="panNo" type="String" />
+		<field name="pesonalEmaiAddress" type="String" />
+		<field name="payPerMonth" type="double" />
+		<field name="groupId" type="long" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.EmployeeDocumentUpload">
+		<field name="empDocumentId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="fileEntryId" type="long" />
+		<field name="travelDeskDetailsId" type="long" />
+		<field name="documentName" type="String" />
+		<field name="documentPath" type="String" />
+		<field name="uploadDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.EmployeeType">
+		<field name="employeetypeId" type="long" />
+		<field name="typeName" type="String" />
+		<field name="pfDeduct" type="long" />
+		<field name="status" type="int" />
+		<field name="companyId" type="long" />
+		<field name="addeddate" type="Date" />
+		<field name="description" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.EmpPayStructure">
+		<field name="empPayStructureId" type="long" />
+		<field name="payComponentId" type="long" />
+		<field name="componentValue" type="double" />
+		<field name="employeeId" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.Evaluation">
+		<field name="evaluationId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="evaluatedBy" type="long" />
+		<field name="evalMessage" type="String" />
+		<field name="evalDate" type="Date" />
+		<field name="evalRating" type="int" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.ExpCategory">
+		<field name="catId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="categoryName" type="String" />
+		<field name="frequency" type="String" />
+		<field name="salaryHead" type="long" />
+		<field name="finalApprovalRoleId" type="long" />
+		<field name="attachment" type="boolean" />
+		<field name="componentId" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.Expense">
+		<field name="expenseId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="projectId" type="long" />
+		<field name="catId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="title" type="String" />
+		<field name="description" type="String" />
+		<field name="expDate" type="Date" />
+		<field name="amount" type="double" />
+		<field name="status" type="int" />
+		<field name="manEmployeeId" type="long" />
+		<field name="manCommnets" type="String" />
+		<field name="manApprovedDate" type="Date" />
+		<field name="accComments" type="String" />
+		<field name="accApprovedDate" type="Date" />
+		<field name="monthYear" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.ExpenseEntry">
+		<field name="expenseId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="projectId" type="long" />
+		<field name="catId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="title" type="String" />
+		<field name="description" type="String" />
+		<field name="expDate" type="Date" />
+		<field name="amount" type="double" />
+		<field name="status" type="int" />
+		<field name="manEmployeeId" type="long" />
+		<field name="manCommnets" type="String" />
+		<field name="manApprovedDate" type="Date" />
+		<field name="accComments" type="String" />
+		<field name="accApprovedDate" type="Date" />
+		<field name="monthYear" type="long" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.ExpenseEntryHistory">
+		<field name="expenseHistoryId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="expenseId" type="long" />
+		<field name="status" type="int" />
+		<field name="manEmployeeId" type="long" />
+		<field name="manComments" type="String" />
+		<field name="addeddate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.ExpProofFiles">
+		<field name="fileId" type="long" />
+		<field name="financialYear" type="String" />
+		<field name="companyId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="expenseId" type="long" />
+		<field name="fileName" type="String" />
+		<field name="fileOrigName" type="String" />
+		<field name="filePath" type="String" />
+		<field name="proofName" type="String" />
+		<field name="uploadDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.FinSalary">
+		<field name="finSalaryId" type="long" />
+		<field name="monthYear" type="long" />
+		<field name="totalEarning" type="double" />
+		<field name="totalDeduction" type="double" />
+		<field name="totalAmount" type="double" />
+		<field name="isLock" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createdDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.FormSixteen">
+		<field name="id" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="financialYear" type="String" />
+		<field name="fileEnteryId" type="long" />
+		<field name="addedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.FormSixteenErrorFile">
+		<field name="errorId" type="long" />
+		<field name="fileName" type="String" />
+		<field name="errorMsg" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.GeoAttendance">
+		<field name="attendanceId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="attDate" type="Date" />
+		<field name="inTime" type="String" />
+		<field name="outTime" type="String" />
+		<field name="workHour" type="String" />
+		<field name="latitude" type="String" />
+		<field name="longitude" type="String" />
+		<field name="outLatitude" type="String" />
+		<field name="outLongitude" type="String" />
+		<field name="geoAddress" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.GoalDetails">
+		<field name="goaldetailId" type="long" />
+		<field name="goalId" type="long" />
+		<field name="evaluationId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="parameter" type="String" />
+		<field name="scale" type="String" />
+		<field name="addedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.GoalMaster">
+		<field name="goalId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="projectId" type="long" />
+		<field name="goalName" type="String" />
+		<field name="goalDescription" type="String" />
+		<field name="addedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.HolidayCalenderManagement">
+		<field name="holidayId" type="long" />
+		<field name="holidayDate" type="Date" />
+		<field name="holidayName" type="String" />
+		<field name="holidayStartDate" type="Date" />
+		<field name="holidayEndDate" type="Date" />
+		<field name="companyId" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.IncomeTaxSlab">
+		<field name="incomeTaxSlabId" type="long" />
+		<field name="financialYear" type="String" />
+		<field name="companyId" type="long" />
+		<field name="incomeFrom" type="int" />
+		<field name="incomeTo" type="int" />
+		<field name="taxRate" type="double" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.InterviewEvaluation">
+		<field name="evaluationId" type="long" />
+		<field name="roleId" type="long" />
+		<field name="evaluationName" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.JobEvaluation">
+		<field name="postEvaluationId" type="long" />
+		<field name="jobPostId" type="long" />
+		<field name="evaluationName" type="String" />
+		<field name="evaluationDescription" type="String" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.JobOpening">
+		<field name="jobOpeningId" type="long" />
+		<field name="jobPostId" type="long" />
+		<field name="openingFor" type="String" />
+		<field name="description" type="String" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.JobPost">
+		<field name="jobPostId" type="long" />
+		<field name="postName" type="String" />
+		<field name="postDescription" type="String" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.LeaveApply">
+		<field name="leaveApplyId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="leaveTypeId" type="long" />
+		<field name="fromDate" type="Date" />
+		<field name="fromDateSession" type="String" />
+		<field name="toDate" type="Date" />
+		<field name="toDateSession" type="String" />
+		<field name="leaveDays" type="double" />
+		<field name="reason" type="String" />
+		<field name="attachedFile" type="String" />
+		<field name="cancelReason" type="String" />
+		<field name="hrComments" type="String" />
+		<field name="isApprove" type="int" />
+		<field name="addedDate" type="Date" />
+		<field name="userId" type="long" />
+		<field name="fileEntryId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.LeaveApplyDtl">
+		<field name="leaveApplyDtlId" type="long" />
+		<field name="leaveApplyId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="leaveTypeId" type="long" />
+		<field name="leaveDate" type="Date" />
+		<field name="sessionData" type="String" />
+		<field name="leaveDays" type="double" />
+		<field name="impectOnSalary" type="int" />
+		<field name="isApprove" type="int" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.LeaveDoc">
+		<field name="leaveDocId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="leaveApplyId" type="long" />
+		<field name="fileEntryId" type="long" />
+		<field name="filePath" type="String" />
+		<field name="addedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.LeaveManagement">
+		<field name="leaveId" type="long" />
+		<field name="leaveName" type="String" />
+		<field name="abb" type="String" />
+		<field name="encashmentDay" type="int" />
+		<field name="forwardDay" type="int" />
+		<field name="leaveStatus" type="boolean" />
+		<field name="encashmentPer" type="int" />
+		<field name="minServiceDay" type="int" />
+		<field name="noticeDay" type="int" />
+		<field name="employeetypeId" type="long" />
+		<field name="maxCreditDay" type="int" />
+		<field name="gender" type="String" />
+		<field name="maritalStatus" type="String" />
+		<field name="impectOnSalary" type="int" />
+		<field name="companyId" type="long" />
+		<field name="addedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.LeaveOb">
+		<field name="leaveobId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="leaveTypeId" type="long" />
+		<field name="obVal" type="int" />
+		<field name="isApprove" type="boolean" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.LeaveType">
+		<field name="leaveTypeId" type="long" />
+		<field name="leaveName" type="String" />
+		<field name="abb" type="String" />
+		<field name="encashmentDay" type="int" />
+		<field name="forwardDay" type="int" />
+		<field name="leaveStatus" type="boolean" />
+		<field name="encashmentPer" type="int" />
+		<field name="minServiceDay" type="int" />
+		<field name="noticeDay" type="int" />
+		<field name="employeetypeId" type="long" />
+		<field name="maxCreditDay" type="int" />
+		<field name="gender" type="String" />
+		<field name="maritalStatus" type="String" />
+		<field name="impectOnSalary" type="int" />
+		<field name="companyId" type="long" />
+		<field name="addedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.Milestone">
+		<field name="milestoneId" type="long" />
+		<field name="projectId" type="long" />
+		<field name="clientId" type="long" />
+		<field name="milestoneName" type="String" />
+		<field name="dueDate" type="Date" />
+		<field name="checkGST" type="int" />
+		<field name="amount" type="double" />
+		<field name="status" type="int" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.MonthlyAdjustment">
+		<field name="monthlyAdjustmentId" type="long" />
+		<field name="payComponentId" type="long" />
+		<field name="amount" type="double" />
+		<field name="monthYear" type="long" />
+		<field name="employeeId" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.NotificationMasterManage">
+		<field name="notifyId" type="long" />
+		<field name="subject" type="String" />
+		<field name="body" type="String" />
+		<field name="createdBy" type="String" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="documentId" type="long" />
+		<field name="documentUrl" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.NotificationSendManage">
+		<field name="notifyIdSendId" type="long" />
+		<field name="notificationId" type="long" />
+		<field name="branchId" type="long" />
+		<field name="sendingDate" type="Date" />
+		<field name="sendBy" type="String" />
+		<field name="isOpen" type="boolean" />
+		<field name="openBy" type="String" />
+		<field name="documentId" type="long" />
+		<field name="isApproved" type="int" />
+		<field name="comment" type="String" />
+		<field name="documentUrl" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.PayComponent">
+		<field name="componentId" type="long" />
+		<field name="employeeTypeId" type="long" />
+		<field name="name" type="String" />
+		<field name="abbreviation" type="String" />
+		<field name="taxStatus" type="int" />
+		<field name="payType" type="String" />
+		<field name="componentType" type="int" />
+		<field name="componentValueFormula" type="String" />
+		<field name="partOfCtc" type="int" />
+		<field name="effectiveDate" type="Date" />
+		<field name="islock" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="amount" type="double" />
+		<field name="payComponentOrder" type="long" />
+		<field name="autoAddPayStructure" type="int" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.PayrollIncrement">
+		<field name="payrollIncrementId" type="long" />
+		<field name="appraisalSettingId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="employeeCode" type="long" />
+		<field name="overallRatingMan" type="long" />
+		<field name="preCtc" type="double" />
+		<field name="postCtc" type="double" />
+		<field name="componentId" type="long" />
+		<field name="preHeadComponentVal" type="double" />
+		<field name="postHeadComponentVal" type="double" />
+		<field name="bonusVal" type="double" />
+		<field name="financialYear" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.PayrollSlabs">
+		<field name="payrollSlabsId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="appraisalSettingId" type="long" />
+		<field name="ratingId" type="long" />
+		<field name="payrollPercentage" type="double" />
+		<field name="bonusPercentage" type="double" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.Performance">
+		<field name="performanceId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="performanceHeading" type="String" />
+		<field name="performanceDescription" type="String" />
+		<field name="createDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.PerformanceMaster">
+		<field name="performanceId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="performanceHeading" type="String" />
+		<field name="performanceDescription" type="String" />
+		<field name="addedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.ProjectMaster">
+		<field name="projectId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="projectName" type="String" />
+		<field name="clientId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="projectStatus" type="int" />
+		<field name="projectStatusId" type="long" />
+		<field name="projectDesc" type="String" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="totalAmount" type="double" />
+		<field name="addedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.ProjectRole">
+		<field name="roleId" type="long" />
+		<field name="roleName" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.ProjectStatus">
+		<field name="projectStatusId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="statusName" type="String" />
+		<field name="statusColor" type="String" />
+		<field name="addedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.ProjectTask">
+		<field name="projectTaskId" type="long" />
+		<field name="projectId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="taskId" type="long" />
+		<field name="taskName" type="String" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="hours" type="double" />
+		<field name="addedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.PushNotification">
+		<field name="pushNotificationId" type="long" />
+		<field name="subject" type="String" />
+		<field name="message" type="String" />
+		<field name="fileId" type="long" />
+		<field name="fileUrl" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.RatingMaster">
+		<field name="ratingId" type="long" />
+		<field name="ratingNum" type="String" />
+		<field name="ratingKey" type="String" />
+		<field name="ratingDescription" type="String" />
+		<field name="salaryPercentage" type="long" />
+		<field name="companyId" type="long" />
+		<field name="addedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.RecruitmentProcess">
+		<field name="recruitmentProcessId" type="long" />
+		<field name="applyCandidateId" type="long" />
+		<field name="interviewDate" type="Date" />
+		<field name="interviewTime" type="String" />
+		<field name="fileEntryId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="interviewerRemarks" type="String" />
+		<field name="hrRemarks" type="String" />
+		<field name="isSelected" type="boolean" />
+		<field name="interviewerId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="jobPostId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="userId" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.RecruitProcess">
+		<field name="recruitProcessId" type="long" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="employeeId" type="long" />
+		<field name="interviewDate" type="Date" />
+		<field name="interviewTime" type="String" />
+		<field name="fileEntryId" type="long" />
+		<field name="fileUrl" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="interviewerRemarks" type="String" />
+		<field name="hrRemarks" type="String" />
+		<field name="isSelected" type="int" />
+		<field name="status" type="long" />
+		<field name="DOB" type="Date" />
+		<field name="email" type="String" />
+		<field name="phoneNumber" type="long" />
+		<field name="skillset" type="String" />
+		<field name="experience" type="double" />
+		<field name="noticePeriod" type="int" />
+		<field name="currentCTC" type="double" />
+		<field name="expextedCTC" type="double" />
+		<field name="projectRoleId" type="long" />
+		<field name="reference" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.Resignation">
+		<field name="ResignationId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="resignationDate" type="Date" />
+		<field name="resignationSubDate" type="Date" />
+		<field name="Description" type="String" />
+		<field name="managerId" type="long" />
+		<field name="mancomment" type="String" />
+		<field name="mancommentdate" type="Date" />
+		<field name="status" type="boolean" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.SalDetails">
+		<field name="SalDetailsId" type="long" />
+		<field name="monthYear" type="long" />
+		<field name="componentId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="value" type="double" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.SchedulesDetails">
+		<field name="schedulesDetailsId" type="long" />
+		<field name="schedulesDate" type="Date" />
+		<field name="worksSchedulesId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="companyId" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.SchedulesMaster">
+		<field name="schedulesId" type="long" />
+		<field name="schedulesName" type="String" />
+		<field name="schedulesDescription" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.SelectedCandidatePayStructure">
+		<field name="candidatePayStructureId" type="long" />
+		<field name="payComponentId" type="long" />
+		<field name="componentValue" type="double" />
+		<field name="recruitmentProcessId" type="long" />
+		<field name="payStatus" type="int" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.SkillSet">
+		<field name="SkillId" type="long" />
+		<field name="SkillName" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.StopPay">
+		<field name="stopPayId" type="long" />
+		<field name="monthYear" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="reason" type="String" />
+		<field name="createdBy" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+		<field name="status" type="long" />
+		<field name="isLock" type="long" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.TaskMaster">
+		<field name="taskId" type="long" />
+		<field name="taskName" type="String" />
+		<field name="taskDesc" type="String" />
+		<field name="status" type="int" />
+		<field name="createDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.TaskMasterMapping">
+		<field name="taskMappingId" type="long" />
+		<field name="taskId" type="long" />
+		<field name="projectId" type="long" />
+		<field name="createDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.TaxDeclaration">
+		<field name="taxDeclarationId" type="long" />
+		<field name="financialYear" type="String" />
+		<field name="monthYear" type="int" />
+		<field name="employeeId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="hraFromDate" type="String" />
+		<field name="hraToDate" type="String" />
+		<field name="hraCity" type="String" />
+		<field name="hraIsmetro" type="String" />
+		<field name="hraLandlordPan" type="String" />
+		<field name="hraRent" type="double" />
+		<field name="medicalIndividual" type="double" />
+		<field name="medicalParents" type="double" />
+		<field name="medicalParentsSenior" type="double" />
+		<field name="medicalHandiLess80" type="double" />
+		<field name="medicalHandiGater80" type="double" />
+		<field name="medicalGater60Less80" type="double" />
+		<field name="medicalGater80" type="double" />
+		<field name="educationLoan" type="double" />
+		<field name="physicalDisability" type="double" />
+		<field name="physicalDisabilitySevere" type="double" />
+		<field name="equitySavings" type="double" />
+		<field name="interestOnDeposit" type="double" />
+		<field name="nationalPension" type="double" />
+		<field name="lic" type="double" />
+		<field name="ppf" type="double" />
+		<field name="nsc" type="double" />
+		<field name="infraBonds" type="double" />
+		<field name="tuitionFees" type="double" />
+		<field name="mutualFunds" type="double" />
+		<field name="sukanya" type="double" />
+		<field name="ulip" type="double" />
+		<field name="timeDeposit" type="double" />
+		<field name="housingLoan" type="double" />
+		<field name="fixedDeposit" type="double" />
+		<field name="nscInterest" type="double" />
+		<field name="housingLoanInterest" type="double" />
+		<field name="housingAddress" type="String" />
+		<field name="previousIncome" type="double" />
+		<field name="previousPf" type="double" />
+		<field name="previousPt" type="double" />
+		<field name="previousTds" type="double" />
+		<field name="islock" type="boolean" />
+		<field name="finalSubmission" type="boolean" />
+		<field name="hraExempt" type="double" />
+		<field name="sectionBExempt" type="double" />
+		<field name="sectionCExempt" type="double" />
+		<field name="sectionDExempt" type="double" />
+		<field name="salaryAfterExempt" type="double" />
+		<field name="salaryBeforeExempt" type="double" />
+		<field name="taxRate" type="double" />
+		<field name="grossTds" type="double" />
+		<field name="totalPtax" type="double" />
+		<field name="totalProvidentFund" type="double" />
+		<field name="totalTds" type="double" />
+		<field name="tdsDeducted" type="double" />
+		<field name="tdsDuePerMonth" type="double" />
+		<field name="annualIncome" type="double" />
+		<field name="educationcess" type="double" />
+		<field name="addeddate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.TaxDeclarationMonthly">
+		<field name="taxDeclarationMonthlyId" type="long" />
+		<field name="taxDeclarationId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="financialYear" type="String" />
+		<field name="monthYear" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="hraFromDate" type="String" />
+		<field name="hraToDate" type="String" />
+		<field name="hraCity" type="String" />
+		<field name="hraIsmetro" type="String" />
+		<field name="hraLandlordPan" type="String" />
+		<field name="hraRent" type="double" />
+		<field name="medicalIndividual" type="double" />
+		<field name="medicalParents" type="double" />
+		<field name="medicalParentsSenior" type="double" />
+		<field name="medicalHandiLess80" type="double" />
+		<field name="medicalHandiGater80" type="double" />
+		<field name="medicalGater60Less80" type="double" />
+		<field name="medicalGater80" type="double" />
+		<field name="educationLoan" type="double" />
+		<field name="physicalDisability" type="double" />
+		<field name="physicalDisabilitySevere" type="double" />
+		<field name="equitySavings" type="double" />
+		<field name="interestOnDeposit" type="double" />
+		<field name="nationalPension" type="double" />
+		<field name="lic" type="double" />
+		<field name="ppf" type="double" />
+		<field name="nsc" type="double" />
+		<field name="infraBonds" type="double" />
+		<field name="tuitionFees" type="double" />
+		<field name="mutualFunds" type="double" />
+		<field name="sukanya" type="double" />
+		<field name="ulip" type="double" />
+		<field name="timeDeposit" type="double" />
+		<field name="housingLoan" type="double" />
+		<field name="fixedDeposit" type="double" />
+		<field name="nscInterest" type="double" />
+		<field name="housingLoanInterest" type="double" />
+		<field name="housingAddress" type="String" />
+		<field name="previousIncome" type="double" />
+		<field name="previousPf" type="double" />
+		<field name="previousPt" type="double" />
+		<field name="previousTds" type="double" />
+		<field name="islock" type="boolean" />
+		<field name="finalSubmission" type="boolean" />
+		<field name="hraExempt" type="double" />
+		<field name="sectionBExempt" type="double" />
+		<field name="sectionCExempt" type="double" />
+		<field name="sectionDExempt" type="double" />
+		<field name="salaryAfterExempt" type="double" />
+		<field name="salaryBeforeExempt" type="double" />
+		<field name="taxRate" type="double" />
+		<field name="grossTds" type="double" />
+		<field name="totalTds" type="double" />
+		<field name="tdsDeducted" type="double" />
+		<field name="tdsDuePerMonth" type="double" />
+		<field name="educationCess" type="double" />
+		<field name="totalPtax" type="double" />
+		<field name="totalProvidentFund" type="double" />
+		<field name="totalConveyance" type="double" />
+		<field name="addedDate" type="Date" />
+		<field name="currentMonthTax" type="double" />
+		<field name="sectionEExempt" type="double" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.TaxProofFiles">
+		<field name="fileId" type="long" />
+		<field name="financialYear" type="String" />
+		<field name="companyId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="taxDeclarationId" type="long" />
+		<field name="fileName" type="String" />
+		<field name="fileOrigName" type="String" />
+		<field name="filePath" type="String" />
+		<field name="proofName" type="String" />
+		<field name="uploadDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.TaxSetting">
+		<field name="taxSettingId" type="long" />
+		<field name="componentId" type="long" />
+		<field name="componentName" type="String" />
+		<field name="taxFormulla" type="String" />
+		<field name="createdBy" type="long" />
+		<field name="createdDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.TimeSheetEntry">
+		<field name="timesheetId" type="long" />
+		<field name="entryDate" type="Date" />
+		<field name="employeeId" type="long" />
+		<field name="projectId" type="long" />
+		<field name="projectTaskId" type="long" />
+		<field name="hours" type="double" />
+		<field name="workDescription" type="String" />
+		<field name="timesheetParentId" type="long" />
+		<field name="addedDate" type="Date" />
+		<field name="groupId" type="long" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.TimeSheetMaster">
+		<field name="timesheetParentId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="fromDate" type="Date" />
+		<field name="toDate" type="Date" />
+		<field name="submitStatus" type="int" />
+		<field name="addedDate" type="Date" />
+		<field name="groupId" type="long" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.TravelDeskDetails">
+		<field name="travelDetailsId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="projectId" type="long" />
+		<field name="projectTeamsId" type="long" />
+		<field name="ticketType" type="String" />
+		<field name="hotel" type="boolean" />
+		<field name="fromDate" type="Date" />
+		<field name="toDate" type="Date" />
+		<field name="fromTime" type="String" />
+		<field name="toTime" type="String" />
+		<field name="location" type="String" />
+		<field name="purpose" type="String" />
+		<field name="specialInstraction" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="managerComment" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.WorkFromHome">
+		<field name="workFromHomeId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="projectId" type="long" />
+		<field name="appliedDate" type="Date" />
+		<field name="description" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="workStatus" type="int" />
+		<field name="hrComments" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.WorksSchedules">
+		<field name="worksSchedulesId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="employeeId" type="long" />
+		<field name="fromDate" type="Date" />
+		<field name="toDate" type="Date" />
+		<field name="schedulesId" type="long" />
+		<field name="islock" type="int" />
+		<field name="status" type="int" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="description" type="String" />
+	</model>
+	<model name="com.liferay.famocom.erpcloud.model.YearSetting">
+		<field name="yearSettingId" type="long" />
+		<field name="financialYearStartDate" type="Date" />
+		<field name="financialYearEndDate" type="Date" />
+		<field name="calendarStartDate" type="Date" />
+		<field name="calendarEndDate" type="Date" />
+		<field name="isActive" type="int" />
+	</model>
+</model-hints>

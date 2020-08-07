@@ -1,0 +1,4 @@
+Bundle-Name: ProjectMaster
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.projectmaster
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.projectmaster.constants

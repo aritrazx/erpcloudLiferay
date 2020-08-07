@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 7.0.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_7_0_0.dtd">
+
+<resource-action-mapping>
+<portlet-resource>
+         <portlet-name>ProjectMaster</portlet-name>
+         <permissions>
+            <supports>               
+                <action-key>PROJECT_MASTER_VIEW</action-key>
+                 <action-key>PROJECT_MASTER_ADD</action-key>
+                <action-key>PROJECT_MASTER_UPDATE</action-key>
+                <action-key>PROJECT_MASTER_STATUS</action-key>
+            </supports>
+        </permissions>
+    </portlet-resource>
+<model-resource>
+    <model-name>com.liferay.famocom.erpcloud.model.ProjectMaster</model-name>
+    <portlet-ref>
+        <portlet-name>ProjectMaster</portlet-name>
+    </portlet-ref>
+    <root>true</root>
+    <weight>1</weight>
+    <permissions>
+        <supports>
+            <action-key>PROJECT_MASTER_VIEW</action-key>
+            <action-key>PROJECT_MASTER_ADD</action-key>
+            <action-key>PROJECT_MASTER_UPDATE</action-key>
+            <action-key>PROJECT_MASTER_STATUS</action-key>
+        </supports>
+        <site-member-defaults>
+            <action-key>PROJECT_MASTER_ADD</action-key>
+        </site-member-defaults>
+        <guest-unsupported>
+            <action-key>PROJECT_MASTER_VIEW</action-key>
+        </guest-unsupported>
+    </permissions>
+</model-resource>
+
+<model-resource>
+    <model-name>com.liferay.famocom.erpcloud.model.AddTeamMember</model-name>
+    <portlet-ref>
+        <portlet-name>ProjectMaster</portlet-name>
+    </portlet-ref>
+    <weight>2</weight>
+    <permissions>
+        <supports>
+        	<action-key>ADD_TEAM_MEMBER_VIEW</action-key>
+            <action-key>ADD_TEAM_MEMBER_ADD</action-key>
+            <action-key>ADD_TEAM_MEMBER_DELETE</action-key>
+            <action-key>ADD_TEAM_MEMBER_UPDATE</action-key>
+        </supports>
+        <site-member-defaults>
+            <action-key>ADD_TEAM_MEMBER_VIEW</action-key>
+        </site-member-defaults>
+        <guest-unsupported>
+             <action-key>ADD_TEAM_MEMBER_UPDATE</action-key>
+        </guest-unsupported>
+    </permissions>
+</model-resource>
+
+<model-resource>
+    <model-name>com.liferay.famocom.erpcloud.model.ProjectTask</model-name>
+    <portlet-ref>
+        <portlet-name>ProjectMaster</portlet-name>
+    </portlet-ref>
+    <weight>3</weight>
+    <permissions>
+        <supports>
+         	<action-key>PROJECT_TASK_VIEW</action-key>
+            <action-key>PROJECT_TASK_ADD</action-key>
+            <action-key>PROJECT_TASK_DELETE</action-key>
+            <action-key>PROJECT_TASK_UPDATE</action-key>
+        </supports>
+        <site-member-defaults>
+            <action-key>PROJECT_TASK_ADD</action-key>
+        </site-member-defaults>
+        <guest-unsupported>
+            <action-key>PROJECT_TASK_VIEW</action-key>
+        </guest-unsupported>
+    </permissions>
+</model-resource>
+</resource-action-mapping>

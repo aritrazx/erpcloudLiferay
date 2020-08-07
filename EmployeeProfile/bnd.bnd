@@ -1,0 +1,4 @@
+Bundle-Name: EmployeeProfile
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.employeeprofile
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.employeeprofile.constants

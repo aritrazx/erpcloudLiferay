@@ -1,0 +1,4 @@
+Bundle-Name: TimesheetSetting
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.tssetting
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.tssetting.constants

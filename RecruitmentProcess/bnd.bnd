@@ -1,0 +1,10 @@
+Bundle-Name: RecruitmentProcess
+Bundle-SymbolicName: RecruitmentProcess
+Bundle-Version: 1.0.0
+Export-Package: RecruitmentProcess.constants
+Import-Package: !com.liferay.portal.workflow.task.web.internal.display.context,\
+ !com.liferay.portal.workflow.task.web.internal.search,\
+ !com.liferay.portal.workflow.task.web.internal.display,\
+*;resolution:=optional
+-includeresource:\
+@com.liferay.portal.workflow.task.web-1.0.6.jar,\

@@ -1,0 +1,4 @@
+Bundle-Name: TravelDesk
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.traveldesk
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.traveldesk.constants

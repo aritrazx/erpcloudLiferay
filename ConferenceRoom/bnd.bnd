@@ -1,0 +1,4 @@
+Bundle-Name: ConferenceRoom
+Bundle-SymbolicName: com.liferay.famocom.erpcloud.conferenceroom
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.famocom.erpcloud.conferenceroom.constants
